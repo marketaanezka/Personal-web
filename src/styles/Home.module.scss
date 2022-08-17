@@ -11,8 +11,12 @@
   }
 } */
 
-$color-pink: #ff00ff;
+.container {
+  // color: $color-pink;
+}
 
-.pageTitle {
-  color: $color-pink;
+.photo {
+  span {
+    border: 3px solid pink;
+  }
 }

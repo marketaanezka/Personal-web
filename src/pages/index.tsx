@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 import Header from "../components/Header/Header";
+import Intro from "../components/Intro/Intro";
+import profile from "../../public/img/photo-profile.png";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
@@ -13,9 +16,9 @@ const Home: NextPage = () => {
       </Head>
       <Header />
 
-      <main className={styles.pageTitle}>
-        <section>Intro</section>
-        <div>Image</div>
+      <main className={styles.container}>
+        <Intro />
+        <Image src={profile} alt="woman smiling" layout="fixed" />
         <section></section>
       </main>
     </div>

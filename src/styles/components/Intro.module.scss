@@ -1,0 +1,9 @@
+.heading {
+  &::before {
+    display: block;
+    content: "";
+    border-top: 0.3rem solid black;
+    width: 4rem;
+    transform: translateY(-1rem);
+  }
+}
