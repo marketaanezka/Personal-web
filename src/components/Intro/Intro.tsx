@@ -1,8 +1,8 @@
-import styles from "../../styles/components/Intro.module.scss";
+import styles from "./Intro.module.scss";
 
 const Header = () => {
   return (
-    <section>
+    <section className={styles.wrapper}>
       <h1 className={styles.heading}>
         Hi, I'm Marketa, a Frontend Developer and Lecturer
       </h1>
