@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <section className={styles.wrapper}>
       <h1 className={styles.heading}>
-        Hi, I'm Marketa, a Frontend Developer and Lecturer
+        Hi, I&#39;m Marketa, a Frontend Developer and Lecturer
       </h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
