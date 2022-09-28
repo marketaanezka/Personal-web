@@ -12,9 +12,9 @@ const Burger = ({ open, setOpen }: Props) => {
     <div aria-label="toggle menu">
       <button
         onClick={() => setOpen(!open)}
-        className={cx(styles.wrapper, { [styles.blue]: open })}
+        className={cx(styles.toggler, { [styles.open]: open })}
       >
-        B
+        <div></div>
       </button>
     </div>
   );
