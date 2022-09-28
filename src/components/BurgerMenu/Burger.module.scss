@@ -50,8 +50,6 @@
     background: black;
 }
 
-/* AND ROTATING THE TOP AND BOTTOM LINES :  */
-
 .toggler.open > div::after{
     top: 0;
     transform: rotate(135deg);

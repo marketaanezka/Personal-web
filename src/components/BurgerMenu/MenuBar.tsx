@@ -10,7 +10,7 @@ type Props = {
 
 const MenuBar = ({ open, setOpen }: Props) => {
   return (
-    <aside className={cx(styles.menubar, { [styles.border]: open })}>
+    <aside className={cx(styles.menubar, { [styles.open]: open })}>
       <Link href="/about">
         <a onClick={() => setOpen(false)}>About me</a>
       </Link>

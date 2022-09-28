@@ -1,13 +1,19 @@
 .menubar {
     height: 200px;
-    width: 150px;
-    background-color: aquamarine;
+    width: 0;
+    background-color: rgba(53, 60, 58, 0.9);
+    color: white;
     position: fixed;
     right: 0;
-    top: 150px;
-    display: none;
+    top: 4rem;
+    transition: all 0.4s ease;
 }
 
-.border {
+.menubar a {
+    white-space: nowrap;
     display: block;
+}
+
+.open {
+    width: 50%;
 }
