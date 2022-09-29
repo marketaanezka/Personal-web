@@ -11,18 +11,20 @@ type Props = {
 const MenuBar = ({ open, setOpen }: Props) => {
   return (
     <aside className={cx(styles.menubar, { [styles.open]: open })}>
-      <Link href="/about">
-        <a onClick={() => setOpen(false)}>About me</a>
-      </Link>
-      <Link href="/featured">
-        <a onClick={() => setOpen(false)}>Featured In</a>
-      </Link>
-      <Link href="/skills">
-        <a onClick={() => setOpen(false)}>My skills</a>
-      </Link>
-      <Link href="/portfolio">
-        <a onClick={() => setOpen(false)}>Portfolio</a>
-      </Link>
+      <div>
+        <Link href="/about">
+          <a onClick={() => setOpen(false)}>About me</a>
+        </Link>
+        <Link href="/featured">
+          <a onClick={() => setOpen(false)}>Featured In</a>
+        </Link>
+        <Link href="/skills">
+          <a onClick={() => setOpen(false)}>My skills</a>
+        </Link>
+        <Link href="/portfolio">
+          <a onClick={() => setOpen(false)}>Portfolio</a>
+        </Link>
+      </div>
     </aside>
   );
 };

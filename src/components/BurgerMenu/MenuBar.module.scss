@@ -1,19 +1,25 @@
 .menubar {
-    height: 200px;
+    height: 100vh;
     width: 0;
     background-color: rgba(53, 60, 58, 0.9);
     color: white;
     position: fixed;
     right: 0;
-    top: 4rem;
+    top: 3rem;
     transition: all 0.4s ease;
+    border-radius: 10px 0 0 10px;
+}
+
+.menubar div {
+    padding: 2rem;
 }
 
 .menubar a {
     white-space: nowrap;
     display: block;
+    margin-bottom: 1rem;
 }
 
 .open {
-    width: 50%;
+    width: 70%;
 }
