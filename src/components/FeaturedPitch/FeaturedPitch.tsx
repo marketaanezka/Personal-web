@@ -1,18 +1,18 @@
-import styles from "./Intro.module.scss";
+import Link from "next/link";
+import styles from "./FeaturedPitch.module.scss";
 
-const Intro = () => {
+const FeaturedPitch = () => {
   return (
     <section className={styles.wrapper}>
-      <h1 className={styles.heading}>
-        Hi, I&#39;m Marketa, a Frontend Developer and Lecturer
-      </h1>
+      <h2 className={styles.heading}>Featured in</h2>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
         eveniet quos temporibus ullam repudiandae libero sint velit excepturi
         voluptates impedit!
       </p>
+      <Link href="/featured">Read more &#x2192;</Link>
     </section>
   );
 };
 
-export default Intro;
+export default FeaturedPitch;

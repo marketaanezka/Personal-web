@@ -1,8 +1,14 @@
+.wrapper {
+  background-color: #28406D;
+  color: white;
+  padding: 2rem;
+}
+
 .heading {
   &::before {
     display: block;
     content: "";
-    border-top: 0.3rem solid black;
+    border-top: 0.3rem solid rgb(255, 255, 255);
     width: 4rem;
     transform: translateY(-1rem);
   }
