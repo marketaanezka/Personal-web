@@ -7,6 +7,7 @@ import Link from "next/link";
 import AboutMePitch from "../components/AboutMePitch/AboutMePitch";
 import OfferPitch from "../components/OfferPitch/OfferPitch";
 import FeaturedPitch from "../components/FeaturedPitch/FeaturedPitch";
+import SkillsPitch from "../components/SkillsPitch/SkillsPitch";
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +15,8 @@ const Home: NextPage = () => {
       <Intro />
       {/* <Image src={profile} alt="woman smiling" layout="fixed" /> */}
       <AboutMePitch />
-      <OfferPitch />
+      <SkillsPitch />
+      {/* <OfferPitch />
       <FeaturedPitch />
       <section>
         <h2>
@@ -25,7 +27,7 @@ const Home: NextPage = () => {
         <h2>
           <Link href="/portfolio">Portfolio</Link>
         </h2>
-      </section>
+      </section> */}
     </div>
   );
 };

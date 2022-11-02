@@ -36,19 +36,3 @@
 .toggler > div::after{
     top: 7px;
 }
-
-.toggler.open > div {
-    background: transparent;
-}
-
-.toggler.open > div::before{
-    top: 0;
-    transform: rotate(45deg);
-    background: black;
-}
-
-.toggler.open > div::after{
-    top: 0;
-    transform: rotate(135deg);
-    background: black;
-}

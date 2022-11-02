@@ -1,14 +1,14 @@
 .wrapper {
-  background-color: #28406D;
-  color: white;
-  padding: 2rem;
+  background-color: var(--chakra-colors-gray-200);
+  color: var(--chakra-colors-black);
+  padding: var(--chakra-space-xl)
 }
 
 .heading {
   &::before {
     display: block;
     content: "";
-    border-top: 0.3rem solid rgb(255, 255, 255);
+    border-top: 0.3rem solid var(--chakra-colors-black);
     width: 4rem;
     transform: translateY(-1rem);
   }

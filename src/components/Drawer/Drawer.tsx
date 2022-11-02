@@ -1,16 +1,16 @@
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  Button,
-  Input,
   useDisclosure,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React, { RefObject } from "react";
+import styles from "./Drawer.module.scss";
+import DrawerButton from "./DrawerButton";
 
 const DrawerMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -18,9 +18,7 @@ const DrawerMenu = () => {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
-        Open
-      </Button>
+      <DrawerButton onOpen={onOpen} btnRef={btnRef} />
       <Drawer
         isOpen={isOpen}
         placement="right"
@@ -30,18 +28,27 @@ const DrawerMenu = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader></DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder="Type here..." />
+            <div className={styles.content}>
+              <Link href="/">
+                <a onClick={onClose}>Home</a>
+              </Link>
+              <Link href="/about">
+                <a onClick={onClose}>About me</a>
+              </Link>
+              <Link href="/featured">
+                <a onClick={onClose}>Featured In</a>
+              </Link>
+              <Link href="/skills">
+                <a onClick={onClose}>My skills</a>
+              </Link>
+              <Link href="/portfolio">
+                <a onClick={onClose}>Portfolio</a>
+              </Link>
+            </div>
           </DrawerBody>
-
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Save</Button>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>
