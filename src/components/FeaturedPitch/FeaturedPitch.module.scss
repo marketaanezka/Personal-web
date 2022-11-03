@@ -1,5 +1,7 @@
 .wrapper {
-    background-color: #28406D;
-    color: white;
-    padding: 2rem;
-}
+    color: #202020;
+    padding: var(--chakra-space-lg) var(--chakra-space-xl)}
+    
+  .heading {
+    font-size: var(--chakra-fontSizes-xl);
+  }

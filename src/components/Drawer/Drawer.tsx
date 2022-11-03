@@ -32,20 +32,20 @@ const DrawerMenu = () => {
 
           <DrawerBody>
             <div className={styles.content}>
-              <Link href="/">
-                <a onClick={onClose}>Home</a>
+              <Link href="/" onClick={onClose}>
+                Home
               </Link>
-              <Link href="/about">
-                <a onClick={onClose}>About me</a>
+              <Link href="/about" onClick={onClose}>
+                About me
               </Link>
-              <Link href="/featured">
-                <a onClick={onClose}>Featured In</a>
+              <Link href="/featured" onClick={onClose}>
+                Featured In
               </Link>
-              <Link href="/skills">
-                <a onClick={onClose}>My skills</a>
+              <Link href="/skills" onClick={onClose}>
+                My skills
               </Link>
-              <Link href="/portfolio">
-                <a onClick={onClose}>Portfolio</a>
+              <Link href="/portfolio" onClick={onClose}>
+                Portfolio
               </Link>
             </div>
           </DrawerBody>

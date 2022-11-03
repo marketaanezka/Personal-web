@@ -17,6 +17,7 @@ const Home: NextPage = () => {
       </div>
       <AboutMePitch />
       <SkillsPitch />
+      <FeaturedPitch />
       {/* <OfferPitch />
       <FeaturedPitch />
       <section>
