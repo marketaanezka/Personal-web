@@ -3,6 +3,8 @@ import styles from "./Intro.module.scss";
 const Intro = () => {
   return (
     <section className={styles.wrapper}>
+      <span className={styles.top}></span>
+      <span>Hello</span>
       <h1 className={styles.heading}>
         Hi, I&#39;m Marketa, a Frontend Developer and Lecturer
       </h1>

@@ -27,7 +27,7 @@ const DrawerMenu = () => {
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton sx={{ width: "1rem", height: "1rem" }} />
           <DrawerHeader></DrawerHeader>
 
           <DrawerBody>

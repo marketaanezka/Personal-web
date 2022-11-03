@@ -3,5 +3,7 @@
     flex-direction: column;
     a {
         display: block;
+        font-size: var(--chakra-fontSizes-lg);
+        margin-bottom: var(--chakra-space-sm);
     }
 }
