@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import juniorguru from "../../../public/img/juniorguru.png";
+import wdf from "../../../public/img/wdf.png";
+import jury from "../../../public/img/jurapodcast.jpeg";
 import styles from "./FeaturedPitch.module.scss";
+import Carousel from "./Carousel";
 
 const FeaturedPitch = () => {
   return (
@@ -11,7 +15,7 @@ const FeaturedPitch = () => {
         eveniet quos temporibus ullam repudiandae libero sint velit excepturi
         voluptates impedit!
       </p>
-      <Link href="/featured">Read more &#x2192;</Link>
+      <Carousel />
     </section>
   );
 };
