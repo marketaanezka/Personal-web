@@ -10,14 +10,14 @@ const Post = ({ frontMatter, mdxSource }) => {
   return (
     <div>
       <h2>{frontMatter.title}</h2>
-      {/* <MDXRemote {...mdxSource} /> */}
+      <MDXRemote {...mdxSource} />
     </div>
   );
 };
 
 export default Post;
 
-const getStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join("src", "posts"));
 
   const paths = files.map((filename) => ({
@@ -32,7 +32,7 @@ const getStaticPaths = async () => {
   };
 };
 
-const getStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps = async ({ params: { slug } }) => {
   const markdownWithMeta = fs.readFileSync(
     path.join("src", "posts", slug + ".mdx")
   );
