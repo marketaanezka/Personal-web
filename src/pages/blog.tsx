@@ -1,28 +1,26 @@
-import type { NextPage } from "next";
 import fs from "fs";
-import Intro from "../components/Intro/Intro";
-import styles from "../styles/Home.module.scss";
-import AboutMePitch from "../components/AboutMePitch/AboutMePitch";
-import FeaturedPitch from "../components/FeaturedPitch/FeaturedPitch";
+import matter from "gray-matter";
 import Link from "next/link";
 import path from "path";
-import matter from "gray-matter";
 
-const Home: NextPage = ({ posts }) => {
+const Blog = ({ posts }) => {
   console.log(posts);
-
   return (
-    <div className={styles.container}>
-      <Intro />
-      <AboutMePitch />
-      <Link href="/blog">BLOG page</Link>
-
-      <FeaturedPitch />
-    </div>
+    <>
+      <h1>Hello this is Blog page</h1>
+      {posts.map((post, index) => {
+        console.log("individual post", post.slug);
+        return (
+          <Link href={`/blog/${post.slug}`} key={`${post.slug}-${index}`}>
+            <h2>{post.frontMatter.title}</h2>
+          </Link>
+        );
+      })}
+    </>
   );
 };
 
-export default Home;
+export default Blog;
 
 export const getStaticProps = async () => {
   const files = fs.readdirSync(path.join("src", "posts"));
@@ -45,3 +43,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+// https://www.youtube.com/watch?v=WCGopHwXnic

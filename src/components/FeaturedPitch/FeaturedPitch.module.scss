@@ -2,6 +2,16 @@
     color: #202020;
     padding: var(--chakra-space-lg) var(--chakra-space-xl)}
     
-  .heading {
-    font-size: var(--chakra-fontSizes-xl);
+.heading {
+  font-size: var(--chakra-fontSizes-xl);
+}
+
+.thumbs {
+  display: grid;
+  justify-items: center;
+  gap: var(--chakra-space-md);
+
+  img {
+    border: 3px solid var(--chakra-colors-gray-300);
   }
+}

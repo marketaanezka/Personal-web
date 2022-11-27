@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FocusLock from "react-focus-lock";
-import ClickAwayListener from "react-click-away-listener";
+import FocusLock from "react-focus-lock"; // removed from package json for now it is not used
+import ClickAwayListener from "react-click-away-listener"; // removed from package json for now it is not used
 import MenuBar from "./MenuBar";
 import Burger from "./Burger";
 
