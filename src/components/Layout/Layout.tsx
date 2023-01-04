@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../Header/Header";
+import styles from "./Layout.module.scss";
 
 type Props = {
   children: React.ReactNode;
@@ -14,7 +15,7 @@ const Layout = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main className={styles.wrapper}>{children}</main>
     </div>
   );
 };

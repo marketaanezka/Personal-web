@@ -7,15 +7,15 @@ import FeaturedPitch from "../components/FeaturedPitch/FeaturedPitch";
 import Link from "next/link";
 import path from "path";
 import matter from "gray-matter";
+import BlogPitch from "../components/BlogPitch/BlogPitch";
 
-const Home: NextPage = ({ posts }) => {
-  console.log(posts);
-
+const Home: NextPage = ({ latestPost }) => {
+  console.log("home", latestPost);
   return (
     <div className={styles.container}>
       <Intro />
       <AboutMePitch />
-      <Link href="/blog">BLOG page</Link>
+      <BlogPitch post={latestPost} />
 
       <FeaturedPitch />
     </div>
@@ -39,9 +39,11 @@ export const getStaticProps = async () => {
     };
   });
 
+  const latestPost = posts[0];
+
   return {
     props: {
-      posts,
+      latestPost,
     },
   };
 };

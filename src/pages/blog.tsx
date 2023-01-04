@@ -4,7 +4,7 @@ import Link from "next/link";
 import path from "path";
 
 const Blog = ({ posts }) => {
-  console.log(posts);
+  console.log("BLOG", posts);
   return (
     <>
       <h1>Hello this is Blog page</h1>

@@ -1,6 +1,10 @@
 .wrapper {
-  color: var(--chakra-colorss-black);
+  color: var(--chakra-colors-black);
   // padding: var(--chakra-space-xl)
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content {
@@ -29,5 +33,7 @@
 
 .imageWrapper {
   height: 400px;
-  max-height: 80vh;
+  width: 400px;
+  max-width: 80vw;
+  max-height: 80vw;
 }
