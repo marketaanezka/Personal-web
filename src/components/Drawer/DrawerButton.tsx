@@ -8,8 +8,13 @@ type Props = {
 
 const DrawerButton = ({ onOpen, btnRef }: Props) => {
   return (
-    <div aria-label="toggle menu">
-      <button ref={btnRef} onClick={onOpen} className={styles.toggler}>
+    <div className={styles.drawerButton}>
+      <button
+        aria-label="open menu"
+        ref={btnRef}
+        onClick={onOpen}
+        className={styles.toggler}
+      >
         <div></div>
       </button>
     </div>

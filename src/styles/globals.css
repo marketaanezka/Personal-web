@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f4f0eb;
 }
 
 a {
@@ -20,6 +21,7 @@ html,
   margin: 0;
 }
 
+
 .profile-image {
   background-image: url('../../public/img/reactgirlstalk.webp');
   background-repeat: no-repeat;
@@ -28,7 +30,6 @@ html,
   background-position: center;
   background-size: cover;
   border-radius: 50%;
-  border: 1.5px solid rgb(71, 71, 71)
 }
 
 /* @media (prefers-color-scheme: dark) {

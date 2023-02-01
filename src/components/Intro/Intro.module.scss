@@ -7,9 +7,15 @@
   align-items: center;
 }
 
-.content {
-  padding: var(--chakra-space-xl)
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction:row;
+  }
+}
 
+.content {
+  flex-basis: 50%;
+  margin-right: 3rem;
 }
 
 .top {
@@ -23,8 +29,15 @@
   }
 }
 
+.text {
+  font-family: Inter;
+}
+
 .heading {
   font-size: 1.5rem;
+  font-family: Syne;
+  font-weight: 600;
+
 
   @media (min-width: 768px) {
     font-size: 2rem;
@@ -32,8 +45,10 @@
 }
 
 .imageWrapper {
+  margin-top: 2rem;
   height: 400px;
   width: 400px;
   max-width: 80vw;
   max-height: 80vw;
+  flex-shrink: 0;
 }

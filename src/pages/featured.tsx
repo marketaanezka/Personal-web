@@ -1,5 +1,5 @@
 const Featured = () => {
-  return <h1>Hello this is featured page</h1>;
+  return <section>Hello this is featured page</section>;
 };
 
 export default Featured;

@@ -5,8 +5,10 @@ import styles from "./Header.module.scss";
 const Header = () => {
   return (
     <header className={styles.wrapper}>
-      <Link href="/">Willis dev</Link>
-      <DrawerMenu />
+      <div className={styles.header}>
+        <Link href="/">Willis dev</Link>
+        <DrawerMenu />
+      </div>
     </header>
   );
 };

@@ -1,4 +1,16 @@
 .wrapper {
     background-color: var(--chakra-colors-lightBackground);
     min-height: calc(100vh - 3.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper section {
+    padding: var(--chakra-space-lg) var(--chakra-space-xl)
+}
+
+.wrapper > * {
+    max-width: 1000px;
+    
 }
