@@ -4,12 +4,13 @@ const Intro = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.content}>
-        <span className={styles.top}></span>
-        <span>Hello</span>
+        <span className={styles.top}>
+          <span>Hello</span>
+        </span>
         <h1 className={styles.heading}>
           I&#39;m Marketa, a Frontend Developer and Lecturer
         </h1>
-        <p>
+        <p className={styles.text}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
           eveniet quos temporibus ullam repudiandae libero sint velit excepturi
           voluptates impedit!
