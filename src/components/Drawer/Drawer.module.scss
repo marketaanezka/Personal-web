@@ -1,3 +1,9 @@
+.wrapper {
+    @media (min-width: 768px) {
+        display: none;
+      }
+}
+
 .content {
     display: flex;
     flex-direction: column;

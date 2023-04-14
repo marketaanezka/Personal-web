@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DrawerMenu from "../Drawer/Drawer";
+import Menu from "../Menu/Menu";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -8,6 +9,7 @@ const Header = () => {
       <div className={styles.header}>
         <Link href="/">Willis dev</Link>
         <DrawerMenu />
+        <Menu />
       </div>
     </header>
   );

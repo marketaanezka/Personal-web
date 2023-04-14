@@ -1,0 +1,8 @@
+.wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 768px) {
+        display: none;
+      }
+}

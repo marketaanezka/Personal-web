@@ -17,7 +17,7 @@ const DrawerMenu = () => {
   const btnRef = React.useRef() as RefObject<HTMLButtonElement>;
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <DrawerButton onOpen={onOpen} btnRef={btnRef} />
       <Drawer
         isOpen={isOpen}
@@ -41,8 +41,8 @@ const DrawerMenu = () => {
               <Link href="/featured" onClick={onClose}>
                 Featured In
               </Link>
-              <Link href="/skills" onClick={onClose}>
-                My skills
+              <Link href="/blog" onClick={onClose}>
+                Blog
               </Link>
               <Link href="/portfolio" onClick={onClose}>
                 Portfolio
@@ -51,7 +51,7 @@ const DrawerMenu = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
-    </>
+    </div>
   );
 };
 
