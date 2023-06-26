@@ -3,13 +3,16 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
+import styles from "../../styles/Blog.module.scss";
+import Link from "next/link";
 
 const Post = ({ frontMatter, mdxSource }) => {
   console.log("postpage", mdxSource);
 
   return (
-    <div>
-      <h2>{frontMatter.title}</h2>
+    <div className={styles.blog}>
+      <Link href="/blog"> ← Zpět na blog</Link>
+      <h2 className={styles.blogHeading}>{frontMatter.title}</h2>
       <MDXRemote {...mdxSource} />
     </div>
   );

@@ -4,11 +4,8 @@ const Intro = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.content}>
-        <span className={styles.top}>
-          <span>Hello</span>
-        </span>
         <h1 className={styles.heading}>
-          I&#39;m Marketa, a Frontend Developer and Lecturer
+          Markéta Willis, frontend vývojářka, mentor a lektor
         </h1>
         <p className={styles.text}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam

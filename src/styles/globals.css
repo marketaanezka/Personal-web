@@ -47,6 +47,15 @@ html,
   background-size:contain;
 }
 
+.aboutme-image {
+  background-image: url('../../public/img/about-me.webp');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size:contain;
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
