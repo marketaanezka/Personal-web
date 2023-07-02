@@ -5,4 +5,17 @@
     @media (max-width: 768px) {
         display: none;
       }
+    a {
+      padding: 0 0.5rem;
+      text-align: center;
+    }
+}
+
+.link {
+
+}
+
+.isActive {
+  font-weight: 600;
+  transition: all 0.1s;
 }

@@ -1,14 +1,22 @@
 import Link from "next/link";
 import styles from "./Menu.module.scss";
+import { useRouter } from "next/router";
+import { Routes } from "../../utils/const";
 
 const Menu = () => {
+  const router = useRouter();
+
   return (
     <div className={styles.wrapper}>
-      <Link href="/">Home</Link>
-      <Link href="/about">About me</Link>
-      <Link href="/featured">Featured In</Link>
-      <Link href="/blog">Blog</Link>
-      <Link href="/portfolio">Portfolio</Link>
+      {Routes.map((route) => (
+        <Link
+          href={route.path}
+          className={router.pathname === route.path ? styles.isActive : ""}
+          key={route.path}
+        >
+          {route.label}
+        </Link>
+      ))}
     </div>
   );
 };

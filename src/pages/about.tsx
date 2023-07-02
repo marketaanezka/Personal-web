@@ -26,9 +26,9 @@ const About = () => {
       <section className={styles.lighter}>
         <div className={styles.paragraphLeft}>
           <p>
-            <div className={styles.paragraphTop}>
+            <p className={styles.paragraphTop}>
               <span>Hello</span>
-            </div>
+            </p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Reprehenderit dolore, placeat accusantium quasi sed incidunt culpa
             assumenda praesentium facere blanditiis veniam alias soluta

@@ -8,13 +8,16 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { RefObject } from "react";
+import { Routes } from "../../utils/const";
 import styles from "./Drawer.module.scss";
 import DrawerButton from "./DrawerButton";
 
 const DrawerMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef() as RefObject<HTMLButtonElement>;
+  const router = useRouter();
 
   return (
     <div className={styles.wrapper}>
@@ -32,21 +35,18 @@ const DrawerMenu = () => {
 
           <DrawerBody>
             <div className={styles.content}>
-              <Link href="/" onClick={onClose}>
-                Home
-              </Link>
-              <Link href="/about" onClick={onClose}>
-                About me
-              </Link>
-              <Link href="/featured" onClick={onClose}>
-                Featured In
-              </Link>
-              <Link href="/blog" onClick={onClose}>
-                Blog
-              </Link>
-              <Link href="/portfolio" onClick={onClose}>
-                Portfolio
-              </Link>
+              {Routes.map((route) => (
+                <Link
+                  href={route.path}
+                  className={
+                    router.pathname === route.path ? styles.isActive : ""
+                  }
+                  key={route.path}
+                  onClick={onClose}
+                >
+                  {route.label}
+                </Link>
+              ))}
             </div>
           </DrawerBody>
         </DrawerContent>

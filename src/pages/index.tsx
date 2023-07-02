@@ -10,7 +10,6 @@ import matter from "gray-matter";
 import BlogPitch from "../components/BlogPitch/BlogPitch";
 
 const Home: NextPage = ({ latestPost }) => {
-  console.log("home", latestPost);
   return (
     <div className={styles.container}>
       <Intro />
