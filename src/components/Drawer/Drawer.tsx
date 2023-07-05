@@ -29,7 +29,7 @@ const DrawerMenu = () => {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent sx={{ backgroundColor: "#f4f0eb" }}>
+        <DrawerContent>
           <DrawerCloseButton sx={{ width: "2rem", height: "2rem" }} />
           <DrawerHeader></DrawerHeader>
 

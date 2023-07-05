@@ -14,7 +14,7 @@ const Intro = () => {
         </p>
       </div>
       <div className={styles.imageWrapper}>
-        <div className="profile-image"></div>
+        {/* <div className="profile-image"></div> */}
       </div>
     </section>
   );

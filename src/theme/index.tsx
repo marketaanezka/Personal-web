@@ -1,6 +1,13 @@
 import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
+  styles: {
+    global: {
+      html: {
+        fontSize: "20px",
+      },
+    },
+  },
   colors: {
     black: "#333",
     white: "#FFF",
@@ -12,7 +19,7 @@ export const theme = extendTheme({
       500: "#838383",
       600: "#3a3a3a",
     },
-    lightBackground: "#f4f0eb",
+    lightBackground: "#FFF",
   },
   // I'm just adding one more fontSize than the default ones
   fontSizes: {

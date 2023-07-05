@@ -5,15 +5,18 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import styles from "../../styles/Blog.module.scss";
 import Link from "next/link";
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 const Post = ({ frontMatter, mdxSource }) => {
   console.log("postpage", mdxSource);
+
+  const components = { SyntaxHighlighter };
 
   return (
     <div className={styles.blog}>
       <Link href="/blog"> ← Zpět na blog</Link>
       <h2 className={styles.blogHeading}>{frontMatter.title}</h2>
-      <MDXRemote {...mdxSource} />
+      <MDXRemote {...mdxSource} components={components} />
     </div>
   );
 };

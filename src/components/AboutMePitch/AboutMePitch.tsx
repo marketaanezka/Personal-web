@@ -10,7 +10,9 @@ const AboutMePitch = () => {
         eveniet quos temporibus ullam repudiandae libero sint velit excepturi
         voluptates impedit!
       </p>
-      <Link href="/about">Read more &#x2192;</Link>
+      <Link href="/about" className={styles.link}>
+        Read more &#x2192;
+      </Link>
     </section>
   );
 };

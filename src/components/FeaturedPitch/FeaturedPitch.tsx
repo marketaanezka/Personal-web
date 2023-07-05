@@ -28,7 +28,9 @@ const FeaturedPitch = () => {
           height={100}
         />
       </div>
-      <Link href="/featured">Read more &#x2192;</Link>
+      <Link href="/featured" className={styles.link}>
+        Read more &#x2192;
+      </Link>
     </section>
   );
 };
