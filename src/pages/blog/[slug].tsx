@@ -14,8 +14,11 @@ const Post = ({ frontMatter, mdxSource }) => {
 
   return (
     <div className={styles.blog}>
-      <Link href="/blog"> ← Zpět na blog</Link>
-      <h2 className={styles.blogHeading}>{frontMatter.title}</h2>
+      <Link href="/blog" className={styles.retrunlink}>
+        {" "}
+        ← Zpět na blog
+      </Link>
+      <h1 className={styles.blogHeading}>{frontMatter.title}</h1>
       <MDXRemote {...mdxSource} components={components} />
     </div>
   );

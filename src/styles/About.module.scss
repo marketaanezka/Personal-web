@@ -21,7 +21,7 @@
   }
   
   .top {
-    font-family: Montserrat;
+    font-family: GTBold, sans-serif;
     font-weight: 400;
     font-size: var(--chakra-fontSizes-lg);
     &::before {
@@ -41,7 +41,7 @@
   
   .heading {
     font-size: var(--chakra-fontSizes-3xl);
-    font-family: Montserrat;
+    font-family: GTBold, sans-serif;
     font-weight: 600;
     line-height: 1.3;
   }
@@ -80,7 +80,7 @@
 }
 
 .paragraphTop {
-    font-family: Montserrat;
+    font-family: GTBold, sans-serif;
     font-weight: 400;
     font-size: var(--chakra-fontSizes-lg);
     &::before {

@@ -8,13 +8,25 @@
         width: 80%;
       }
 
-    pre {
-        background-color: fuchsia;
-        font-size: 15px;
+    p, code {
+        font-size: var(--chakra-fontSizes-md);
+    }
+
+    h2 {
+        font-size: var(--chakra-fontSizes-xl);
+        font-weight: 600;
+        font-family: GTBold, sans-serif;
     }
 }
 
+.retrunlink {
+    font-size: var(--chakra-fontSizes-sm);
+    color: var(--chakra-colors-gray-500);
+}
+
 .blogHeading {
-    font-size: var(--chakra-fontSizes-xl);
+    font-size: var(--chakra-fontSizes-3xl);
+    font-weight: 600;
     margin-bottom: 1rem;
+    font-family: GTBold, sans-serif;
 }
