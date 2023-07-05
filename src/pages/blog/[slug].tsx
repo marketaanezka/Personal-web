@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -6,11 +7,24 @@ import { MDXRemote } from "next-mdx-remote";
 import styles from "../../styles/Blog.module.scss";
 import Link from "next/link";
 import SyntaxHighlighter from "react-syntax-highlighter";
+import Image from "next/image";
 
 const Post = ({ frontMatter, mdxSource }) => {
   console.log("postpage", mdxSource);
 
-  const components = { SyntaxHighlighter };
+  const ResponsiveImage = (props) => (
+    <Image
+      alt={props.alt}
+      sizes="100vw"
+      style={{ width: "100%", height: "auto" }}
+      {...props}
+    />
+  );
+
+  const components = {
+    SyntaxHighlighter,
+    img: ResponsiveImage,
+  };
 
   return (
     <div className={styles.blog}>
