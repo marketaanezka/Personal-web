@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable */
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -6,23 +6,30 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import styles from "../../styles/Blog.module.scss";
 import Link from "next/link";
-import SyntaxHighlighter from "react-syntax-highlighter";
 import Image from "next/image";
 
-const Post = ({ frontMatter, mdxSource }) => {
-  console.log("postpage", mdxSource);
+type ResponsiveImageProps = {
+  alt: string;
+  src: string;
+};
 
-  const ResponsiveImage = (props) => (
-    <Image
-      alt={props.alt}
-      sizes="100vw"
-      style={{ width: "100%", height: "auto" }}
-      {...props}
-    />
-  );
+const ResponsiveImage = (props: ResponsiveImageProps) => (
+  <Image sizes="100vw" style={{ width: "100%", height: "auto" }} {...props} />
+);
 
+type PostProps = {
+  frontMatter: {
+    title: string;
+  };
+  mdxSource: {
+    compiledSource: string;
+    renderedOutput: string;
+    scope: Record<string, unknown>;
+  };
+};
+
+const Post = ({ frontMatter, mdxSource }: PostProps) => {
   const components = {
-    SyntaxHighlighter,
     img: ResponsiveImage,
   };
 
@@ -33,6 +40,7 @@ const Post = ({ frontMatter, mdxSource }) => {
         ← Zpět na blog
       </Link>
       <h1 className={styles.blogHeading}>{frontMatter.title}</h1>
+      {/* @ts-ignore */}
       <MDXRemote {...mdxSource} components={components} />
     </div>
   );
@@ -55,7 +63,13 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params: { slug } }) => {
+type BlogProps = {
+  params: {
+    slug: string;
+  };
+};
+
+export const getStaticProps = async ({ params: { slug } }: BlogProps) => {
   const markdownWithMeta = fs.readFileSync(
     path.join("src", "posts", slug + ".mdx")
   );
