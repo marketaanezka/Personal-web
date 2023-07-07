@@ -7,6 +7,8 @@ import { MDXRemote } from "next-mdx-remote";
 import styles from "../../styles/Blog.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import Prism from "prismjs";
+import { useEffect } from "react";
 
 type ResponsiveImageProps = {
   alt: string;
@@ -16,6 +18,26 @@ type ResponsiveImageProps = {
 const ResponsiveImage = (props: ResponsiveImageProps) => (
   <Image sizes="100vw" style={{ width: "100%", height: "auto" }} {...props} />
 );
+
+type CodeBlockProps = {
+  children: string;
+  language: string;
+};
+
+const CodeBlock = ({ children, language }: CodeBlockProps) => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+  return (
+    <pre className={styles.codeWrapper}>
+      <code className={`language-${language}`}>{children}</code>
+    </pre>
+  );
+};
+
+const codeSample = `const add = (a, b) => {
+  return a + b;
+}`;
 
 type PostProps = {
   frontMatter: {
@@ -31,6 +53,7 @@ type PostProps = {
 const Post = ({ frontMatter, mdxSource }: PostProps) => {
   const components = {
     img: ResponsiveImage,
+    CodeBlock,
   };
 
   return (

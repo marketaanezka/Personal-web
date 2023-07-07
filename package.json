@@ -22,6 +22,7 @@
     "gray-matter": "^4.0.3",
     "next": "13.0.1",
     "next-mdx-remote": "^4.2.0",
+    "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-syntax-highlighter": "^15.5.0",
@@ -30,6 +31,7 @@
   },
   "devDependencies": {
     "@types/node": "18.7.5",
+    "@types/prismjs": "^1.26.0",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "@types/react-syntax-highlighter": "^15.5.7",
