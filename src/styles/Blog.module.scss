@@ -23,6 +23,7 @@
         background-color: var(--chakra-colors-gray-200);
         border-radius: 0.25rem;
     }
+    
 
     h2 {
         font-weight: 600;
@@ -30,9 +31,23 @@
     }
 }
 
+html[data-theme='dark'] .blog p > code {
+    padding: 0.2rem 0.4rem;
+    font-size: 90%;
+    background-color: var(--chakra-colors-darkPurple);
+    color: var(--chakra-colors-gray-200);
+    border-radius: 0.25rem;
+}
+
 .retrunlink {
     font-size: var(--chakra-fontSizes-sm);
     color: var(--chakra-colors-gray-500);
+}
+
+@media (prefers-color-scheme: dark) {
+    .retrunlink {
+        color: var(--chakra-colors-gray-300);
+    }
 }
 
 .blogHeading {

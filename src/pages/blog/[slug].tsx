@@ -9,7 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Prism from "prismjs";
 import { useEffect } from "react";
-import { Heading } from "@chakra-ui/react";
+import { Code, Heading } from "@chakra-ui/react";
 
 type ResponsiveImageProps = {
   alt: string;
@@ -36,10 +36,6 @@ const CodeBlock = ({ children, language }: CodeBlockProps) => {
   );
 };
 
-const codeSample = `const add = (a, b) => {
-  return a + b;
-}`;
-
 type PostProps = {
   frontMatter: {
     title: string;
@@ -55,6 +51,7 @@ const Post = ({ frontMatter, mdxSource }: PostProps) => {
   const components = {
     img: ResponsiveImage,
     CodeBlock,
+    Code,
   };
 
   return (

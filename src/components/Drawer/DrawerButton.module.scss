@@ -24,7 +24,7 @@
 }
 
 .toggler > div {
-    background-color: var(--chakra-colors-black);
+    background-color: var(--chakra-colors-chakra-body-text);
     position: relative;
     top: 0;
     left: 0;
@@ -37,7 +37,7 @@
 .toggler > div::before,
 .toggler > div::after{
     content: '';
-    background-color: var(--chakra-colors-black);
+    background-color: var(--chakra-colors-chakra-body-text);
     position: absolute;
     display: block;
     top: -7px;
