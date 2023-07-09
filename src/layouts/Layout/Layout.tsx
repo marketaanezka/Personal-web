@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "../../components/Header/Header";
 import styles from "./Layout.module.scss";
@@ -15,7 +16,9 @@ const Layout = ({ children }: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={styles.wrapper}>{children}</main>
+      <Box as="main" className={styles.wrapper}>
+        {children}
+      </Box>
     </div>
   );
 };
