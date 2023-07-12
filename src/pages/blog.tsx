@@ -1,20 +1,30 @@
+import { VStack } from "@chakra-ui/react";
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import path from "path";
+import { FC } from "react";
+import { Post } from "../common/types";
+import BlogPostCard from "../components/BlogPostCard/BlogPostCard";
 
-const Blog = ({ posts }) => {
+interface BlogPostProps {
+  posts: Post[];
+}
+
+const Blog: FC<BlogPostProps> = ({ posts }) => {
   return (
     <>
       <h1>Hello this is Blog page</h1>
-      {posts.map((post, index) => {
-        console.log("individual post", post.slug);
-        return (
-          <Link href={`/blog/${post.slug}`} key={`${post.slug}-${index}`}>
-            <h2>{post.frontMatter.title}</h2>
-          </Link>
-        );
-      })}
+      <VStack spacing={4} align="stretch">
+        {posts.map((post, index) => {
+          console.log("individual post", post);
+          return (
+            <Link href={`/blog/${post.slug}`} key={`${post.slug}-${index}`}>
+              <BlogPostCard post={post} />
+            </Link>
+          );
+        })}
+      </VStack>
     </>
   );
 };

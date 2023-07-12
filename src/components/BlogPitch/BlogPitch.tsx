@@ -1,18 +1,24 @@
-import fs from "fs";
-import matter from "gray-matter";
+import { Text, Card, Image, Stack, CardBody, Heading } from "@chakra-ui/react";
 import Link from "next/link";
-import path from "path";
+import { FC } from "react";
 import styles from "./BlogPitch.module.scss";
+import { Post } from "../../common/types";
+import BlogPostCard from "../BlogPostCard/BlogPostCard";
 
-const BlogPitch = ({ post }) => {
-  console.log(post);
+interface BlogPitchProps {
+  post: Post;
+}
+
+const BlogPitch: FC<BlogPitchProps> = ({ post }) => {
   return (
     <section className={styles.wrapper}>
       <h2 className={styles.heading}>Nejnovější blogpost</h2>
-      <h3>{post.frontMatter.title}</h3>
-      <p>{post.frontMatter.description}</p>
-      <Link href={`/blog/${post.slug}`} className={styles.link}>
-        Read more &#x2192;
+
+      <Link href={`/blog/${post.slug}`}>
+        <BlogPostCard post={post} />
+      </Link>
+      <Link href={`/blog`} className={styles.link}>
+        All blogposts &#x2192;
       </Link>
     </section>
   );
