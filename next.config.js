@@ -1,5 +1,5 @@
 // https://dev.to/msoup/fixing-require-statement-not-part-of-import-statementeslinttypescript-eslintno-var-requires-25n3
-
+/* eslint-disable */
 const withMDX = require('@next/mdx')({
     extension: /\.mdx?$/,
     options: {
@@ -16,4 +16,7 @@ const withMDX = require('@next/mdx')({
 module.exports = withMDX({
     // Append the default value with md extensions
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    images: {
+        domains: ['images.unsplash.com'],
+    },
 })

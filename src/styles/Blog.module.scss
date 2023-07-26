@@ -1,7 +1,7 @@
 .blog {
     width: 100%;
     min-height: calc(100vh - 3.5rem);
-    padding: 2rem 10%;
+    padding: 2rem 7%;
     font-size: 1.2rem;
 
     @media (min-width: 768px) {
@@ -20,7 +20,7 @@
         padding: 0.2rem 0.4rem;
         font-size: 90%;
         color: var(--chakra-colors-darkPurple);
-        background-color: var(--chakra-colors-gray-200);
+        background-color: var(--chakra-colors-gray-300);
         border-radius: 0.25rem;
     }
     
@@ -28,26 +28,13 @@
     h2 {
         font-weight: 600;
         font-family: GTBold, sans-serif;
+        border: 2px solid var(pinkish);
     }
-}
-
-html[data-theme='dark'] .blog p > code {
-    padding: 0.2rem 0.4rem;
-    font-size: 90%;
-    background-color: var(--chakra-colors-darkPurple);
-    color: var(--chakra-colors-gray-200);
-    border-radius: 0.25rem;
 }
 
 .retrunlink {
     font-size: var(--chakra-fontSizes-sm);
     color: var(--chakra-colors-gray-500);
-}
-
-@media (prefers-color-scheme: dark) {
-    .retrunlink {
-        color: var(--chakra-colors-gray-300);
-    }
 }
 
 .blogHeading {
@@ -56,3 +43,18 @@ html[data-theme='dark'] .blog p > code {
     margin-bottom: 1rem;
     font-family: GTBold, sans-serif;
 }
+
+html[data-theme='dark'] {
+    .blog p > code {
+        padding: 0.2rem 0.4rem;
+        font-size: 90%;
+        background-color: var(--chakra-colors-darkPurple);
+        color: var(--chakra-colors-gray-200);
+        border-radius: 0.25rem;
+    }
+
+    .retrunlink {
+        color: var(--chakra-colors-gray-400);
+    }
+}
+
