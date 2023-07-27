@@ -1,21 +1,22 @@
-import { Box, Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import Link from "next/link";
 import DrawerMenu from "../Drawer/Drawer";
 import Menu from "../Menu/Menu";
 import styles from "./Header.module.scss";
+import ToggleModeButton from "./ToggleModeButton";
 
 const Header = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const color = useColorModeValue("#fafafa", "gray.800");
 
   return (
-    <Box as="header" className={styles.wrapper}>
+    <Box as="header" className={styles.wrapper} bg={color}>
       <div className={styles.header}>
-        <Link href="/">Willis dev</Link>
-        <Button onClick={toggleColorMode}>
-          Toggle {colorMode === "light" ? "Dark" : "Light"}
-        </Button>
+        <Box as="span">
+          <Link href="/">Willis dev</Link>
+        </Box>
         <DrawerMenu />
         <Menu />
+        <ToggleModeButton />
       </div>
     </Box>
   );

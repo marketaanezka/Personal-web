@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./Menu.module.scss";
 import { useRouter } from "next/router";
 import { Routes } from "../../utils/const";
+import ToggleModeButton from "../Header/ToggleModeButton";
 
 const Menu = () => {
   const router = useRouter();

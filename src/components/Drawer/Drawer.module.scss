@@ -4,6 +4,17 @@
       }
 }
 
+.drawerBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  button {
+    width: 2rem;
+    align-self: end;
+  }
+}
+
 .content {
     display: flex;
     flex-direction: column;

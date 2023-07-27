@@ -8,7 +8,11 @@ type BlogThumbImageProps = {
 
 const BlogThumbImage = ({ src, alt }: BlogThumbImageProps) => {
   return (
-    <Box w="10rem" h="auto" position="relative">
+    <Box
+      w={{ base: "auto", sm: "10rem" }}
+      h={{ base: "10rem", sm: "auto" }}
+      position="relative"
+    >
       <Box>
         <Image
           src={src}

@@ -1,3 +1,5 @@
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Button } from "@chakra-ui/react";
 import { RefObject } from "react";
 import styles from "./DrawerButton.module.scss";
 
@@ -8,16 +10,14 @@ type Props = {
 
 const DrawerButton = ({ onOpen, btnRef }: Props) => {
   return (
-    <div className={styles.drawerButton}>
-      <button
-        aria-label="open menu"
-        ref={btnRef}
-        onClick={onOpen}
-        className={styles.toggler}
-      >
-        <div></div>
-      </button>
-    </div>
+    <Button
+      aria-label="open menu"
+      ref={btnRef}
+      onClick={onOpen}
+      fontWeight="light"
+    >
+      Menu
+    </Button>
   );
 };
 

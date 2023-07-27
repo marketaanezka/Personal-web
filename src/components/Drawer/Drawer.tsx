@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { RefObject } from "react";
 import { Routes } from "../../utils/const";
+import ToggleModeButton from "../Header/ToggleModeButton";
 import styles from "./Drawer.module.scss";
 import DrawerButton from "./DrawerButton";
 
@@ -33,7 +34,7 @@ const DrawerMenu = () => {
           <DrawerCloseButton sx={{ width: "2rem", height: "2rem" }} />
           <DrawerHeader></DrawerHeader>
 
-          <DrawerBody>
+          <DrawerBody className={styles.drawerBody}>
             <div className={styles.content}>
               {Routes.map((route) => (
                 <Link
