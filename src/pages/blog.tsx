@@ -1,4 +1,4 @@
-import { VStack } from "@chakra-ui/react";
+import { Box, Heading, VStack, Text } from "@chakra-ui/react";
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
@@ -13,8 +13,12 @@ interface BlogPostProps {
 
 const Blog: FC<BlogPostProps> = ({ posts }) => {
   return (
-    <>
-      <h1>Hello this is Blog page</h1>
+    <Box>
+      <Heading>Blog</Heading>
+      <Text fontSize="xl" marginY="2rem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+        molestiae.
+      </Text>
       <VStack spacing={4} align="stretch">
         {posts.map((post, index) => {
           console.log("individual post", post);
@@ -25,7 +29,7 @@ const Blog: FC<BlogPostProps> = ({ posts }) => {
           );
         })}
       </VStack>
-    </>
+    </Box>
   );
 };
 

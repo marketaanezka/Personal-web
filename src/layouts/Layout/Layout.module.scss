@@ -4,10 +4,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: var(--chakra-space-lg) 7%;
 }
 
 .wrapper section {
-    padding: var(--chakra-space-lg) var(--chakra-space-xl)
+    padding: var(--chakra-space-lg) 0;
 }
 
 .wrapper > * {
