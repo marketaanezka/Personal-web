@@ -1,12 +1,12 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
 import Link from "next/link";
 import DrawerMenu from "../Drawer/Drawer";
 import Menu from "../Menu/Menu";
 import styles from "./Header.module.scss";
-import ToggleModeButton from "./ToggleModeButton";
 
 const Header = () => {
-  const color = useColorModeValue("#fafafa", "gray.800");
+  const color = useColorModeValue("gray.100", "gray.800");
+  const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
 
   return (
     <Box as="header" className={styles.wrapper} bg={color}>
@@ -14,9 +14,7 @@ const Header = () => {
         <Box as="span">
           <Link href="/">Willis dev</Link>
         </Box>
-        <DrawerMenu />
-        <Menu />
-        <ToggleModeButton />
+        {isSmallScreen ? <DrawerMenu /> : <Menu />}
       </div>
     </Box>
   );

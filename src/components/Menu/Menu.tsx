@@ -3,6 +3,7 @@ import styles from "./Menu.module.scss";
 import { useRouter } from "next/router";
 import { Routes } from "../../utils/const";
 import ToggleModeButton from "../Header/ToggleModeButton";
+import MenuItem from "../Header/MenuItem";
 
 const Menu = () => {
   const router = useRouter();
@@ -10,14 +11,15 @@ const Menu = () => {
   return (
     <div className={styles.wrapper}>
       {Routes.map((route) => (
-        <Link
+        <MenuItem
           href={route.path}
-          className={router.pathname === route.path ? styles.isActive : ""}
+          isActive={router.pathname === route.path}
           key={route.path}
         >
           {route.label}
-        </Link>
+        </MenuItem>
       ))}
+      <ToggleModeButton />
     </div>
   );
 };

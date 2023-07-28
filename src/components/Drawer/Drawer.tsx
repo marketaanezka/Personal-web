@@ -32,7 +32,9 @@ const DrawerMenu = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton sx={{ width: "2rem", height: "2rem" }} />
-          <DrawerHeader></DrawerHeader>
+          <DrawerHeader>
+            <ToggleModeButton />
+          </DrawerHeader>
 
           <DrawerBody className={styles.drawerBody}>
             <div className={styles.content}>
