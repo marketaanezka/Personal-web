@@ -1,11 +1,8 @@
-.wrapper {
-    // color: #202020;
-}
-    
 .heading {
   font-size: var(--chakra-fontSizes-2xl);
   font-family: GTBold, sans-serif;
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .thumbs {
@@ -13,11 +10,6 @@
   align-items: center;
   flex-direction: column;
   gap: var(--chakra-space-md);
-
-  img {
-    border: 3px solid var(--chakra-colors-gray-300);
-  }
-
 }
 
 @media (min-width: 768px) {

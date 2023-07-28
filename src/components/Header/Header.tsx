@@ -1,4 +1,9 @@
-import { Box, useColorModeValue, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  useColorModeValue,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import DrawerMenu from "../Drawer/Drawer";
 import Menu from "../Menu/Menu";
@@ -16,6 +21,7 @@ const Header = () => {
         </Box>
         {isSmallScreen ? <DrawerMenu /> : <Menu />}
       </div>
+      <Divider />
     </Box>
   );
 };
