@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { RefObject } from "react";
 import { Routes } from "../../utils/const";
+import MenuItem from "../Header/MenuItem";
 import ToggleModeButton from "../Header/ToggleModeButton";
 import styles from "./Drawer.module.scss";
 import DrawerButton from "./DrawerButton";
@@ -39,16 +40,14 @@ const DrawerMenu = () => {
           <DrawerBody className={styles.drawerBody}>
             <div className={styles.content}>
               {Routes.map((route) => (
-                <Link
+                <MenuItem
                   href={route.path}
-                  className={
-                    router.pathname === route.path ? styles.isActive : ""
-                  }
+                  isActive={router.pathname === route.path}
                   key={route.path}
                   onClick={onClose}
                 >
                   {route.label}
-                </Link>
+                </MenuItem>
               ))}
             </div>
           </DrawerBody>
