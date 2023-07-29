@@ -15,7 +15,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head></Head>
+        <Head>
+          <script async src="//www.instagram.com/embed.js"></script>
+        </Head>
         <body>
           <Main />
           <NextScript />
