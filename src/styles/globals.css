@@ -20,6 +20,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Rowdies";
+  src: url("../assets/Rowdies-font/Rowdies-Bold.ttf");
+  src: url("../assets/Rowdies-font/Rowdies-Light.ttf");
+  src: url("../assets/Rowdies-font/Rowdies-Regular.ttf");
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;

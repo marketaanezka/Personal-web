@@ -17,7 +17,10 @@ const Header = () => {
     <Box as="header" className={styles.wrapper} bg={color}>
       <div className={styles.header}>
         <Box as="span">
-          <Link href="/">Willis dev</Link>
+          <Link href="/">
+            <span className={styles.name}>Willis</span>
+            <span className={styles.popColor}>Dev</span>
+          </Link>
         </Box>
         {isSmallScreen ? <DrawerMenu /> : <Menu />}
       </div>

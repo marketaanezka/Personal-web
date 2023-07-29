@@ -16,16 +16,28 @@ const FeaturedPitch = () => {
         eveniet quos temporibus.
       </Text>
       <Flex align="center" my={2}>
-        <Avatar src="/img/juniorguru.png" marginRight="0.5rem" size="xs" />
         <Heading size="sm">Junior Guru podcast</Heading>
       </Flex>
-      <iframe
+      {/* <iframe
         src="https://open.spotify.com/embed/episode/0IWgQHavpmoMa3TJI6w2w6?utm_source=generator"
         width="100%"
         height="152"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
         style={{ borderRadius: "12px" }}
+      ></iframe> */}
+      <iframe
+        allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+        frameBorder="0"
+        height="175"
+        style={{
+          width: "100%",
+          maxWidth: "950px",
+          overflow: "hidden",
+          borderRadius: "10px",
+        }}
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        src="https://embed.podcasts.apple.com/cz/podcast/6-mark%C3%A9ta-willis-applifting-o-jej%C3%AD-cest%C4%9B-k-it-a/id1603653549?i=1000566466352"
       ></iframe>
       <Flex
         gap={{ base: 0, lg: 6 }}
@@ -60,7 +72,7 @@ const FeaturedPitch = () => {
                 marginRight="0.5rem"
                 size="xs"
               />
-              <Heading size="sm">A pedagogue-turned-developer</Heading>
+              <Heading size="sm">How did I find my way to IT?</Heading>
               <ExternalLink ml={2} />
             </Flex>
             <Text>
