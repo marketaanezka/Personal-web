@@ -8,10 +8,10 @@ const ToggleModeButton = () => {
     <IconButton
       isRound={true}
       variant="solid"
-      size="sm"
+      size="xs"
       colorScheme="gray"
       aria-label={colorMode === "light" ? "dark mode" : "light mode"}
-      fontSize="20px"
+      fontSize="0.8rem"
       icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       onClick={toggleColorMode}
     />

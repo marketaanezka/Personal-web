@@ -8,7 +8,7 @@ import heroine from "../../../public/img/heroine.png";
 const FeaturedPitch = () => {
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.heading}>Featured in</h2>
+      <h2 className={styles.heading}>Kde jsem se objevila</h2>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
         eveniet quos temporibus.
@@ -28,7 +28,7 @@ const FeaturedPitch = () => {
           height={100}
         />
       </div>
-      <Link href="/featured" className={styles.link}>
+      <Link href="/media" className={styles.link}>
         Read more &#x2192;
       </Link>
     </section>

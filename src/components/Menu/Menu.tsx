@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./Menu.module.scss";
 import { useRouter } from "next/router";
 import { Routes } from "../../utils/const";
@@ -8,9 +7,11 @@ import MenuItem from "../Header/MenuItem";
 const Menu = () => {
   const router = useRouter();
 
+  const routesNoHome = Routes.filter((route) => route.path !== "/");
+
   return (
     <div className={styles.wrapper}>
-      {Routes.map((route) => (
+      {routesNoHome.map((route) => (
         <MenuItem
           href={route.path}
           isActive={router.pathname === route.path}

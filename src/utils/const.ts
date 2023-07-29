@@ -5,11 +5,11 @@ export const Routes = [
     },
     {
         path: '/about',
-        label: 'About'
+        label: 'O mně'
     },
     {
-        path: '/featured',
-        label: 'Featured In'
+        path: '/media',
+        label: 'Media'
     },
     {
         path: '/blog',
