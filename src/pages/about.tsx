@@ -1,6 +1,45 @@
 import styles from "../styles/About.module.scss";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import laptop from "../assets/images/laptop-1.png";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
+import { Heart, Instagram } from "../assets/Icons/icons";
+import { FC } from "react";
+
+interface InstagramImageProps {
+  imageLink: string;
+  imageSource: StaticImageData;
+}
+
+const InstagramImage: FC<InstagramImageProps> = ({
+  imageLink,
+  imageSource,
+}) => {
+  return (
+    <Box
+      className={styles.paragraphImage}
+      background={"#867798"}
+      borderRadius={"md"}
+    >
+      <Link href="https://www.instagram.com/marketa_willis/">
+        <Flex
+          p={1}
+          alignItems={"center"}
+          justifyContent="space-between"
+          color={"white"}
+        >
+          <Flex alignItems={"center"}>
+            <Instagram fontSize="xl" mr={1} opacity={0.7} />
+            <Text fontSize="0.8rem">marketa_willis</Text>
+          </Flex>
+          <Heart fontSize="md" mr={2} />
+        </Flex>
+      </Link>
+      <Link href={imageLink}>
+        <Image src={imageSource} alt="laptop" />
+      </Link>
+    </Box>
+  );
+};
 
 const About = () => {
   return (
@@ -24,11 +63,8 @@ const About = () => {
         </div>
       </section>
       <section className={styles.lighter}>
-        <div className={styles.paragraphLeft}>
-          <p>
-            <p className={styles.paragraphTop}>
-              <span>Hello</span>
-            </p>
+        <Box className={styles.paragraphLeft}>
+          <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Reprehenderit dolore, placeat accusantium quasi sed incidunt culpa
             assumenda praesentium facere blanditiis veniam alias soluta
@@ -39,15 +75,13 @@ const About = () => {
             reprehenderit, sunt accusantium omnis iusto consectetur maiores
             modi. Recusandae atque possimus distinctio eligendi vel quisquam
             officia dignissimos debitis deserunt cum. Eos numquam porro iure
-            reiciendis eveniet explicabo, maxime aspernatur quas nostrum
-            voluptas molestias fuga necessitatibus laboriosam dignissimos nulla
-            animi. Nesciunt architecto modi dolore. Eum, labore quaerat?
-            Laboriosam laudantium e
-          </p>
-          <div className={styles.paragraphImage}>
-            <Image src={laptop} alt="laptop" />
-          </div>
-        </div>
+            reiciendis eveniet explicabo, maxime aspernatur quas n
+          </Text>
+          <InstagramImage
+            imageLink="https://www.instagram.com/p/CkIfwipjfRm/"
+            imageSource={laptop}
+          />
+        </Box>
         <div className={styles.paragraphRight}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -58,15 +92,12 @@ const About = () => {
             culpa aspernatur veritatis aut inventore deleniti pariatur, porro
             tenetur laudantium exercitationem dolorum quis velit qui? Magnam
             reprehenderit, sunt accusantium omnis iusto consectetur maiores
-            modi. Recusandae atque possimus distinctio eligendi vel quisquam
-            officia dignissimos debitis deserunt cum. Eos numquam porro iure
-            reiciendis eveniet explicabo, maxime aspernatur quas nostrum
-            voluptas molestias fuga necessitatibus laboriosam dignissimos nulla
-            animi. Nesciunt architecto modi dolore. Eum, labore quaerat?
+            modi. Recusandae atque possimus distinctio eligendi vel quisqu
           </p>
-          <div className={styles.paragraphImage}>
-            <Image src={laptop} alt="laptop" />
-          </div>
+          <InstagramImage
+            imageLink="https://www.instagram.com/p/CkIfwipjfRm/"
+            imageSource={laptop}
+          />
         </div>
       </section>
     </div>
