@@ -51,15 +51,17 @@ const FeaturedPitch = () => {
           >
             <Flex align="center" mt="0.5">
               <Avatar src="/img/wdf.png" marginRight="0.5rem" size="xs" />
-              <Heading size="sm">Se zapojením do komunit bych neváhala</Heading>
+              <Heading size="sm" className="linkUnderline">
+                Se zapojením do komunit bych neváhala
+              </Heading>
               <ExternalLink ml={2} />
             </Flex>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-              officiis quisquam pariatur ipsa aliquam beatae soluta animi
-              dignissimos est obcaecati.
-            </Text>
           </Link>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In officiis
+            quisquam pariatur ipsa aliquam beatae soluta animi dignissimos est
+            obcaecati.
+          </Text>
         </Box>
         <Box my={4}>
           <Link
@@ -72,15 +74,17 @@ const FeaturedPitch = () => {
                 marginRight="0.5rem"
                 size="xs"
               />
-              <Heading size="sm">How did I find my way to IT?</Heading>
+              <Heading size="sm" className="linkUnderline">
+                How did I find my way to IT?
+              </Heading>
               <ExternalLink ml={2} />
             </Flex>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-              officiis quisquam pariatur ipsa aliquam beatae soluta animi
-              dignissimos est obcaecati.
-            </Text>
           </Link>
+          <Text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In officiis
+            quisquam pariatur ipsa aliquam beatae soluta animi dignissimos est
+            obcaecati.
+          </Text>
         </Box>
       </Flex>
       <Link href="/media" className={styles.link}>

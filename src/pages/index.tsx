@@ -4,7 +4,6 @@ import Intro from "../components/HomePage/Intro/Intro";
 import styles from "../styles/Home.module.scss";
 import AboutMePitch from "../components/HomePage/AboutMePitch/AboutMePitch";
 import FeaturedPitch from "../components/HomePage/FeaturedPitch/FeaturedPitch";
-import Link from "next/link";
 import path from "path";
 import matter from "gray-matter";
 import BlogPitch from "../components/HomePage/BlogPitch/BlogPitch";

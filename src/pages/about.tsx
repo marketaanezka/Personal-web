@@ -17,7 +17,7 @@ const InstagramImage: FC<InstagramImageProps> = ({
   return (
     <Box
       className={styles.paragraphImage}
-      background={"#504256"}
+      background={"#4d3d9f"}
       borderRadius={"md"}
     >
       <Link href="https://www.instagram.com/marketa_willis/">

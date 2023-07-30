@@ -25,9 +25,9 @@
 
 .name, .popColor {
   font-family: 'Rowdies';
-  font-size: larger;
+  font-size: 1.5rem;
 }
 
 .popColor {
-  color: #b990ca;
+  color: var(--chakra-colors-lila-400);
 }

@@ -8,4 +8,9 @@
   .link {
     font-style: italic;
     line-height: 2;
+    color: var(--chakra-colors-lila-300);
+
+    &:hover {
+      color: var(--chakra-colors-lila-500)
+    }
   }

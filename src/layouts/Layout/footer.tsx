@@ -7,7 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import SocialMediaButtons from "../../components/SocialMediaButtons/socialMediaButtons";
+import SocialMediaButtons from "../../components/SocialMediaButtons/SocialMediaButtons";
 
 export default function Footer() {
   return (

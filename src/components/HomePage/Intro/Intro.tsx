@@ -1,6 +1,6 @@
 import { Link, Stack, Text } from "@chakra-ui/react";
 import { Github, Instagram, Linkedin } from "../../../assets/Icons/icons";
-import SocialMediaButtons from "../../SocialMediaButtons/socialMediaButtons";
+import SocialMediaButtons from "../../SocialMediaButtons/SocialMediaButtons";
 import styles from "./Intro.module.scss";
 
 const Intro = () => {

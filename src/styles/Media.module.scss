@@ -1,0 +1,8 @@
+.linkUnderline {
+    background-image: linear-gradient(0deg,rgba(180,170,255,.4) 0,rgba(180,170,255,.4) 30%,transparent 40%,transparent);
+    border-bottom: none;
+
+    &:hover {
+        background-image: linear-gradient(0deg,#b4aaff 0,#b4aaff 30%,transparent 0,transparent);
+    }
+}

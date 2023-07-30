@@ -30,8 +30,19 @@ export const theme = extendTheme({
       500: "#838383",
       600: "#3a3a3a",
     },
+    lila: {
+      100: "#e9e4ff",
+      200: "#cec4ff",
+      300: "#b3a4ff",
+      400: "#9e8bff",
+      500: "#7c6bd7",
+      600: "#360fff",
+      700: "#2100ca",
+      800: "#554994",
+    },
     lightBackground: "#FFF",
     darkPurple: "#504256",
+    lightPurple: "#b990ca",
   },
   // I'm just adding one more fontSize than the default ones
   fontSizes: {

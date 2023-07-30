@@ -5,6 +5,7 @@ import { ExternalLink } from "../assets/Icons/icons";
 import Link from "next/link";
 import { FC } from "react";
 import { MediaPosts } from "../data/mediaposts";
+import styles from "../styles/Media.module.scss";
 
 interface MediaPostProps {
   externalLink: string;
@@ -24,7 +25,9 @@ const MediaPost: FC<MediaPostProps> = ({
       <Link href={externalLink} target="_blank">
         <Flex align="center" mt="0.5">
           <Avatar src={avatar} marginRight="0.5rem" size="xs" />
-          <Heading size="sm">{heading}</Heading>
+          <Heading size="sm" className="linkUnderline">
+            {heading}
+          </Heading>
           <ExternalLink ml={2} />
         </Flex>
         <Text>{description}</Text>
