@@ -5,7 +5,7 @@ import wdf from "../../../public/img/wdf.png";
 import styles from "./FeaturedPitch.module.scss";
 import heroine from "../../../public/img/heroine.png";
 import { Box, Text, Heading, Avatar, Flex } from "@chakra-ui/react";
-import { ExternalLink } from "../../assets/Icons/icons";
+import { ExternalLink } from "../../../assets/Icons/icons";
 
 const FeaturedPitch = () => {
   return (

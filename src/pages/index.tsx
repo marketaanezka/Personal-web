@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import fs from "fs";
-import Intro from "../components/Intro/Intro";
+import Intro from "../components/HomePage/Intro/Intro";
 import styles from "../styles/Home.module.scss";
-import AboutMePitch from "../components/AboutMePitch/AboutMePitch";
-import FeaturedPitch from "../components/FeaturedPitch/FeaturedPitch";
+import AboutMePitch from "../components/HomePage/AboutMePitch/AboutMePitch";
+import FeaturedPitch from "../components/HomePage/FeaturedPitch/FeaturedPitch";
 import Link from "next/link";
 import path from "path";
 import matter from "gray-matter";
-import BlogPitch from "../components/BlogPitch/BlogPitch";
+import BlogPitch from "../components/HomePage/BlogPitch/BlogPitch";
 
 const Home: NextPage = ({ latestPost }) => {
   return (

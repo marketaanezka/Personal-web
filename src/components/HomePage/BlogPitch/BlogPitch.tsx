@@ -2,8 +2,8 @@ import { Text, Card, Image, Stack, CardBody, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
 import styles from "./BlogPitch.module.scss";
-import { Post } from "../../common/types";
-import BlogPostCard from "../BlogPostCard/BlogPostCard";
+import { Post } from "../../../common/types";
+import BlogPostCard from "../../BlogPostCard/BlogPostCard";
 
 interface BlogPitchProps {
   post: Post;
