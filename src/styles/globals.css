@@ -87,6 +87,14 @@ html,
   text-decoration: none;
 }
 
+/*  full height minus header (3.5rem), footer, and layout top and bottom padding (2*1.5) */
+.u-full-height {
+  min-height: calc(100vh - 14.5rem); 
+
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 11rem); 
+  }
+}
 
 
 /* @media (prefers-color-scheme: dark) {
