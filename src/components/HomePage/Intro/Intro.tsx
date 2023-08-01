@@ -30,7 +30,7 @@ const Intro = () => {
       {/* <div className={styles.imageWrapper}> */}
       <Box
         mt={{ base: 7, md: 0 }}
-        w={{ base: "80%", md: "20rem" }}
+        w={{ base: "90%", md: "20rem" }}
         h={{ base: "25rem", md: "30rem", lg: "22rem" }}
         maxW={"80vw"}
         position="relative"
