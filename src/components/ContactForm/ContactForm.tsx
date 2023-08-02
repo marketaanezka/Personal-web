@@ -9,48 +9,51 @@ import {
   Textarea,
   Button,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsPerson } from "react-icons/bs";
 import axios from "axios";
-import React, { ChangeEvent, useState } from "react";
+import React, { useState } from "react";
+import useContactForm from "../../hooks/useContactForm";
 
-const sendEmail = async (email: string, subject: string, message: string) => {
+const sendEmail = async (name: string, email: string, message: string) => {
   return axios({
     method: "post",
     url: "/api/sendmail",
     data: {
+      name: name,
       email: email,
-      subject: subject,
       message: message,
     },
   });
 };
-
 const ContactForm = () => {
   const [responseMessage, setResponseMessage] = useState({
     isSuccessful: false,
     message: "",
   });
-  const [values, setValues] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const { values, handleChange, resetValues } = useContactForm();
   const [loading, setLoading] = useState(false);
+  const toast = useToast();
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    setValues((prevState) => {
-      return {
-        ...prevState,
-        [e.target.id]: e.target.value,
-      };
+  const showSuccessToast = () =>
+    toast({
+      title: "Děkuji 🎉",
+      description: "Zpráva byla odeslána",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
     });
-  };
 
-  console.log({ responseMessage });
+  const showErrorToast = () =>
+    toast({
+      title: "Ooops 😬",
+      description: "Něco se pokazilo, zkuste to znovu.",
+      status: "error",
+      duration: 9000,
+      isClosable: true,
+    });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -63,6 +66,8 @@ const ContactForm = () => {
           message: "Thank you for your message.",
         });
         setLoading(false);
+        showSuccessToast();
+        resetValues();
       }
     } catch (e) {
       console.log(e);
@@ -71,6 +76,8 @@ const ContactForm = () => {
         message: "Oops something went wrong. Please try again.",
       });
       setLoading(false);
+      showErrorToast();
+      resetValues();
     }
   };
 
@@ -90,7 +97,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit}>
         <VStack spacing={3}>
           <FormControl isRequired>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>Jméno</FormLabel>
 
             <InputGroup>
               <InputLeftElement>
@@ -99,7 +106,7 @@ const ContactForm = () => {
               <Input
                 type="text"
                 name="name"
-                placeholder="Your Name"
+                placeholder="Kamil Novák"
                 id="name"
                 value={values.name}
                 onChange={handleChange}
@@ -118,7 +125,7 @@ const ContactForm = () => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Your Email"
+                placeholder="kamil@novak.cz"
                 value={values.email}
                 onChange={handleChange}
               />
@@ -126,11 +133,11 @@ const ContactForm = () => {
           </FormControl>
 
           <FormControl isRequired>
-            <FormLabel>Message</FormLabel>
+            <FormLabel>Zpráva</FormLabel>
 
             <Textarea
               name="message"
-              placeholder="Your Message"
+              placeholder="Vaše zpráva"
               rows={6}
               resize="none"
               id="message"
@@ -147,8 +154,9 @@ const ContactForm = () => {
             }}
             width="full"
             type="submit"
+            isLoading={loading}
           >
-            {loading ? "loading" : "Send Message"}
+            Odeslat
           </Button>
         </VStack>
       </form>

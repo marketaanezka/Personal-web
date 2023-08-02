@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 const useContactForm = () => {
   const [values, setValues] = useState({
+    name: "",
     email: "",
-    subject: "",
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
+  ) => {
     setValues((prevState) => {
       return {
         ...prevState,
@@ -16,7 +18,15 @@ const useContactForm = () => {
     });
   };
 
-  return { values, handleChange };
+  const resetValues = () => {
+    setValues({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
+  return { values, handleChange, resetValues };
 };
 
 export default useContactForm;

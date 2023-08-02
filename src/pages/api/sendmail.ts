@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     const message = {
         from: req.body.email,
         to: process.env.MAIL_ADDRESS,
-        subject: req.body.subject,
+        subject: `Od ${req.body.name}`,
         text: req.body.message,
         html: `<p>${req.body.message}</p>`,
     };
