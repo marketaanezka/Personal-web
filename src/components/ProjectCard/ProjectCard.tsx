@@ -7,6 +7,7 @@ import {
   Tag,
   Flex,
   Box,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
@@ -52,6 +53,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
         top: "-5px",
         transition: "top 0.25s",
       }}
+      variant="outline"
     >
       <CardImage src={image} alt={imageAlt} />
       <CardBody
@@ -68,7 +70,11 @@ const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
         <Box mt={4}>
           <Flex wrap={"wrap"} gap={2}>
             {technologies.map((technology) => (
-              <Tag bg={"lila.500"} key={technology}>
+              <Tag
+                bg={useColorModeValue("lila.300", "lila.800")}
+                color={useColorModeValue("whiteAlpha.900", "whiteAlpha.800")}
+                key={technology}
+              >
                 {technology}
               </Tag>
             ))}

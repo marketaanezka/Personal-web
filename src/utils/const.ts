@@ -1,22 +1,26 @@
 export const Routes = [
     {
         path: '/',
-        label: 'Home'
+        label: 'home'
     },
     {
         path: '/blog',
-        label: 'Blog'
+        label: 'blog'
     },
     {
         path: '/media',
-        label: 'Média'
+        label: 'média'
     },
     {
         path: '/projects',
-        label: 'Projekty'
+        label: 'projekty'
+    },
+    {
+        path: '/about',
+        label: 'o mně'
     },
     {
         path: '/chakraform',
-        label: 'Kontakt'
+        label: 'kontakt'
     }
 ]
