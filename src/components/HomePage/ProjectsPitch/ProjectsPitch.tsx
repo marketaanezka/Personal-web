@@ -24,8 +24,8 @@ const ProjectsPitch = () => {
         gap={5}
       >
         <ProjectCard small project={projects[1]} />
-        <ProjectCard small project={projects[1]} />
-        <ProjectCard small project={projects[1]} />
+        <ProjectCard small project={projects[0]} />
+        <ProjectCard small project={projects[2]} />
       </Grid>
     </section>
   );

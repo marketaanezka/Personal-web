@@ -4,19 +4,41 @@ import {
   Heading,
   Stack,
   Text,
-  Image,
   Tag,
   Flex,
   Box,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
+import Image from "next/image";
 import { Project } from "../../common/types";
 
 interface ProjectCardProps {
   small?: boolean;
   project: Project;
 }
+
+type CardImageProps = {
+  src: string;
+  alt: string;
+};
+
+const CardImage = ({ src, alt }: CardImageProps) => {
+  return (
+    <Box w={{ base: "auto" }} h={{ base: "12rem" }} position="relative">
+      <Box>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          style={{ objectFit: "cover", borderRadius: "0.375rem 0.375rem 0 0" }}
+          quality={10}
+        />
+        ;
+      </Box>
+    </Box>
+  );
+};
 
 const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
   const { heading, description, technologies, image, imageAlt, link } = project;
@@ -31,7 +53,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
         transition: "top 0.25s",
       }}
     >
-      <Image src={image} alt={imageAlt} borderRadius="0.375rem 0.375rem 0 0" />
+      <CardImage src={image} alt={imageAlt} />
       <CardBody
         display={"flex"}
         flexDir={"column"}
