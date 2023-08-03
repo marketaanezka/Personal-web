@@ -25,6 +25,12 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
       variant="elevated"
       my={2}
       className={styles.card}
+      top={0}
+      _hover={{
+        position: "relative",
+        top: "-5px",
+        transition: "top 0.25s",
+      }}
     >
       <BlogThumbImage src={post.frontMatter.thumbnailUrl} alt="alt" />
       <Stack w={{ base: "100%", md: "70%" }}>

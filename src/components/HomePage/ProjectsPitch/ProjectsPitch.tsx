@@ -1,20 +1,32 @@
 import Link from "next/link";
-import ProjectCardMini from "../../ProjectCardMini/ProjectCardMini";
 import styles from "./ProjectsPitch.module.scss";
+import { projects } from "../../../data/projects";
+import { Grid, Text } from "@chakra-ui/react";
+import ProjectCard from "../../ProjectCard/ProjectCard";
 
 const ProjectsPitch = () => {
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.heading}>Projekty</h2>
-      <ProjectCardMini />
-      <p>
+      <Link href="/projects">
+        <h2 className={`${styles.heading} linkUnderline`}>Projekty</h2>
+      </Link>
+      <Text mb={4}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
         eveniet quos temporibus ullam repudiandae libero sint velit excepturi
         voluptates impedit!
-      </p>
-      <Link href="/about" className={styles.link}>
-        Read more &#x2192;
-      </Link>
+      </Text>
+      <Grid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
+        }}
+        gap={5}
+      >
+        <ProjectCard small project={projects[1]} />
+        <ProjectCard small project={projects[1]} />
+        <ProjectCard small project={projects[1]} />
+      </Grid>
     </section>
   );
 };

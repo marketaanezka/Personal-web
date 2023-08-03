@@ -4,15 +4,19 @@ export const Routes = [
         label: 'Home'
     },
     {
+        path: '/blog',
+        label: 'Blog'
+    },
+    {
+        path: '/media',
+        label: 'Média'
+    },
+    {
         path: '/projects',
         label: 'Projekty'
     },
     {
-        path: '/media',
-        label: 'Media'
-    },
-    {
-        path: '/blog',
-        label: 'Blog'
+        path: '/chakraform',
+        label: 'Kontakt'
     }
 ]

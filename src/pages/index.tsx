@@ -12,10 +12,10 @@ const Home: NextPage = ({ latestPost }) => {
   return (
     <div className={styles.container}>
       <Intro />
-      <ProjectsPitch />
       <BlogPitch post={latestPost} />
 
       <FeaturedPitch />
+      <ProjectsPitch />
     </div>
   );
 };

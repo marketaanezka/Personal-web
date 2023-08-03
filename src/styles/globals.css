@@ -109,6 +109,15 @@ html[data-theme='dark'] .u-card-shadow:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  
 }
 
+.u-arrowlink {
+  font-style: italic;
+  line-height: 2;
+  color: var(--chakra-colors-lila-300);
+}
+.u-arrowlink:hover {
+  color: var(--chakra-colors-lila-500)
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
