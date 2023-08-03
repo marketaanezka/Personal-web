@@ -11,21 +11,25 @@ const Intro = () => {
         <h1 className={styles.heading}>
           Markéta Willis, frontend vývojářka, mentor a lektor
         </h1>
+        <Stack direction="row" spacing={1} my={3}>
+          <SocialMediaButtons />
+        </Stack>
         <Text className={styles.text} opacity={0.7} mb={3}>
           Baví mě technologie webového vývoje, ráda se učím a stejně rada učím
           druhé. Nevěřím, že programovat muže jen ten, kdo na to má “mozek” od
           narození.
         </Text>
-        <Text className={styles.text} opacity={0.7} mb={3}>
-          Kromě webového vývoje se zabývám tématem mentální odolnosti při změně
-          kariéry do IT. Na vlastní cestě mě překvapilo, jak byl přechod kromě
-          samotného studia programování náročný i emocionálně. Věnuji se tématu
-          imposter syndromu, práci se zpětnou vazbou, vyhoření, pozici ženy v
-          převážně mužských týmech i dalším.
+        <Text className={styles.text} opacity={0.7}>
+          Kromě webového vývoje se zabývám tématem přípravy na změnu kariéry do
+          IT, a to nejen prakticky, ale i mentálně. Na vlastní cestě mě
+          překvapilo, jak byl přechod kromě samotného studia programování
+          náročný i emocionálně. Věnuji se problematice imposter syndromu, práci
+          se zpětnou vazbou, vyhoření, pozici ženy v převážně mužských týmech i
+          dalším.
         </Text>
-        <Stack direction="row" spacing={1}>
-          <SocialMediaButtons />
-        </Stack>
+        <Link href="/about" className={styles.link}>
+          Více o mně &#x2192;
+        </Link>
       </div>
       {/* <div className={styles.imageWrapper}> */}
       <Box

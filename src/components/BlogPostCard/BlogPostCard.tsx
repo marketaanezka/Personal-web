@@ -22,7 +22,7 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
     <Card
       direction={{ base: "column", md: "row" }}
       overflow="hidden"
-      variant="outline"
+      variant="elevated"
       my={2}
       className={styles.card}
     >

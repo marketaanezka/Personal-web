@@ -96,6 +96,18 @@ html,
   }
 }
 
+.u-card-shadow {
+   transition: box-shadow .2s;
+   cursor: pointer;
+}
+
+.u-card-shadow:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+html[data-theme='dark'] .u-card-shadow:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  
+}
 
 /* @media (prefers-color-scheme: dark) {
   html {

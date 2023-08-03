@@ -4,8 +4,8 @@ export const Routes = [
         label: 'Home'
     },
     {
-        path: '/about',
-        label: 'O mně'
+        path: '/projects',
+        label: 'Projekty'
     },
     {
         path: '/media',

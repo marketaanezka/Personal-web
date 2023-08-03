@@ -1,10 +1,12 @@
 import Link from "next/link";
-import styles from "./AboutMePitch.module.scss";
+import ProjectCardMini from "../../ProjectCardMini/ProjectCardMini";
+import styles from "./ProjectsPitch.module.scss";
 
-const AboutMePitch = () => {
+const ProjectsPitch = () => {
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.heading}>O mně</h2>
+      <h2 className={styles.heading}>Projekty</h2>
+      <ProjectCardMini />
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
         eveniet quos temporibus ullam repudiandae libero sint velit excepturi
@@ -17,4 +19,4 @@ const AboutMePitch = () => {
   );
 };
 
-export default AboutMePitch;
+export default ProjectsPitch;
