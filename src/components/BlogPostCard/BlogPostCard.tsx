@@ -22,15 +22,15 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
     <Card
       direction={{ base: "column", md: "row" }}
       overflow="hidden"
-      variant="elevated"
+      variant="outline"
       my={2}
       className={styles.card}
-      top={0}
-      _hover={{
-        position: "relative",
-        top: "-5px",
-        transition: "top 0.25s",
-      }}
+      // transform=""
+      // _hover={{
+      //   position: "relative",
+      //   transform: "scale(1.008)",
+      //   transition: "all 0.2s",
+      // }}
     >
       <BlogThumbImage src={post.frontMatter.thumbnailUrl} alt="alt" />
       <Stack w={{ base: "100%", md: "70%" }}>

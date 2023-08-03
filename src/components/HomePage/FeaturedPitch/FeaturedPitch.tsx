@@ -1,31 +1,16 @@
 import Link from "next/link";
-import Image from "next/image";
-import juniorguru from "../../../public/img/juniorguru.png";
-import wdf from "../../../public/img/wdf.png";
 import styles from "./FeaturedPitch.module.scss";
-import heroine from "../../../public/img/heroine.png";
 import { Box, Text, Heading, Avatar, Flex } from "@chakra-ui/react";
 import { ExternalLink } from "../../../assets/Icons/icons";
+import PitchHeading from "../../PitchHeading/PitchHeading";
 
 const FeaturedPitch = () => {
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.heading}>Média</h2>
-      <Text mb={4}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
-        eveniet quos temporibus.
-      </Text>
+      <PitchHeading heading="Média" linkUrl="/media" linkText="Více na čtení" />
       <Flex align="center" my={2}>
         <Heading size="sm">Junior Guru podcast</Heading>
       </Flex>
-      {/* <iframe
-        src="https://open.spotify.com/embed/episode/0IWgQHavpmoMa3TJI6w2w6?utm_source=generator"
-        width="100%"
-        height="152"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        style={{ borderRadius: "12px" }}
-      ></iframe> */}
       <iframe
         allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
         frameBorder="0"
@@ -87,9 +72,6 @@ const FeaturedPitch = () => {
           </Text>
         </Box>
       </Flex>
-      <Link href="/media" className={styles.link}>
-        Read more &#x2192;
-      </Link>
     </section>
   );
 };
