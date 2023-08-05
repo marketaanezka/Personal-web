@@ -41,7 +41,9 @@ const Intro = () => {
       >
         <Box className={styles.imageWrapper}>
           <Image
-            src={profileImage}
+            src={
+              "https://raw.githubusercontent.com/marketaanezka/Personal-web/images/profile.jpeg"
+            }
             alt={"profile image"}
             fill
             style={{ objectFit: "cover" }}

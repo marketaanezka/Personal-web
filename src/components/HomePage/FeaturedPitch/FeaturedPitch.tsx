@@ -3,6 +3,7 @@ import styles from "./FeaturedPitch.module.scss";
 import { Box, Text, Heading, Avatar, Flex } from "@chakra-ui/react";
 import { ExternalLink } from "../../../assets/Icons/icons";
 import PitchHeading from "../../PitchHeading/PitchHeading";
+import { CldImage } from "next-cloudinary";
 
 const FeaturedPitch = () => {
   return (
@@ -11,6 +12,12 @@ const FeaturedPitch = () => {
         heading="Média"
         linkUrl="/media"
         linkText="Na čtení i poslech"
+      />
+      <CldImage
+        width="600"
+        height="600"
+        src="06-1-1_Settings_x1l6my"
+        alt="cloud alt"
       />
       {/* <Flex align="center" my={2}>
         <Heading size="sm">Junior Guru podcast</Heading>
