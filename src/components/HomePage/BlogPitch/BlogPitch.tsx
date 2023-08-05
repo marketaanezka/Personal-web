@@ -1,4 +1,3 @@
-import { Flex } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
 import styles from "./BlogPitch.module.scss";

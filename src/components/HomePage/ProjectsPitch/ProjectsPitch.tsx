@@ -1,11 +1,15 @@
-import Link from "next/link";
 import styles from "./ProjectsPitch.module.scss";
-import { projects } from "../../../data/projects";
-import { Grid, Text } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import ProjectCard from "../../ProjectCard/ProjectCard";
 import PitchHeading from "../../PitchHeading/PitchHeading";
+import { Project } from "../../../common/types";
+import { FC } from "react";
 
-const ProjectsPitch = () => {
+interface ProjectsPitchProps {
+  projects: Project[];
+}
+
+const ProjectsPitch: FC<ProjectsPitchProps> = ({ projects }) => {
   return (
     <section className={styles.wrapper}>
       <PitchHeading
@@ -22,9 +26,9 @@ const ProjectsPitch = () => {
         gap={5}
         mt={4}
       >
-        <ProjectCard small project={projects[1]} />
-        <ProjectCard small project={projects[0]} />
-        <ProjectCard small project={projects[2]} />
+        {projects.map((project) => (
+          <ProjectCard small project={project} key={project.slug} />
+        ))}
       </Grid>
     </section>
   );

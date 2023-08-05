@@ -7,15 +7,23 @@ import FeaturedPitch from "../components/HomePage/FeaturedPitch/FeaturedPitch";
 import path from "path";
 import matter from "gray-matter";
 import BlogPitch from "../components/HomePage/BlogPitch/BlogPitch";
+import { Post, Project } from "../common/types";
 
-const Home: NextPage = ({ latestPost }) => {
+interface HomeProps {
+  latestPost: Post;
+  projects: Project[];
+}
+
+const Home: NextPage<{ latestPost: Post; projects: Project[] }> = ({
+  latestPost,
+  projects,
+}: HomeProps) => {
   return (
     <div className={styles.container}>
       <Intro />
       <BlogPitch post={latestPost} />
-
       <FeaturedPitch />
-      <ProjectsPitch />
+      <ProjectsPitch projects={projects} />
     </div>
   );
 };
@@ -39,9 +47,24 @@ export const getStaticProps = async () => {
 
   const latestPost = posts[0];
 
+  const projectFiles = fs.readdirSync(path.join("src", "projects"));
+
+  const projects = projectFiles.map((filename) => {
+    const markdownWithMeta = fs.readFileSync(
+      path.join("src", "projects", filename)
+    );
+    const { data: frontMatter } = matter(markdownWithMeta);
+
+    return {
+      frontMatter,
+      slug: filename.split(".")[0],
+    };
+  });
+
   return {
     props: {
       latestPost,
+      projects,
     },
   };
 };
