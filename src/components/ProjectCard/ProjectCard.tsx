@@ -42,7 +42,7 @@ const CardImage = ({ src, alt }: CardImageProps) => {
 };
 
 const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
-  const { heading, description, technologies, image, imageAlt, link } = project;
+  const { frontMatter, slug } = project;
   return (
     <Card
       maxW={small === true ? "18rem" : "28rem"}
@@ -55,32 +55,34 @@ const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
       }}
       variant="outline"
     >
-      <CardImage src={image} alt={imageAlt} />
-      <CardBody
-        display={"flex"}
-        flexDir={"column"}
-        justifyContent={"space-between"}
-      >
-        <Stack mt="2" spacing="3">
-          <Heading size="md" w={"fit-content"}>
-            {heading}
-          </Heading>
-          {!small && <Text>{description}</Text>}
-        </Stack>
-        <Box mt={4}>
-          <Flex wrap={"wrap"} gap={2}>
-            {technologies.map((technology) => (
-              <Tag
-                bg={useColorModeValue("lila.300", "lila.800")}
-                color={useColorModeValue("whiteAlpha.900", "whiteAlpha.800")}
-                key={technology}
-              >
-                {technology}
-              </Tag>
-            ))}
-          </Flex>
-        </Box>
-      </CardBody>
+      <Link href={`/projects/${slug}`} key={slug}>
+        <CardImage src={frontMatter.image} alt={frontMatter.imageAlt} />
+        <CardBody
+          display={"flex"}
+          flexDir={"column"}
+          justifyContent={"space-between"}
+        >
+          <Stack mt="2" spacing="3">
+            <Heading size="md" w={"fit-content"}>
+              {frontMatter.title}
+            </Heading>
+            {!small && <Text>{frontMatter.description}</Text>}
+          </Stack>
+          <Box mt={4}>
+            <Flex wrap={"wrap"} gap={2}>
+              {frontMatter.technologies.map((technology) => (
+                <Tag
+                  bg={useColorModeValue("lila.300", "lila.800")}
+                  color={useColorModeValue("whiteAlpha.900", "whiteAlpha.800")}
+                  key={technology}
+                >
+                  {technology}
+                </Tag>
+              ))}
+            </Flex>
+          </Box>
+        </CardBody>
+      </Link>
     </Card>
   );
 };

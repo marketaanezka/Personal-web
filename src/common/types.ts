@@ -1,4 +1,4 @@
-export interface FrontMatter {
+export interface PostFrontMatter {
     date: string;
     description: string;
     tags: string[];
@@ -7,15 +7,21 @@ export interface FrontMatter {
 }
 
 export interface Post {
-    frontMatter: FrontMatter;
+    frontMatter: PostFrontMatter;
     slug: string;
 }
 
-export interface Project {
-    heading: string,
+export interface ProjectFrontMatter {
+    title: string,
     description: string,
     technologies: string[],
     image: string,
     imageAlt: string,
-    link: string,
 }
+
+export interface Project {
+    frontMatter: ProjectFrontMatter,
+    slug: string,
+}
+
+
