@@ -4,39 +4,13 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import styles from "../../styles/Blog.module.scss";
+import styles from "../../styles/Mdx.module.scss";
 import Link from "next/link";
-import Image from "next/image";
-import Prism from "prismjs";
-import { useEffect } from "react";
 import { Code, Heading } from "@chakra-ui/react";
+import ResponsiveImage from "../../components/MdxComponents/ResponsiveImage";
+import CodeBlock from "../../components/MdxComponents/CodeBlock";
 
-type ResponsiveImageProps = {
-  alt: string;
-  src: string;
-};
-
-const ResponsiveImage = (props: ResponsiveImageProps) => (
-  <Image sizes="100vw" style={{ width: "100%", height: "auto" }} {...props} />
-);
-
-type CodeBlockProps = {
-  children: string;
-  language: string;
-};
-
-const CodeBlock = ({ children, language }: CodeBlockProps) => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-  return (
-    <pre className={styles.codeWrapper}>
-      <code className={`language-${language}`}>{children}</code>
-    </pre>
-  );
-};
-
-type PostProps = {
+type ProjectProps = {
   frontMatter: {
     title: string;
   };
@@ -47,7 +21,7 @@ type PostProps = {
   };
 };
 
-const Project = ({ frontMatter, mdxSource }: PostProps) => {
+const Project = ({ frontMatter, mdxSource }: ProjectProps) => {
   const components = {
     img: ResponsiveImage,
     CodeBlock,
@@ -55,10 +29,10 @@ const Project = ({ frontMatter, mdxSource }: PostProps) => {
   };
 
   return (
-    <div className={styles.blog}>
-      <Link href="/blog" className={styles.retrunlink}>
+    <div className={styles.mdx}>
+      <Link href="/projects" className={styles.retrunlink}>
         {" "}
-        ← Zpět na blog
+        ← Zpět na projekty
       </Link>
       <Heading size="2xl">{frontMatter.title}</Heading>
       {/* @ts-ignore */}

@@ -4,37 +4,11 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
-import styles from "../../styles/Blog.module.scss";
+import styles from "../../styles/Mdx.module.scss";
 import Link from "next/link";
-import Image from "next/image";
-import Prism from "prismjs";
-import { useEffect } from "react";
 import { Code, Heading } from "@chakra-ui/react";
-
-type ResponsiveImageProps = {
-  alt: string;
-  src: string;
-};
-
-const ResponsiveImage = (props: ResponsiveImageProps) => (
-  <Image sizes="100vw" style={{ width: "100%", height: "auto" }} {...props} />
-);
-
-type CodeBlockProps = {
-  children: string;
-  language: string;
-};
-
-const CodeBlock = ({ children, language }: CodeBlockProps) => {
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-  return (
-    <pre className={styles.codeWrapper}>
-      <code className={`language-${language}`}>{children}</code>
-    </pre>
-  );
-};
+import ResponsiveImage from "../../components/MdxComponents/ResponsiveImage";
+import CodeBlock from "../../components/MdxComponents/CodeBlock";
 
 type PostProps = {
   frontMatter: {
@@ -55,12 +29,12 @@ const Post = ({ frontMatter, mdxSource }: PostProps) => {
   };
 
   return (
-    <div className={styles.blog}>
+    <div className={styles.mdx}>
       <Link href="/blog" className={styles.retrunlink}>
         {" "}
         ← Zpět na blog
       </Link>
-      <Heading size="2xl">{frontMatter.title}</Heading>
+      <Heading size="xl">{frontMatter.title}</Heading>
       {/* @ts-ignore */}
       <MDXRemote {...mdxSource} components={components} />
     </div>

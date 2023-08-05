@@ -126,3 +126,20 @@ html[data-theme='dark'] .u-arrowlink:hover {
   color: var(--chakra-colors-lila-400)
 }
 
+/* code styling */
+pre {
+  border-radius: 0.5rem;
+}
+
+p {
+  font-size: var(--chakra-fontSizes-md);
+}
+
+p > code {
+  padding: 0.2rem 0.4rem;
+  font-size: 90%;
+  color: var(--chakra-colors-darkPurple);
+  background-color: var(--chakra-colors-gray-300);
+  border-radius: 0.25rem;
+}
+

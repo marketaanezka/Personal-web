@@ -1,4 +1,4 @@
-.blog {
+.mdx {
     width: 100%;
     min-height: calc(100vh - 3.5rem);
     padding: 2rem 7%;
@@ -37,18 +37,11 @@
     color: var(--chakra-colors-gray-500);
 }
 
-.blogHeading {
-    font-size: var(--chakra-fontSizes-3xl);
-    font-weight: 600;
-    margin-bottom: 1rem;
-    font-family: GTBold, sans-serif;
-}
-
 html[data-theme='dark'] {
-    .blog p > code {
+    .mdx p > code {
         padding: 0.2rem 0.4rem;
         font-size: 90%;
-        background-color: var(--chakra-colors-darkPurple);
+        background-color: var(--chakra-colors-lila-800);
         color: var(--chakra-colors-gray-200);
         border-radius: 0.25rem;
     }
