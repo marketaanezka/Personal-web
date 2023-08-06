@@ -2,13 +2,13 @@ export const MediaPosts = [
     {
         externalLink: 'https://applifting.io/blog/a-pedagogue-turned-developer',
         avatar: '/img/applifting.png',
-        heading: "Applifting article",
+        heading: "A pedagogue-turned-developer",
         description: "Rozhovor v angličtině na blog firmy Applifting. Bavíme se o tom, co mi dala zahraniční zkušenost, o problémech juniorů v IT, o imposter syndromu i jakou roli hraje při hledání práce osobní značka."
     },
     {
         externalLink: 'https://www.wdf.cz/blog/se-zapojenim-do-komunit-bych-nevahala-radi-juniorum-vyvojarka-willis',
         avatar: '/img/wdf.png',
-        heading: "WDF article",
+        heading: "Se zapojením do komunit bych neváhala",
         description: "Rozhovor pro WDF v rámci spolupráce s reactgirls, kdy jsem na meetupu měla přednášku o faktorech, které je potřeba zvážit při výběru práce. V rozhovoru popisuji svou cestu do IT, nebo jak jsem se stala lektorkou programování."
     },
     {
