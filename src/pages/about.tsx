@@ -37,7 +37,7 @@ const InstagramImage: FC<InstagramImageProps> = ({
           <Heart fontSize="md" mr={2} />
         </Flex>
       </Link>
-      <Link href={imageLink}>
+      <Link href={imageLink} target="_blank">
         <Image
           src={imageSource}
           alt={imageAlt}
@@ -76,17 +76,12 @@ const About = () => {
       <section className={styles.lighter}>
         <Box className={styles.paragraphLeft}>
           <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit dolore, placeat accusantium quasi sed incidunt culpa
-            assumenda praesentium facere blanditiis veniam alias soluta
-            consectetur libero, aperiam, doloremque totam. Ex sint fuga at
-            maxime dolore voluptate facilis fugit cum explicabo odio distinctio,
-            culpa aspernatur veritatis aut inventore deleniti pariatur, porro
-            tenetur laudantium exercitationem dolorum quis velit qui? Magnam
-            reprehenderit, sunt accusantium omnis iusto consectetur maiores
-            modi. Recusandae atque possimus distinctio eligendi vel quisquam
-            officia dignissimos debitis deserunt cum. Eos numquam porro iure
-            reiciendis eveniet explicabo, maxime aspernatur quas n
+            Svou cestu za programováním jsem začal v roce 2019, kdy jsem
+            absolvoval svůj první kurz programování. Zamiloval jsem si kombinaci
+            kreativity a systematických vzorů, která vám dává nekonečné
+            možnosti. Brzy jsem zjistil, že programování je silně návykové. V
+            roce 2020 jsem se plně soustředil na změnu kariéry a během půl roku
+            jsem našel svou první práci jako juniorní frontendový vývojář.
           </Text>
           <InstagramImage
             imageLink="https://www.instagram.com/p/CkIfwipjfRm/"
@@ -96,18 +91,18 @@ const About = () => {
         </Box>
         <div className={styles.paragraphRight}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit dolore, placeat accusantium quasi sed incidunt culpa
-            assumenda praesentium facere blanditiis veniam alias soluta
-            consectetur libero, aperiam, doloremque totam. Ex sint fuga at
-            maxime dolore voluptate facilis fugit cum explicabo odio distinctio,
-            culpa aspernatur veritatis aut inventore deleniti pariatur, porro
-            tenetur laudantium exercitationem dolorum quis velit qui? Magnam
-            reprehenderit, sunt accusantium omnis iusto consectetur maiores
-            modi. Recusandae atque possimus distinctio eligendi vel quisqu
+            Současně s nástupem do práce na plný úvazek jsem aktivně pomáhala na
+            kurzech kódování a programování v Czechitas, české neziskové
+            organizaci zaměřené na to, aby se do IT zapojilo více žen. Díky
+            svému vzdělání jsem brzy poté dostala nabídku na pozici lektorky.
+            Byla to úžasná příležitost, která mi pomohla prohloubit znalosti
+            kódování a zdokonalit prezentační dovednosti. Od roku 2021 spojuji
+            své zkušenosti se vzděláváním, náborem, mentoringem a programováním
+            a jsem aktivní v IT komunitách, podporuji diverzitu, podporuji
+            juniorní vývojáře a udržuji se v realitě.
           </p>
           <InstagramImage
-            imageLink="https://www.instagram.com/p/CkIfwipjfRm/"
+            imageLink="https://www.instagram.com/p/CarfLGcA9K_/"
             imageSource="https://res.cloudinary.com/doqtwlcxw/image/upload/c_fill,h_800,w_800/v1691358223/content_02_ypvojv.jpg"
             imageAlt="A girl programmer next to a monitor with code on it"
           />
