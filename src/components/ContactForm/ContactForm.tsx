@@ -106,7 +106,7 @@ const ContactForm = () => {
               <Input
                 type="text"
                 name="name"
-                placeholder="Kamil Novák"
+                placeholder="Joe Doe"
                 id="name"
                 value={values.name}
                 onChange={handleChange}
@@ -125,7 +125,7 @@ const ContactForm = () => {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="kamil@novak.cz"
+                placeholder="joe@email.cz"
                 value={values.email}
                 onChange={handleChange}
               />
@@ -137,7 +137,7 @@ const ContactForm = () => {
 
             <Textarea
               name="message"
-              placeholder="Vaše zpráva"
+              placeholder="Your message"
               rows={6}
               resize="none"
               id="message"

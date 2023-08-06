@@ -1,6 +1,6 @@
 import fs from "fs";
 
-import { Grid } from "@chakra-ui/react";
+import { Box, Grid, Heading, Text } from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import path from "path";
 import matter from "gray-matter";
@@ -13,8 +13,12 @@ interface ProjectsProps {
 
 const Projects: FC<ProjectsProps> = ({ projects }) => {
   return (
-    <>
-      <h1>Hello this is Projects page</h1>
+    <Box>
+      <Heading size="lg">Projekty</Heading>
+      <Text mt={3} mb={6} opacity={0.7}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+        molestiae.
+      </Text>
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
@@ -27,7 +31,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
           <ProjectCard key={project.frontMatter.title} project={project} />
         ))}
       </Grid>
-    </>
+    </Box>
   );
 };
 

@@ -5,6 +5,7 @@ import {
   Stack,
   useColorModeValue,
   VStack,
+  Text,
 } from "@chakra-ui/react";
 
 import { CONFETTI_LIGHT, CONFETTI_DARK } from "../assets/Icons/confetti";
@@ -28,15 +29,19 @@ export default function ContactFormWithSocialButtons() {
       <Box borderRadius="lg" m={{ base: 0, lg: 2 }} p={{ base: 0, lg: 4 }}>
         <Box>
           <VStack spacing={{ base: 2, md: 4, lg: 8 }}>
-            <Heading
-              fontSize={{
-                base: "3xl",
-                md: "4xl",
-              }}
-            >
-              Get in Touch
-            </Heading>
-
+            <Box>
+              <Heading
+                fontSize={{
+                  base: "2xl",
+                  md: "3xl",
+                }}
+              >
+                Chcete spolupracovat?
+              </Heading>
+              <Text align="center" mt={{ base: 2, md: 4 }}>
+                Dejte vědět, s čím vám můžu pomoct:
+              </Text>
+            </Box>
             <Stack
               spacing={{ base: 2, md: 4, lg: 8 }}
               direction={{ base: "column", md: "row" }}

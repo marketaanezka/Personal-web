@@ -20,7 +20,7 @@ export const Routes = [
         label: 'o mně'
     },
     {
-        path: '/chakraform',
+        path: '/contact',
         label: 'kontakt'
     }
 ]

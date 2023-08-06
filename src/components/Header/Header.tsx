@@ -14,7 +14,7 @@ const Header = () => {
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
 
   return (
-    <Box as="header" className={styles.wrapper} bg={color}>
+    <Box as="header" className={styles.wrapper} bg={color} height="4.5rem">
       <div className={styles.header}>
         <Box as="span">
           <Link href="/">

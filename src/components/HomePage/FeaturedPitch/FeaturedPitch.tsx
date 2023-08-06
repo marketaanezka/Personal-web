@@ -13,12 +13,12 @@ const FeaturedPitch = () => {
         linkUrl="/media"
         linkText="Na čtení i poslech"
       />
-      <CldImage
+      {/* <CldImage
         width="600"
         height="600"
         src="06-1-1_Settings_x1l6my"
         alt="cloud alt"
-      />
+      /> */}
       {/* <Flex align="center" my={2}>
         <Heading size="sm">Junior Guru podcast</Heading>
       </Flex> */}

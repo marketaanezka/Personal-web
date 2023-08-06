@@ -1,7 +1,7 @@
-import { Box, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Stack, Text } from "@chakra-ui/react";
 import SocialMediaButtons from "../../SocialMediaButtons/SocialMediaButtons";
 import Image from "next/image";
-import profileImage from "../../../assets/images/profile.jpeg";
+import Link from "next/link";
 import styles from "./Intro.module.scss";
 
 const Intro = () => {
