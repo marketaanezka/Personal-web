@@ -21,11 +21,11 @@ const MediaPost: FC<MediaPostProps> = ({
   description,
 }) => {
   return (
-    <Box my={4}>
+    <Box my={10}>
       <Link href={externalLink} target="_blank">
         <Flex align="center" mt="0.5">
           <Avatar src={avatar} marginRight="0.5rem" size="xs" />
-          <Heading size="sm" className="linkUnderline">
+          <Heading size="md" className="linkUnderline">
             {heading}
           </Heading>
           <ExternalLink ml={2} />
@@ -41,8 +41,11 @@ const Media = () => {
     <Box>
       <Heading size="lg">Média</Heading>
       <Text mt={3} mb={6} opacity={0.7}>
-        Čas od času někomu připadne můj příběh zajímavý, a tak vznikly podcasty
-        a články.
+        Díky své online aktivitě a networkingu jsem měla možnost spolupracovat s
+        různými IT firmami a komunitami 💜. Vznikly zajímavé články i podcasty o
+        mé cestě do IT, o tom, s čím se junioři v začátcích často potýkají nebo
+        na co je dobré se zaměřit při hledání práce jako &#34;switcher&#34; do
+        IT.
       </Text>
       {MediaPosts.map((post) => (
         <MediaPost

@@ -53,10 +53,10 @@ const FeaturedPitch = () => {
               <ExternalLink ml={2} />
             </Flex>
           </Link>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In officiis
-            quisquam pariatur ipsa aliquam beatae soluta animi dignissimos est
-            obcaecati.
+          <Text mt={2}>
+            Rozhovor pro firmu WDF v rámci spolupráce s reactgirls, kdy jsem na
+            meetupu měla přednášku o faktorech, které je potřeba zvážit při
+            výběru práce.
           </Text>
         </Box>
         <Box my={4}>
@@ -76,10 +76,10 @@ const FeaturedPitch = () => {
               <ExternalLink ml={2} />
             </Flex>
           </Link>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In officiis
-            quisquam pariatur ipsa aliquam beatae soluta animi dignissimos est
-            obcaecati.
+          <Text mt={2}>
+            Rozhovor v angličtině na blog firmy Applifting. Bavíme se o tom, co
+            mi dala zahraniční zkušenost, o problémech juniorů v IT nebo o
+            imposter syndromu.
           </Text>
         </Box>
       </Flex>
