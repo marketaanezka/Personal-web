@@ -1,23 +1,26 @@
 import styles from "../styles/About.module.scss";
 import Image, { StaticImageData } from "next/image";
 import laptop from "../assets/images/laptop-1.png";
-import { Box, Flex, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Text, useColorModeValue } from "@chakra-ui/react";
 import { Heart, Instagram } from "../assets/Icons/icons";
 import { FC } from "react";
+import { CldImage } from "next-cloudinary";
 
 interface InstagramImageProps {
   imageLink: string;
-  imageSource: StaticImageData;
+  imageSource: string;
+  imageAlt: string;
 }
 
 const InstagramImage: FC<InstagramImageProps> = ({
   imageLink,
   imageSource,
+  imageAlt,
 }) => {
   return (
     <Box
       className={styles.paragraphImage}
-      background={"#4d3d9f"}
+      background={useColorModeValue("#c9c2ee", "#594d91")}
       borderRadius={"md"}
     >
       <Link href="https://www.instagram.com/marketa_willis/">
@@ -25,7 +28,7 @@ const InstagramImage: FC<InstagramImageProps> = ({
           p={1}
           alignItems={"center"}
           justifyContent="space-between"
-          color={"white"}
+          color={useColorModeValue("gray.900", "white")}
         >
           <Flex alignItems={"center"}>
             <Instagram fontSize="xl" mr={1} opacity={0.7} />
@@ -35,7 +38,13 @@ const InstagramImage: FC<InstagramImageProps> = ({
         </Flex>
       </Link>
       <Link href={imageLink}>
-        <Image src={imageSource} alt="laptop" />
+        <Image
+          src={imageSource}
+          alt={imageAlt}
+          width={800}
+          height={800}
+          className={styles.image}
+        />
       </Link>
     </Box>
   );
@@ -46,11 +55,8 @@ const About = () => {
     <div>
       <section className={styles.wrapper}>
         <div className={styles.content}>
-          <span className={styles.top}>
-            <span>Hello</span>
-          </span>
           <h2 className={styles.heading}>
-            I&#39;m Marketa, a Frontend Developer and Lecturer
+            Těší mě! Jsem Markéta a tohle je můj příběh.
           </h2>
           <p className={styles.text}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
@@ -59,7 +65,12 @@ const About = () => {
           </p>
         </div>
         <div className={styles.imageWrapper}>
-          <div className="aboutme-image"></div>
+          <CldImage
+            width="350"
+            height="350"
+            src="rgtalk_jtakgk"
+            alt="a girl programmer lecturer smiling"
+          />
         </div>
       </section>
       <section className={styles.lighter}>
@@ -79,7 +90,8 @@ const About = () => {
           </Text>
           <InstagramImage
             imageLink="https://www.instagram.com/p/CkIfwipjfRm/"
-            imageSource={laptop}
+            imageSource="https://res.cloudinary.com/doqtwlcxw/image/upload/c_fill,h_800,w_800/v1691359480/content_03_zsq0np.png"
+            imageAlt="corner of a monitor with code on it with iced coffee next to it"
           />
         </Box>
         <div className={styles.paragraphRight}>
@@ -96,7 +108,8 @@ const About = () => {
           </p>
           <InstagramImage
             imageLink="https://www.instagram.com/p/CkIfwipjfRm/"
-            imageSource={laptop}
+            imageSource="https://res.cloudinary.com/doqtwlcxw/image/upload/c_fill,h_800,w_800/v1691358223/content_02_ypvojv.jpg"
+            imageAlt="A girl programmer next to a monitor with code on it"
           />
         </div>
       </section>

@@ -17,6 +17,6 @@ module.exports = withMDX({
     // Append the default value with md extensions
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     images: {
-        domains: ['images.unsplash.com', 'github.com', 'raw.githubusercontent.com'],
+        domains: ['images.unsplash.com', 'github.com', 'raw.githubusercontent.com', 'res.cloudinary.com'],
     },
 })
