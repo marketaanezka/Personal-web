@@ -111,7 +111,7 @@ const About = () => {
           />
         </Box>
         <div className={styles.paragraphRight}>
-          <Box>
+          <Box className={styles.rightText}>
             <Text>
               Může se zdát, že tady příběh šťastně končí, ohňostroje, šampaňské.
               I já jsem si to tak představovala - udělám si kurzy, najdu si

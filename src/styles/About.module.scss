@@ -92,7 +92,7 @@
   .paragraphRight {
     grid-template-columns: 1fr 2fr;
 
-    div {
+    .rightText {
         order: 2
     }
     .paragraphImage {
