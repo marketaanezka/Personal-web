@@ -16,8 +16,9 @@ const Blog: FC<BlogPostProps> = ({ posts }) => {
     <Box>
       <Heading size="lg">Blog</Heading>
       <Text mt={3} mb={6} opacity={0.7}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-        molestiae.
+        Tady najdete zajímavosti ze světa webového vývoje, hlavně frontendu.
+        Mimo to sdílím své zkušenosti a tipy z oblasti začátků v programování,
+        hledání uplatnění v IT i to, jak zvládnout první týdny v nové práci.
       </Text>
       <VStack spacing={4} align="stretch">
         {posts.map((post, index) => {

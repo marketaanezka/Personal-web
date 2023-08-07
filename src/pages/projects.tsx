@@ -16,8 +16,8 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
     <Box>
       <Heading size="lg">Projekty</Heading>
       <Text mt={3} mb={6} opacity={0.7}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-        molestiae.
+        Seznam projektů, na kterých jsem pracovala, jaké technologie jsem
+        používala, i co jsem se na nich naučila.
       </Text>
       <Grid
         templateColumns={{

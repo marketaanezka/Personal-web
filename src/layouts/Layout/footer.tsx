@@ -28,8 +28,8 @@ export default function Footer() {
         justifyContent="center"
       >
         Chcete spolupracovat?{" "}
-        <Link href="/contact" className="linkUnderline">
-          <Text as="b" mx={2}>
+        <Link href="/contact">
+          <Text as="b" mx={2} className="linkUnderline">
             Kontaktujte mě 💌,
           </Text>
         </Link>{" "}

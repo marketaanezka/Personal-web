@@ -71,12 +71,24 @@ html,
 }
 
 .linkUnderline {
-  background-image: linear-gradient(0deg,rgba(180,170,255,.4) 0,rgba(180,170,255,.4) 30%,transparent 40%,transparent);
+  background-image: linear-gradient(
+    0deg, 
+    transparent 15%, 
+  rgb(192 184 255 / 50%) 0 20%, 
+  rgb(192 184 255 / 40%) 30%, 
+  rgb(192 184 255 / 30%) 45%, 
+  transparent 0 100%);
   border-bottom: none;
 }
 
 .linkUnderline:hover {
-    background-image: linear-gradient(0deg,#b4aaff 0,#b4aaff 30%,transparent 0,transparent);
+  background-image: linear-gradient(
+    0deg, 
+    transparent 15%, 
+  rgb(192 184 255 / 80%) 0 20%, 
+  rgb(192 184 255 / 70%) 30%, 
+  rgb(192 184 255 / 60%) 45%, 
+  transparent 0 100%);
 }
 
 .u-no-decoration,

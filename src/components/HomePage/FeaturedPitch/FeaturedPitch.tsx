@@ -38,8 +38,10 @@ const FeaturedPitch = () => {
           >
             <Flex align="center" mt="0.5">
               <Avatar src="/img/wdf.png" marginRight="0.5rem" size="xs" />
-              <Heading size="sm" className="linkUnderline">
-                Se zapojením do komunit bych neváhala
+              <Heading size="sm">
+                <span className="linkUnderline">
+                  Se zapojením do komunit bych neváhala
+                </span>
               </Heading>
               <ExternalLink ml={2} />
             </Flex>
@@ -61,8 +63,10 @@ const FeaturedPitch = () => {
                 marginRight="0.5rem"
                 size="xs"
               />
-              <Heading size="sm" className="linkUnderline">
-                How did I find my way to IT?
+              <Heading size="sm">
+                <span className="linkUnderline">
+                  How did I find my way to IT?
+                </span>
               </Heading>
               <ExternalLink ml={2} />
             </Flex>
