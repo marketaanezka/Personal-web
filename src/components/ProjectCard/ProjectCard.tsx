@@ -7,12 +7,11 @@ import {
   Tag,
   Flex,
   Box,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
-import Image from "next/image";
 import { Project } from "../../common/types";
+import { CldImage } from "next-cloudinary";
 
 interface ProjectCardProps {
   small?: boolean;
@@ -24,18 +23,19 @@ type CardImageProps = {
   alt: string;
 };
 
+// beey-logo_sl3dbo
+
 const CardImage = ({ src, alt }: CardImageProps) => {
   return (
     <Box w={{ base: "auto" }} h={{ base: "12rem" }} position="relative">
       <Box>
-        <Image
+        <CldImage
           src={src}
           alt={alt}
           fill
           style={{ objectFit: "cover", borderRadius: "0.375rem 0.375rem 0 0" }}
           quality={10}
         />
-        ;
       </Box>
     </Box>
   );
@@ -63,17 +63,23 @@ const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
           justifyContent={"space-between"}
         >
           <Stack mt="2" spacing="3">
-            <Heading size="md" w={"fit-content"}>
-              {frontMatter.title}
-            </Heading>
-            {!small && <Text>{frontMatter.description}</Text>}
+            <Flex alignItems="center" pr={0} justifyContent="space-between">
+              <Heading size="md" w={"fit-content"}>
+                {frontMatter.title}
+              </Heading>
+              <Tag size="sm" colorScheme="gray">
+                {frontMatter.year}
+              </Tag>
+            </Flex>
+            {!small && <Text fontSize="sm">{frontMatter.description}</Text>}
           </Stack>
           <Box mt={4}>
             <Flex wrap={"wrap"} gap={2}>
               {frontMatter.technologies.map((technology) => (
                 <Tag
-                  bg={useColorModeValue("lila.300", "lila.800")}
-                  color={useColorModeValue("whiteAlpha.900", "whiteAlpha.800")}
+                  // bg={useColorModeValue("lila.300", "lila.800")}
+                  // color={useColorModeValue("whiteAlpha.900", "whiteAlpha.800")}
+                  colorScheme="purple"
                   key={technology}
                 >
                   {technology}

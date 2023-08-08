@@ -13,6 +13,7 @@ export interface Post {
 
 export interface ProjectFrontMatter {
     title: string,
+    year: number,
     description: string,
     technologies: string[],
     image: string,

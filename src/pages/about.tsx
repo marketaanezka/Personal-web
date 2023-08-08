@@ -4,7 +4,6 @@ import {
   Box,
   Card,
   CardBody,
-  CardFooter,
   Flex,
   Text,
   useColorModeValue,
@@ -161,6 +160,7 @@ const About = () => {
           <Link
             href="https://www.instagram.com/marketa_willis/"
             className="linkUnderline"
+            target="_blank"
           >
             na sociálních sítích
           </Link>{" "}
@@ -170,15 +170,38 @@ const About = () => {
         </Text>
         <Text mt={2}>
           Proto nyní kromě technických tipů v programování otevírám i téma
-          psychického zdraví a odolnosti. Kromě lektorování v Czechitas jsem se
-          objevila jako lektor a speaker v ReactGirlsPrague, v podcastu
-          junior.guru{" "}
+          psychického zdraví a odolnosti. Kromě lektorování v{" "}
+          <Link
+            href="https://www.czechitas.cz/"
+            target="_blank"
+            className="linkUnderline"
+          >
+            Czechitas
+          </Link>{" "}
+          jsem se objevila jako lektor a speaker v{" "}
+          <Link
+            href="https://reactgirls.com/"
+            target="_blank"
+            className="linkUnderline"
+          >
+            {" "}
+            ReactGirls
+          </Link>
+          , v podcastu{" "}
+          <Link
+            href="https://junior.guru/"
+            target="_blank"
+            className="linkUnderline"
+          >
+            junior.guru
+          </Link>{" "}
+          i v{" "}
           <Link
             href="/media"
             aria-aria-label="media appearance"
             className="linkUnderline"
           >
-            i v dalších médiích.
+            dalších médiích.
           </Link>
         </Text>
       </section>

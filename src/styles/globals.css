@@ -155,3 +155,12 @@ p > code {
   border-radius: 0.25rem;
 }
 
+.mdx-space--sm {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.mdx-space--md {
+  margin-top: 1rem;
+  width: 100%;
+}
+

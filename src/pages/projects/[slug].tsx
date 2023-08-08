@@ -6,13 +6,16 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import styles from "../../styles/Mdx.module.scss";
 import Link from "next/link";
-import { Code, Heading } from "@chakra-ui/react";
+import { Code, Flex, Heading, Tag, Text } from "@chakra-ui/react";
 import ResponsiveImage from "../../components/MdxComponents/ResponsiveImage";
 import CodeBlock from "../../components/MdxComponents/CodeBlock";
+import MdxLink from "../../components/MdxComponents/MdxLink";
+import MdxTag from "../../components/MdxComponents/MdxTag";
 
 type ProjectProps = {
   frontMatter: {
     title: string;
+    year: number;
   };
   mdxSource: {
     compiledSource: string;
@@ -26,6 +29,8 @@ const Project = ({ frontMatter, mdxSource }: ProjectProps) => {
     img: ResponsiveImage,
     CodeBlock,
     Code,
+    MdxLink,
+    MdxTag,
   };
 
   return (
@@ -34,7 +39,18 @@ const Project = ({ frontMatter, mdxSource }: ProjectProps) => {
         {" "}
         ← Zpět na projekty
       </Link>
-      <Heading size="2xl">{frontMatter.title}</Heading>
+      <Flex
+        alignItems="baseline"
+        gap={4}
+        mb={4}
+        pr={{ base: 8, md: 10 }}
+        justifyContent="space-between"
+      >
+        <Heading size="xl">{frontMatter.title}</Heading>
+        <Tag size="md" colorScheme="gray">
+          {frontMatter.year}
+        </Tag>
+      </Flex>
       {/* @ts-ignore */}
       <MDXRemote {...mdxSource} components={components} />
     </div>
