@@ -11,6 +11,7 @@ import ResponsiveImage from "../../components/MdxComponents/ResponsiveImage";
 import CodeBlock from "../../components/MdxComponents/CodeBlock";
 import MdxLink from "../../components/MdxComponents/MdxLink";
 import MdxTagList from "../../components/MdxComponents/MdxTag";
+import MdxGithubLink from "../../components/MdxComponents/MdxGithubLink";
 
 type ProjectProps = {
   frontMatter: {
@@ -31,6 +32,7 @@ const Project = ({ frontMatter, mdxSource }: ProjectProps) => {
     Code,
     MdxLink,
     MdxTagList,
+    MdxGithubLink,
   };
 
   return (
