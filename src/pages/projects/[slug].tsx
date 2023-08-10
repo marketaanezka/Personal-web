@@ -10,7 +10,7 @@ import { Code, Flex, Heading, Tag, Text } from "@chakra-ui/react";
 import ResponsiveImage from "../../components/MdxComponents/ResponsiveImage";
 import CodeBlock from "../../components/MdxComponents/CodeBlock";
 import MdxLink from "../../components/MdxComponents/MdxLink";
-import MdxTag from "../../components/MdxComponents/MdxTag";
+import MdxTagList from "../../components/MdxComponents/MdxTag";
 
 type ProjectProps = {
   frontMatter: {
@@ -30,7 +30,7 @@ const Project = ({ frontMatter, mdxSource }: ProjectProps) => {
     CodeBlock,
     Code,
     MdxLink,
-    MdxTag,
+    MdxTagList,
   };
 
   return (

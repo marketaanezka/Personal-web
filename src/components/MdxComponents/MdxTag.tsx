@@ -1,23 +1,21 @@
-import { Tag, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Tag } from "@chakra-ui/react";
 import { FC } from "react";
 
-type TagProps = {
-  colorScheme: string;
-  id: string;
-  children: React.ReactNode;
+interface TagList {
+  tags: string[];
+  color: string;
+}
+
+const MdxTagList: FC<TagList> = ({ tags, color }) => {
+  return (
+    <Flex wrap="wrap" gap={2} mt={4}>
+      {tags.map((tag) => (
+        <Tag size={"lg"} colorScheme={color} key={tag}>
+          {tag}
+        </Tag>
+      ))}
+    </Flex>
+  );
 };
 
-const MdxTag: FC<TagProps> = ({ colorScheme, children, id }) => (
-  <Tag
-    mt={2}
-    size={"lg"}
-    // bg={useColorModeValue("lila.300", "lila.800")}
-    // color={useColorModeValue("whiteAlpha.900", "whiteAlpha.800")}
-    colorScheme={colorScheme}
-    key={id}
-  >
-    {children}
-  </Tag>
-);
-
-export default MdxTag;
+export default MdxTagList;

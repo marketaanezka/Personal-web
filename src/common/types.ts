@@ -32,10 +32,18 @@ export interface MediaPost {
     description: string;
 }
 
+export enum TagColor {
+    Purple = 'purple',
+    Blue = 'blue',
+    Cyan = 'cyan',
+    Pink = 'pink',
+    Yellow = 'yellow',
+}
+
 export interface SkillsCard {
     heading: string,
     skillsList: string[],
-    color: "purple" | "blue" | "cyan" | "pink" | "yellow";
+    color: TagColor;
 }
 
 
