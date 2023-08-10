@@ -19,6 +19,6 @@ export const skills: SkillsCard[] = [
     {
         heading: "Soft skills",
         skillsList: ["Mentoring, lektorování", "Aktivní naslouchání", "Prezentační dovednosti", "Proaktivita"],
-        color: TagColor.Yellow,
+        color: TagColor.Teal,
     },
 ]

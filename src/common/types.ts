@@ -35,6 +35,7 @@ export interface MediaPost {
 export enum TagColor {
     Purple = 'purple',
     Blue = 'blue',
+    Teal = 'teal',
     Cyan = 'cyan',
     Pink = 'pink',
     Yellow = 'yellow',

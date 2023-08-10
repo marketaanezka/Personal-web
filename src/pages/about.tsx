@@ -180,16 +180,16 @@ const About = () => {
           >
             Czechitas
           </Link>{" "}
-          jsem se objevila jako lektor a speaker v{" "}
+          jsem například spoluautorem testu znalostí JavaScriptu na{" "}
           <Link
-            href="https://reactgirls.com/"
+            href="https://www.startupjobs.cz/test/javascript"
             target="_blank"
             className="linkUnderline"
           >
             {" "}
-            ReactGirls
+            Startupjobs
           </Link>
-          , v podcastu{" "}
+          , nebo jsem se objevila v podcastu{" "}
           <Link
             href="https://junior.guru/"
             target="_blank"

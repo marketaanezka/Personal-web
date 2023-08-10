@@ -79,7 +79,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ small, project }) => {
                 <Tag
                   // bg={useColorModeValue("lila.300", "lila.800")}
                   // color={useColorModeValue("whiteAlpha.900", "whiteAlpha.800")}
-                  colorScheme="purple"
+                  colorScheme="gray"
                   key={technology}
                 >
                   {technology}
