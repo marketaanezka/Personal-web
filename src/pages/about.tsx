@@ -71,8 +71,9 @@ const About = () => {
             novým kolegům a&nbsp;vysvětlovala: &quot;Já&nbsp;odcházím, udělala
             jsem si&nbsp;kurzy programování a budu pracovat jako softwarový
             tester!&quot; A&nbsp;i&nbsp;když jsem byla nadšená z nové práce,
-            zároveň jsem si říkala: Práce&nbsp;v&nbsp;IT?&nbsp;Po&nbsp;kurzu?
-            To&nbsp;jde? To&nbsp;chci!
+            zároveň jsem si říkala:
+            Práce&nbsp;v&nbsp;IT?&nbsp;Bez&nbsp;IT&nbsp;vejšky? To&nbsp;jde?
+            To&nbsp;chci!
           </p>
         </div>
         <div className={styles.imageWrapper}>
@@ -93,9 +94,10 @@ const About = () => {
               své první lekci programování v C#. Neskutečně mě to nadchlo,
               kombinace kreativity, ale zároveň systematičnosti. Do práce jsem
               chodila na šestou ráno a programovala jsem, protože jsem tam měla
-              extra monitor. A už mě to nepustilo. Po kurzu C# jsem v roce 2020
-              absolvovala webovou Digitální Akademii Czechitas a zanedlouho nato
-              jsem si našla svou první práci jako frontend vývojář.
+              klid a extra monitor. A už mě to nepustilo. Po kurzu C# jsem v
+              roce 2020 absolvovala webovou Digitální Akademii Czechitas a
+              zanedlouho nato jsem si našla svou první práci jako frontend
+              vývojář.
             </Text>
             <Text mt={2}>
               Současně jsem se začala aktivně zapojovat v Czechitas, jako kouč a

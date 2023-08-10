@@ -25,4 +25,17 @@ export interface Project {
     slug: string,
 }
 
+export interface MediaPost {
+    externalLink: string;
+    avatar: string;
+    heading: string;
+    description: string;
+}
+
+export interface SkillsCard {
+    heading: string,
+    skillsList: string[],
+    color: "purple" | "blue" | "cyan" | "pink" | "yellow";
+}
+
 

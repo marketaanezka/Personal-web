@@ -5,15 +5,9 @@ import { ExternalLink } from "../assets/Icons/icons";
 import Link from "next/link";
 import { FC } from "react";
 import { MediaPosts } from "../data/mediaposts";
+import { MediaPost } from "../common/types";
 
-interface MediaPostProps {
-  externalLink: string;
-  avatar: string;
-  heading: string;
-  description: string;
-}
-
-const MediaPost: FC<MediaPostProps> = ({
+const MediaPost: FC<MediaPost> = ({
   externalLink,
   avatar,
   heading,
