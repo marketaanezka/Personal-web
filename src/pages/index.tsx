@@ -22,8 +22,8 @@ const Home: NextPage<{ latestPost: Post; projects: Project[] }> = ({
     <div className={styles.container}>
       <Intro />
       <BlogPitch post={latestPost} />
-      <FeaturedPitch />
       <ProjectsPitch projects={projects} />
+      <FeaturedPitch />
     </div>
   );
 };
