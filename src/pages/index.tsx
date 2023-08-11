@@ -49,7 +49,7 @@ export const getStaticProps = async () => {
 
   const projectFiles = fs.readdirSync(path.join("src", "projects"));
 
-  const projects = projectFiles.map((filename) => {
+  const allProjects = projectFiles.map((filename) => {
     const markdownWithMeta = fs.readFileSync(
       path.join("src", "projects", filename)
     );
@@ -60,6 +60,8 @@ export const getStaticProps = async () => {
       slug: filename.split(".")[0],
     };
   });
+
+  const projects = allProjects.slice(2, 5);
 
   return {
     props: {
