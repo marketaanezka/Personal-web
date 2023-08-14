@@ -18,8 +18,8 @@ const Header = () => {
       <div className={styles.header}>
         <Box as="span">
           <Link href="/">
-            <span className={styles.name}>Willis</span>
-            <span className={styles.popColor}>Dev</span>
+            <span className={styles.name}>Markéta</span>
+            <span className={styles.popColor}>Willis</span>
           </Link>
         </Box>
         {isSmallScreen ? <DrawerMenu /> : <Menu />}

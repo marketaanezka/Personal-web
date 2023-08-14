@@ -22,7 +22,7 @@ const SkillsCard: FC<SkillsCardProps> = ({ skill }) => {
       </Heading>
       <Flex wrap="wrap" gap={2}>
         {skill.skillsList.map((skill) => (
-          <Tag key={skill} size="lg" colorScheme={color}>
+          <Tag key={skill} size="md" colorScheme={color}>
             {skill}
           </Tag>
         ))}
@@ -49,26 +49,26 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
           md: "repeat(2, 1fr)",
           lg: "repeat(3, 1fr)",
         }}
-        gap={5}
+        gap={6}
       >
         {projects.map((project) => (
           <ProjectCard key={project.frontMatter.title} project={project} />
         ))}
       </Grid>
       <Box>
-        <Heading size="lg" mt={8} mb={4}>
+        <Heading size="lg" mt={{ base: 8, lg: 10 }} mb={2}>
           Znalosti
         </Heading>
-        <Text mt={3} mb={6} opacity={0.7}>
+        <Text mb={6} opacity={0.7}>
           Přehled technologií, se kterými pracuji a témata kterým se věnuji.
         </Text>
         <Grid
           templateColumns={{
             base: "repeat(1, 1fr)",
             // md: "repeat(2, 1fr)",
-            // lg: "repeat(3, 1fr)",
+            lg: "repeat(3, 1fr)",
           }}
-          gap={8}
+          gap={12}
         >
           {skills.map((skill) => (
             <SkillsCard skill={skill} key={skill.heading} />

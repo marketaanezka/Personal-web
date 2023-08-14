@@ -13,16 +13,15 @@ const BlogThumbImage = ({ src, alt }: BlogThumbImageProps) => {
       h={{ base: "10rem", md: "auto" }}
       position="relative"
     >
-      <Box>
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          style={{ objectFit: "cover" }}
-          quality={10}
-        />
-        ;
-      </Box>
+      {/* <Box> */}
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        style={{ objectFit: "cover" }}
+        quality={10}
+      />
+      ;{/* </Box> */}
     </Box>
   );
 };

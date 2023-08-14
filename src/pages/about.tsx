@@ -123,11 +123,11 @@ const About = () => {
             </Text>
             <Text mt={2}>
               Nejvíc jsem bojovala s narůstajícím imposter syndromem, pocitem,
-              že mi chybí zpětná vazba, že dělám svou práci dobře a postupuji
-              dost rychle. Na schůzkách jsem nevěděla, jestli se ptám podezřele
-              málo, nebo jestli plácám nesmysly. Když jsem se zasekla na opravě
-              bugu, celé dny jsem se bála poprosit seniora o pomoc, abych se
-              &quot;neprozradila&quot;, že toho vlastně tolik neumím.
+              že mi chybí zpětná vazba, jestli dělám svou práci dobře a
+              postupuji dost rychle. Na schůzkách jsem nevěděla, jestli se ptám
+              podezřele málo, nebo jestli plácám nesmysly. Když jsem se zasekla
+              na opravě bugu, celé dny jsem se bála poprosit seniora o pomoc,
+              abych se &quot;neprozradila&quot;, že toho vlastně tolik neumím.
             </Text>
           </Box>
           <InstagramImage

@@ -10,7 +10,7 @@ interface PitchHeadingProps {
 
 const PitchHeading = ({ heading, linkUrl, linkText }: PitchHeadingProps) => {
   return (
-    <Flex alignItems={"center"}>
+    <Flex alignItems={"center"} mb={4}>
       <Heading mr={2} className={styles.heading}>
         {heading}
       </Heading>

@@ -14,6 +14,7 @@ export interface Post {
 export interface ProjectFrontMatter {
     title: string,
     year: number,
+    company?: string,
     description: string,
     technologies: string[],
     image: string,

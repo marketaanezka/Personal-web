@@ -44,7 +44,7 @@ export default function Footer() {
         justify={{ base: "center", md: "space-between" }}
         align={{ base: "center", md: "center" }}
       >
-        <Text fontSize="xs">
+        <Text fontSize="sm">
           ©2023 with 🫶 &{" "}
           <Link href="/contact" className="linkUnderline">
             various tech

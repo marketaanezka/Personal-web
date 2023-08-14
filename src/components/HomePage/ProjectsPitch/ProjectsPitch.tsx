@@ -1,9 +1,10 @@
 import styles from "./ProjectsPitch.module.scss";
-import { Grid } from "@chakra-ui/react";
+import { Box, Grid } from "@chakra-ui/react";
 import ProjectCard from "../../ProjectCard/ProjectCard";
 import PitchHeading from "../../PitchHeading/PitchHeading";
 import { Project } from "../../../common/types";
 import { FC } from "react";
+import ProjectPitchCard from "../../ProjectCard/ProjectPitchCard";
 
 interface ProjectsPitchProps {
   projects: Project[];
@@ -17,7 +18,7 @@ const ProjectsPitch: FC<ProjectsPitchProps> = ({ projects }) => {
         linkUrl="/projects"
         linkText="Všechny projekty"
       />
-      <Grid
+      {/* <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",
           md: "repeat(2, 1fr)",
@@ -29,7 +30,12 @@ const ProjectsPitch: FC<ProjectsPitchProps> = ({ projects }) => {
         {projects.map((project) => (
           <ProjectCard small project={project} key={project.slug} />
         ))}
-      </Grid>
+      </Grid> */}
+      <Box>
+        {projects.map((project) => (
+          <ProjectPitchCard project={project} key={project.slug} />
+        ))}
+      </Box>
     </section>
   );
 };

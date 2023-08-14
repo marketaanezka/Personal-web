@@ -61,7 +61,7 @@ export const getStaticProps = async () => {
     };
   });
 
-  const projects = allProjects.slice(2, 5);
+  const projects = allProjects.slice(0, 4);
 
   return {
     props: {

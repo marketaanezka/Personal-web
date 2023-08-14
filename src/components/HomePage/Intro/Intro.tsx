@@ -47,6 +47,7 @@ const Intro = () => {
             alt={"profile image"}
             fill
             style={{ objectFit: "cover" }}
+            priority={true}
           />
         </Box>
       </Box>

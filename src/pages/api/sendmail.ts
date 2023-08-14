@@ -36,9 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     });
 
     if (req.method === 'POST') {
-        console.log("post method")
         transporter.sendMail(message, (err, info) => {
-            console.log("transporter")
             if (err) {
                 res.status(404).json({
                     error: `Connection refused: ${err}`

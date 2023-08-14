@@ -15,7 +15,7 @@ export const theme = extendTheme({
         bg: mode("gray.100", "gray.800")(props),
       },
       html: {
-        fontSize: "20px",
+        fontSize: "18px",
       },
     }),
   },
