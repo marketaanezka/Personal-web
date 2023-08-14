@@ -22,7 +22,7 @@ const Blog: FC<BlogPostProps> = ({ posts }) => {
       </Text>
       <VStack spacing={4} align="stretch">
         {posts.map((post, index) => {
-          console.log("individual post", post);
+          // console.log("individual post", post);
           return (
             <Link href={`/blog/${post.slug}`} key={`${post.slug}-${index}`}>
               <BlogPostCard post={post} />

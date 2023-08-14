@@ -82,6 +82,7 @@ const About = () => {
             height="600"
             src="rgtalk_jtakgk"
             alt="a girl programmer lecturer smiling"
+            priority
           />
         </div>
       </section>
@@ -200,7 +201,7 @@ const About = () => {
           i v{" "}
           <Link
             href="/media"
-            aria-aria-label="media appearance"
+            aria-label="media appearance"
             className="linkUnderline"
           >
             dalších médiích.

@@ -45,11 +45,13 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Text fontSize="sm">
-          ©2023 with 🫶 &{" "}
+          ©2023 with 🫶
+          {/* &{" "}
           <Link href="/contact" className="linkUnderline">
             various tech
           </Link>
-          , Markéta Willis
+          ,  */}{" "}
+          Markéta Willis
         </Text>
         <Stack direction="row" spacing={2}>
           <SocialMediaButtons />

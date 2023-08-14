@@ -16,7 +16,7 @@ const Intro = () => {
         </Stack>
         <Text className={styles.text} opacity={0.7} mb={3}>
           Baví mě technologie webového vývoje, ráda se učím a stejně rada učím
-          druhé. Nevěřím, že programovat muže jen ten, kdo na to má “mozek” od
+          druhé. Nevěřím, že programovat může jen ten, kdo na to má “mozek” od
           narození.
         </Text>
         <Text className={styles.text} opacity={0.7}>

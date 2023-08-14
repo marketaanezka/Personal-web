@@ -11,7 +11,11 @@ interface ProjectCardProps {
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   const { frontMatter, slug } = project;
   return (
-    <Box _notFirst={{ paddingTop: "2rem" }}>
+    <Box
+      _notFirst={{ paddingTop: "1.5rem" }}
+      borderBottom={{ base: "1px solid #8e8e8e4d", lg: "none" }}
+      paddingBottom={{ base: 6, lg: 0 }}
+    >
       <Grid templateColumns={{ base: "3fr 1fr", lg: "2fr 4fr 1fr" }}>
         <Link href={`/projects/${slug}`} key={slug}>
           <Flex align="baseline">
@@ -28,6 +32,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           gap={2}
           order={{ base: 3, lg: 0 }}
           mt={{ base: 4, lg: 0 }}
+          gridArea={{ base: "2 / 1 / span 1 / span 2", lg: "auto" }}
         >
           {frontMatter.technologies.map((technology) => (
             <Tag colorScheme="gray" key={technology}>
