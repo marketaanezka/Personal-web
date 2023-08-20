@@ -8,12 +8,12 @@ export const skills: SkillsCard[] = [
     },
     {
         heading: "Nástroje & platformy",
-        skillsList: ["Github", "Gitlab", "MS Azure", "Jira", "ClickUp", "Postman", "Netlify", "Vercel", "Storybook", "Docker", "DevTools", "Web Accessibilty"],
+        skillsList: ["Github", "Gitlab", "MS Azure", "Jira", "ClickUp", "Postman", "Storybook", "DevTools", "Web Accessibilty"],
         color: TagColor.Blue,
     },
     {
         heading: "Soft skills",
-        skillsList: ["Mentoring, lektorování", "Prezentační dovednosti", "Proaktivita", "Aktivní naslouchání", "Kariérní tipy", "Imposter syndrom management"],
+        skillsList: ["Mentoring", "Prezentační dovednosti", "Aktivní naslouchání", "Kariérní tipy", "Imposter syndrom management"],
         color: TagColor.Teal,
     },
 ]

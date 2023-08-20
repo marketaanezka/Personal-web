@@ -19,7 +19,7 @@ const BlogThumbImage = ({ src, alt }: BlogThumbImageProps) => {
         alt={alt}
         fill
         style={{ objectFit: "cover" }}
-        quality={10}
+        quality={60}
       />
       ;{/* </Box> */}
     </Box>

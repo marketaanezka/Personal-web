@@ -34,7 +34,7 @@ const CardImage = ({ src, alt }: CardImageProps) => {
           alt={alt}
           fill
           style={{ objectFit: "cover", borderRadius: "0.375rem 0.375rem 0 0" }}
-          quality={10}
+          quality={70}
         />
       </Box>
     </Box>
