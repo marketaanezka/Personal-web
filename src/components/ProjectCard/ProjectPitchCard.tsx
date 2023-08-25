@@ -1,4 +1,12 @@
-import { Text, Box, Flex, Grid, Heading, Tag } from "@chakra-ui/react";
+import {
+  Text,
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  Tag,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import { FC } from "react";
 import { Project } from "../../common/types";
@@ -10,6 +18,8 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   const { frontMatter, slug } = project;
+  const borderColor = useColorModeValue("#eaeaeae6", "transparent");
+
   return (
     <Box
       _notFirst={{ paddingTop: "1.5rem" }}
@@ -35,7 +45,12 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
           gridArea={{ base: "2 / 1 / span 1 / span 2", lg: "auto" }}
         >
           {frontMatter.technologies.map((technology) => (
-            <Tag colorScheme="gray" key={technology}>
+            <Tag
+              colorScheme="gray"
+              bg={useColorModeValue("white", "#F7F7F729")}
+              border={`1px solid ${borderColor}`}
+              key={technology}
+            >
               {technology}
             </Tag>
           ))}
