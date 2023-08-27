@@ -9,6 +9,8 @@ import Link from "next/link";
 import { Code, Heading } from "@chakra-ui/react";
 import ResponsiveImage from "../../components/MdxComponents/ResponsiveImage";
 import CodeBlock from "../../components/MdxComponents/CodeBlock";
+import MdxLink from "../../components/MdxComponents/MdxLink";
+import Quote from "../../components/MdxComponents/Quote";
 
 type PostProps = {
   frontMatter: {
@@ -26,6 +28,8 @@ const Post = ({ frontMatter, mdxSource }: PostProps) => {
     img: ResponsiveImage,
     CodeBlock,
     Code,
+    MdxLink,
+    Quote,
   };
 
   return (

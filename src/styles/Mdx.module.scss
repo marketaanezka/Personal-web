@@ -5,6 +5,7 @@
 
     @media (min-width: 768px) {
         width: 90%;
+        padding: 0 7% 1rem;
       }
 
     pre {
@@ -27,7 +28,7 @@
     h2 {
         font-weight: 600;
         font-family: GTBold, sans-serif;
-        border: 2px solid var(pinkish);
+        margin: 2rem 0 0.5rem 0;
     }
 
     ul {

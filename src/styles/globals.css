@@ -164,3 +164,8 @@ p > code {
   width: 100%;
 }
 
+.mdx-space--lg {
+  margin-top: 2rem;
+  width: 100%;
+}
+
