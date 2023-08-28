@@ -10,6 +10,7 @@ import { MediaPost } from "../common/types";
 const MediaPost: FC<MediaPost> = ({
   externalLink,
   avatar,
+  alt,
   heading,
   description,
 }) => {
@@ -17,7 +18,7 @@ const MediaPost: FC<MediaPost> = ({
     <Box my={10}>
       <Link href={externalLink} target="_blank">
         <Flex align="center" mt="0.5">
-          <Avatar src={avatar} marginRight="0.5rem" size="xs" />
+          <Avatar src={avatar} marginRight="0.5rem" size="xs" name={alt} />
           <Heading size="md">
             <span className="linkUnderline">{heading}</span>
           </Heading>
@@ -47,6 +48,7 @@ const Media = () => {
           avatar={post.avatar}
           heading={post.heading}
           description={post.description}
+          alt={post.alt}
         />
       ))}
     </Box>

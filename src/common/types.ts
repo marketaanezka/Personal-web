@@ -1,6 +1,7 @@
 export interface PostFrontMatter {
     date: string;
     description: string;
+    readingtime: string;
     tags: string[];
     thumbnailUrl: string;
     title: string;
@@ -29,6 +30,7 @@ export interface Project {
 export interface MediaPost {
     externalLink: string;
     avatar: string;
+    alt: string,
     heading: string;
     description: string;
 }

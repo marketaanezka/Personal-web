@@ -36,12 +36,15 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
       <Stack w={{ base: "100%", md: "70%" }}>
         <CardBody>
           <Heading size="md">{post.frontMatter.title}</Heading>
-          <Flex align="baseline" mt="1">
+          <Flex align="baseline" mt="1" gap={3}>
             <Text>
-              <Avatar src="/img/avatar.jpeg" marginRight="0.5rem" size="xs" />
+              <Avatar src="/img/avatar.jpeg" size="xs" name="Marketa Willis" />
             </Text>
             <Text fontSize="sm" opacity={0.7}>
               {post.frontMatter.date}
+            </Text>
+            <Text fontSize="sm" opacity={0.7}>
+              {post.frontMatter.readingtime}
             </Text>
           </Flex>
           <Text py="2" className={styles.description}>

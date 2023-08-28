@@ -6,16 +6,15 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import styles from "../../styles/Mdx.module.scss";
 import Link from "next/link";
-import { Code, Heading } from "@chakra-ui/react";
+import { Code, Heading, Text } from "@chakra-ui/react";
 import ResponsiveImage from "../../components/MdxComponents/ResponsiveImage";
 import CodeBlock from "../../components/MdxComponents/CodeBlock";
 import MdxLink from "../../components/MdxComponents/MdxLink";
 import Quote from "../../components/MdxComponents/Quote";
+import { PostFrontMatter } from "../../common/types";
 
 type PostProps = {
-  frontMatter: {
-    title: string;
-  };
+  frontMatter: PostFrontMatter;
   mdxSource: {
     compiledSource: string;
     renderedOutput: string;
