@@ -5,14 +5,22 @@ import styles from "./SocialMediaButtons.module.scss";
 const SocialMediaButtons = () => {
   return (
     <div className={styles.socialMediaIcon}>
-      <Link href="https://www.instagram.com/marketa_willis/" target="_blank">
-        <Instagram fontSize="2xl" mr={1} opacity={0.9} />
+      <Link
+        href="https://www.instagram.com/marketa_willis/"
+        target="_blank"
+        aria-label="marketa willis instagram profile"
+      >
+        <Instagram fontSize="3xl" mr={1} opacity={0.9} />
       </Link>
       {/* <Link href="https://github.com/marketaanezka" target="_blank">
         <Github fontSize="2xl" mr={1} opacity={0.9} />
       </Link> */}
-      <Link href="https://www.linkedin.com/in/marketa-willis/" target="_blank">
-        <Linkedin fontSize="2xl" opacity={0.9} />
+      <Link
+        href="https://www.linkedin.com/in/marketa-willis/"
+        target="_blank"
+        aria-label="marketa willis linkedin profile"
+      >
+        <Linkedin fontSize="3xl" opacity={0.9} />
       </Link>
     </div>
   );

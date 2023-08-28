@@ -36,10 +36,10 @@ export default function ContactFormWithSocialButtons() {
                   md: "3xl",
                 }}
               >
-                Chcete spolupracovat?
+                Kontaktní formulář
               </Heading>
               <Text align="center" mt={{ base: 2, md: 4 }}>
-                Dejte vědět, s čím vám můžu pomoct:
+                Zůstaňme ve spojení 📧
               </Text>
             </Box>
             <Stack

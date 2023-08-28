@@ -30,10 +30,9 @@ export default function Footer() {
         Chcete spolupracovat?{" "}
         <Link href="/contact">
           <Text as="b" mx={2} className="linkUnderline">
-            Kontaktujte mě 💌,
+            Pošlete mi zprávu 💌
           </Text>
-        </Link>{" "}
-        něco vymyslíme.
+        </Link>
       </Flex>
       <Container
         as={Stack}

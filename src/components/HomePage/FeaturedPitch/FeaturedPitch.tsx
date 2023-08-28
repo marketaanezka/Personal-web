@@ -14,6 +14,7 @@ const FeaturedPitch = () => {
         linkText="Na čtení i poslech"
       />
       <iframe
+        title="junior guru podcast on apple podcasts"
         allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
         frameBorder="0"
         height="175"
