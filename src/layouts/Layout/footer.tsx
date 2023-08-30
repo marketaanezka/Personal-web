@@ -21,7 +21,7 @@ export default function Footer() {
       flexDirection={"column"}
       justifyContent={"end"}
     >
-      <Flex
+      {/* <Flex
         p={4}
         direction={{ base: "column", md: "row" }}
         alignItems="center"
@@ -33,7 +33,7 @@ export default function Footer() {
             Pošlete mi zprávu 💌
           </Text>
         </Link>
-      </Flex>
+      </Flex> */}
       <Container
         as={Stack}
         maxW={"6xl"}
