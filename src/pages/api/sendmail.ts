@@ -11,18 +11,18 @@ type Data = {
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 
     const message = {
-        from: req.body.email,
+        from: "mail@marketawillis.com",
         to: process.env.MAIL_ADDRESS,
-        subject: `Od ${req.body.name}`,
+        subject: `Od ${req.body.name} z ${req.body.email}`,
         text: req.body.message,
         html: `<p>${req.body.message}</p>`,
     };
 
     const transporter = nodemailer.createTransport({
         host: process.env.MAIL_HOST,
-        port: 2525,
+        port: 587,
         auth: {
-            user: process.env.MAIL_USER,
+            user: process.env.MAIL_USERNAME,
             pass: process.env.MAIL_PASSWORD,
         },
     });
