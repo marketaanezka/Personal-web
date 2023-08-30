@@ -38,23 +38,32 @@
             font-size: 1rem;
         }
     }
+
+    .readingTime {
+        font-size: var(--chakra-fontSizes-sm);
+        color: var(--chakra-colors-gray-500);
+    }
 }
 
-.retrunlink {
-    font-size: var(--chakra-fontSizes-sm);
-    color: var(--chakra-colors-gray-500);
-}
+    .retrunlink {
+        font-size: var(--chakra-fontSizes-sm);
+        color: var(--chakra-colors-gray-500);
+    }
 
 html[data-theme='dark'] {
     .mdx p > code {
         padding: 0.2rem 0.4rem;
         font-size: 90%;
-        background-color: var(--chakra-colors-lila-800);
+        background-color: #58546b;
         color: var(--chakra-colors-gray-200);
         border-radius: 0.25rem;
     }
 
     .retrunlink {
+        color: var(--chakra-colors-gray-400);
+    }
+
+    .readingTime {
         color: var(--chakra-colors-gray-400);
     }
 }

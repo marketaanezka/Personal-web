@@ -38,7 +38,7 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
           <Heading size="md">{post.frontMatter.title}</Heading>
           <Flex align="baseline" mt="1" gap={3}>
             <Text>
-              <Avatar src="/img/avatar.jpeg" size="xs" name="Marketa Willis" />
+              <Avatar src="/img/avatar.jpeg" size="xs" />
             </Text>
             <Text fontSize="sm" opacity={0.7}>
               {post.frontMatter.date}

@@ -18,7 +18,7 @@ const MediaPost: FC<MediaPost> = ({
     <Box my={10}>
       <Link href={externalLink} target="_blank">
         <Flex align="center" mt="0.5">
-          <Avatar src={avatar} marginRight="0.5rem" size="xs" name={alt} />
+          <Avatar src={avatar} marginRight="0.5rem" size="xs" />
           <Heading size="md">
             <span className="linkUnderline">{heading}</span>
           </Heading>

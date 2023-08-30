@@ -38,12 +38,7 @@ const FeaturedPitch = () => {
             target="_blank"
           >
             <Flex align="center" mt="0.5">
-              <Avatar
-                src="/img/wdf.png"
-                marginRight="0.5rem"
-                size="xs"
-                name="wdf"
-              />
+              <Avatar src="/img/wdf.png" marginRight="0.5rem" size="xs" />
               <Heading size="sm">
                 <span className="linkUnderline">
                   Se zapojením do komunit bych neváhala
@@ -68,7 +63,6 @@ const FeaturedPitch = () => {
                 src="/img/applifting.png"
                 marginRight="0.5rem"
                 size="xs"
-                name="Applifting"
               />
               <Heading size="sm">
                 <span className="linkUnderline">

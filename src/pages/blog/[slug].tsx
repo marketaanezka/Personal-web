@@ -38,6 +38,7 @@ const Post = ({ frontMatter, mdxSource }: PostProps) => {
         ← Zpět na blog
       </Link>
       <Heading size="xl">{frontMatter.title}</Heading>
+      <Text className={styles.readingTime}>📖 {frontMatter.readingtime}</Text>
       {/* @ts-ignore */}
       <MDXRemote {...mdxSource} components={components} />
     </div>
