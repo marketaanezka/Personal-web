@@ -1,5 +1,5 @@
 export interface PostFrontMatter {
-    date: string;
+    date: number;
     description: string;
     readingtime: string;
     tags: string[];
