@@ -34,6 +34,21 @@ export default function Footer() {
           </Text>
         </Link>
       </Flex> */}
+      <Flex
+        p={4}
+        direction={{ base: "column", md: "row" }}
+        alignItems={{ base: "center", md: "baseline" }}
+        justifyContent="center"
+        opacity={0.8}
+      >
+        <Text fontFamily="Rowdies" fontWeight="lighter">
+          Be yourself, everyone else is taken.
+        </Text>
+        <Text mx={2} fontSize="sm">
+          {" "}
+          - Oscar Wilde
+        </Text>
+      </Flex>
       <Container
         as={Stack}
         maxW={"6xl"}

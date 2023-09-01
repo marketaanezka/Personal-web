@@ -6,18 +6,17 @@ import {
   Heading,
   Avatar,
   Flex,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import { Post } from "../../common/types";
 import BlogThumbImage from "./BlogThumbImage";
 import styles from "./BlogPostCard.module.scss";
+import { unixToDate } from "../../utils/human-readable";
 interface BlogPostCardProps {
   post: Post;
 }
 
 const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
-  const color = useColorModeValue("#626262", "#bfbfbf");
   return (
     <Card
       direction={{ base: "column", md: "row" }}
@@ -25,12 +24,6 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
       variant="outline"
       my={2}
       className={styles.card}
-      // transform=""
-      // _hover={{
-      //   position: "relative",
-      //   transform: "scale(1.008)",
-      //   transition: "all 0.2s",
-      // }}
     >
       <BlogThumbImage src={post.frontMatter.thumbnailUrl} alt="alt" />
       <Stack w={{ base: "100%", md: "70%" }}>
@@ -41,7 +34,7 @@ const BlogPostCard: FC<BlogPostCardProps> = ({ post }) => {
               <Avatar src="/img/avatar.jpeg" size="xs" />
             </Text>
             <Text fontSize="sm" opacity={0.7}>
-              {post.frontMatter.date}
+              {unixToDate(post.frontMatter.date)}
             </Text>
             <Text fontSize="sm" opacity={0.7}>
               {post.frontMatter.readingtime}
