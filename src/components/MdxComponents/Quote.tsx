@@ -7,7 +7,7 @@ type QuoteProps = {
 };
 
 const Quote: FC<QuoteProps> = ({ author, children }) => (
-  <Card mt={{ base: 10, md: 16, lg: 12 }}>
+  <Card mt={{ base: 8, md: 10, lg: 12 }}>
     <CardBody textAlign="center" px={{ md: 10, lg: 14 }}>
       <Text fontStyle="oblique" fontSize="md">
         {children}
