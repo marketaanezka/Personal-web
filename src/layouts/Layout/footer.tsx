@@ -21,8 +21,10 @@ export default function Footer() {
       flexDirection={"column"}
       justifyContent={"end"}
     >
-      {/* <Flex
-        p={4}
+      <Flex
+        px={4}
+        pt={{ base: 4, md: 6 }}
+        pb={{ base: 4, md: 2 }}
         direction={{ base: "column", md: "row" }}
         alignItems="center"
         justifyContent="center"
@@ -33,8 +35,8 @@ export default function Footer() {
             Pošlete mi zprávu 💌
           </Text>
         </Link>
-      </Flex> */}
-      <Flex
+      </Flex>
+      {/* <Flex
         p={4}
         direction={{ base: "column", md: "row" }}
         alignItems={{ base: "center", md: "baseline" }}
@@ -48,7 +50,7 @@ export default function Footer() {
           {" "}
           - Oscar Wilde
         </Text>
-      </Flex>
+      </Flex> */}
       <Container
         as={Stack}
         maxW={"6xl"}

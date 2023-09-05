@@ -11,9 +11,9 @@ type Data = {
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 
     const message = {
-        from: "mail@marketawillis.com",
+        from: process.env.MAIL_SENDER,
         to: process.env.MAIL_ADDRESS,
-        subject: `Od ${req.body.name} z ${req.body.email}`,
+        subject: `Od ${req.body.name}, e-mail ${req.body.email}`,
         text: req.body.message,
         html: `<p>${req.body.message}</p>`,
     };
@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
         host: process.env.MAIL_HOST,
         port: 587,
         auth: {
-            user: process.env.MAIL_USERNAME,
+            user: process.env.MAIL_USER,
             pass: process.env.MAIL_PASSWORD,
         },
     });

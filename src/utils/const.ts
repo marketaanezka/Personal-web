@@ -19,8 +19,8 @@ export const Routes = [
         path: '/media',
         label: 'média'
     },
-    // {
-    //     path: '/contact',
-    //     label: 'kontakt'
-    // }
+    {
+        path: '/contact',
+        label: 'kontakt'
+    }
 ]
