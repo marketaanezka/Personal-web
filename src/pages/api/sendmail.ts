@@ -44,7 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
             } else {
                 console.log("success ", res)
                 res.status(250).json({
-                    success: `Message delivered to ${info.accepted}`
+                    success: `Message delivered`
                 });
             }
         });
