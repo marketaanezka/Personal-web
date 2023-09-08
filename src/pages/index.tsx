@@ -33,7 +33,7 @@ export default Home;
 export const getStaticProps = async () => {
   const files = fs.readdirSync(path.join("src", "posts"));
 
-  const posts = files.map((filename) => {
+  const postsByName = files.map((filename) => {
     const markdownWithMeta = fs.readFileSync(
       path.join("src", "posts", filename)
     );
@@ -43,6 +43,10 @@ export const getStaticProps = async () => {
       frontMatter,
       slug: filename.split(".")[0],
     };
+  });
+
+  const posts = postsByName.sort((a, b) => {
+    return b.frontMatter.date - a.frontMatter.date;
   });
 
   const latestPost = posts[0];
