@@ -1,0 +1,149 @@
+---
+title: CSS názvosloví 101 
+date: 1696331200
+description: Základní přehled a vysvětlení termínů. Od CSS preprocesorům až k pojmenovávacím konvencím.  
+readingtime: 5 minut
+thumbnailUrl: 'https://images.unsplash.com/photo-1610986603166-f78428624e76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+tags: ['css', 'learning']
+---
+
+{/* <MdxLink url=""></MdxLink> */}
+<div className="mdx-space--md"></div>
+Od začátku stylování webových stránek v 90. letech CSS hodně pokročilo. Mnoho věcí je možné využít v samotném CSS, jako třeba proměnné nebo media queries. Mimo to máme preprocesory, stylovací knihovny, nebo různé přístupy k organizaci CSS. 
+
+Pro nováčky bývá náročné se v tom vyznat. Sass, Tailwind, BEM, MaterialUI. Všechno se týká stylování, ale každé trochu jinak. Pojďme si utřídit termíny.  
+
+## Čisté CSS
+CSS, neboli Cascade Style Sheet (česky kaskádové styly, brrr, říkejme CSS 😃) je způsob, jak můžeme na webové stránce měnit styl - barvu textu, přidat rámeček, uspořádat prvky na stránce, animovat i další. 
+
+Pokud na .html soubor napojíme .css soubor a otevřeme ho v prohlížeči, rozezná ho a styly aplikuje. Funguje to tak, že v css souboru pomocí selektoru vybíráme prvek na stránce a pomocí zápisu `vlastnost: hodnota` na prvek aplikujeme styly.
+
+
+
+```css
+h1 {
+	color: blue;
+}
+```
+<div className="mdx-space--md"></div>
+
+{/* <CodeBlock language="css">
+{`h1 {
+	color: blue;
+}`}
+</CodeBlock> */}
+
+Pomocí takového zápisu všechny prvky h1 v html dokumentu obarvíme na modrou. 
+<div className="mdx-space--md"></div>
+CSS se stále vyvíjí a každý rok se objeví řada nových vlastností a vymožeností. 
+Nedávno to byly například container queries, `@when/@else` podmínka nebo selektory `:has` a `:is`. Před použitím takových novinek si nezapomeňte vždy zkontrolovat podporu v prohlížečích na <MdxLink url="https://caniuse.com/">caniuse.com</MdxLink>.
+
+## CSS preprocesory
+
+V zápisu CSS se často setkáváme se zdlouhavými zápisy selektorů, nebo s opakovaným zápisem např. centrování. Do nedávna také v čistém CSS nebylo možné používat různé typy syntaxu jako třeba nesting. CSS preprocesory přesně tímhle pomáhají. Nabízejí použití zjednodušeného syntaxu nebo funkce, které se po zkompilování převedou na čisté CSS, které prohlížeč přečte. Preprocesory v principu samy o sobě nenabízí nastylované prvky, ale usnadňují psaní CSS.
+Je potřeba si je nainstalovat do svého projektu.
+
+Příklad CSS preprocesoru je třeba <MdxLink url="https://sass-lang.com/">Sass</MdxLink>, <MdxLink url="https://lesscss.org/">Less</MdxLink> nebo <MdxLink url="https://stylus-lang.com/">Stylus</MdxLink>
+
+<div className="mdx-space--md"></div>
+<img src="https://res.cloudinary.com/doqtwlcxw/image/upload/Screen_Shot_2019-06-17_at_00.21.51_bwcthg.png" alt="CSS preprocessor Sass"/>
+
+
+## CSS knihovny a frameworky
+
+CSS knihovny a frameworky se liší od preprocesorů tím, že nabízejí již předstylované prvky. Knihovnu nebo framework si nainstalujete nebo přidáte do svého projektu. Pak můžete používat css třídy u html prvků nebo importovat celé nastylované komponenty. 
+<div className="mdx-space--md"></div>
+Schválně je dávám pod jednu kategorii, protože rozdíl mezi knihovnou a frameworkem není úplně jasně daný. Obecně se dá říct, že framework nabízí komplexnější systém, často je u komponent i javascriptová logika (např. hamburger menu, toast notifikace nebo třeba formuláře) nebo i celé šablony stránek. Knihovna je víc “lightweight” a je možné si ji upravit ke svým potřebám.     
+
+Příklad použití frameworku bootstrap - po přidání do projektu stačí přidat třídy jako btn a btn-primary a mít hned nastylované tlačítko. U knihoven a frameworků bývá už daná barevná paleta pro light a dark mód, ale je možné si ji upravit podle svých nebo klientských potřeb.
+
+<div className="mdx-space--md"></div>
+<img src="https://res.cloudinary.com/doqtwlcxw/image/upload/bootstrap_f5s9rp.png" alt="CSS framework bootstrap example"/>
+<div className="mdx-space--md"></div>
+
+Některé známé stylovací knihovny a frameworky jsou <MdxLink url="https://getbootstrap.com/">Boostrap</MdxLink>, <MdxLink url="https://bulma.io/">Bulma</MdxLink>, <MdxLink url="https://semantic-ui.com/">Semantic UI</MdxLink> nebo <MdxLink url="https://tailwindcss.com/">Tailwind</MdxLink>.     
+Pokud píšete frontend v Reactu, setkáte se s knihovnami specificky pro projekty v Reactu. Díky nim si můžete naimportovat a použít celé komponenty a upravovat je pomocí props. Populární je <MdxLink url="https://mui.com/">MaterialUI</MdxLink>, <MdxLink url="https://chakra-ui.com/">Chakra UI</MdxLink> nebo <MdxLink url="https://ant.design/">AntDesign</MdxLink>. 
+
+## CSS metodologie
+
+Pokud mluvíme o CSS metodologiích nebo “naming conventions”, máme na mysli způsob, jakým se CSS soubory strukturují, pojmenovávají a zapisují. Nejedná se o balíček, který je potřeba instalovat a updatovat, ale o domluvu mezi vývojáři, jak si organizovat CSS. Metodologie lze kombinovat s preprocesory i knihovnami. 
+Hlavní důvod existence pojmenovávacích konvencí v CSS je přehlednost, udržitelnost kódu, spolupráce v týmu a možnost znovu použít a škálovat dané stylování.
+
+Celkově se metodologie shodnou na tom, že by se mělo psát tzv. “ploché” CSS, tedy že se používají pouze selektory typu třídy a specificita by měla být ideálně vždy stejná, aby se selektory zmatečně nepřebíjely. 
+
+### Sémantické CSS
+
+Známé přístupy jsou například **OOCSS** (Object Oriented CSS), **BEM** (Block Element Modifier) nebo **SMACSS** (Scalable and Modular Architecture for CSS) [smacks]. To jsou konvence, které doporučují tzv. sémantické CSS, tedy kdy názvy tříd popisují o jaký prvek na stránce se jedná - např. header, card, sidebar.
+
+<div className="mdx-space--md"></div>
+<img src="https://res.cloudinary.com/doqtwlcxw/image/upload/semanticcss_vpbfwy.png" alt="CSS semantic naming convention BEM"/>
+<div className="mdx-space--md"></div>
+Takto může vypadat třída a stylování podle sémantického CSS. 
+```css
+.primary-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+```
+<div className="mdx-space--md"></div>
+Sémantické CSS mnoho týmů využívá, ale má i nevýhody. Jednou s nich je neustálá potřeba vymýšlet odpovídající jména tříd. Když máte komplexnější design a musíte vymýšlet název pro už třetí “container” a pátý “wrapper”, přestává to být sranda 🙂
+
+### Alternativy sémantického CSS
+
+Jako protipól sémantického CSS postupně vzniklo non-semantic CSS, kde názvy tříd popisují, jak vypadá styl prvku:
+
+```css
+.red-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.large-font {
+    font-size: 20px;
+}
+```
+<div className="mdx-space--md"></div>
+Toto se vyvinulo v “atomic” CSS, které už ani nepopisuje vizuální styl prvků, ale nabízí použití css vlastnosti skrze třídy. 
+
+```css
+.bg-red {
+    background-color: red;
+}
+
+.color-white {
+    color: white;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.br-5 {
+    border-radius: 5px;
+}
+
+```
+<div className="mdx-space--md"></div>
+Asi nejznámější framework, který používá atomic CSS, je Tailwind, jehož použití vypadá takto: 
+
+```html
+<button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
+        Click me
+</button>
+```
+<div className="mdx-space--md"></div>
+
+## Shrnutí
+
+Stylování je komplexní disciplína, které se žádný frontenďák nevyhne. Kromě stylování za použití .css souborů se ale za poslední roky vyvinulo mnoho různých nástrojů, které nám stylování zjednodušují.   
+Většina firem využívá na svých projektech nějaký preprocesor, který usnadňuje psaní CSS syntaxu a nabízí i další funkce. Kromě toho je často efektivní použití knihovny nebo framworku. Ty nabízí již nastylované prvky a komponenty. Posledním CSS termínem je tzv. metodologie nebo konvence - tím se chápe způsob organzování a pojmenovávání CSS tříd.     
+Na projektu můžete používat css preprocesor, knihovnu a zároveň pojmenovávat podle určité konvence, navzájem se to nevylučuje. Vyzkoušejte si různé technologie a vyberte si, co vám vyhovuje.
