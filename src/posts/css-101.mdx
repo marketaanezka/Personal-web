@@ -19,19 +19,19 @@ CSS, neboli Cascade Style Sheet (česky kaskádové styly, brrr, říkejme CSS �
 Pokud na .html soubor napojíme .css soubor a otevřeme ho v prohlížeči, rozezná ho a styly aplikuje. Funguje to tak, že v css souboru pomocí selektoru vybíráme prvek na stránce a pomocí zápisu `vlastnost: hodnota` na prvek aplikujeme styly.
 
 
-
+{/* 
 ```css
 h1 {
 	color: blue;
 }
 ```
-<div className="mdx-space--md"></div>
+<div className="mdx-space--md"></div> */}
 
-{/* <CodeBlock language="css">
+<CodeBlock language="css">
 {`h1 {
 	color: blue;
 }`}
-</CodeBlock> */}
+</CodeBlock>
 
 Pomocí takového zápisu všechny prvky h1 v html dokumentu obarvíme na modrou. 
 <div className="mdx-space--md"></div>
@@ -90,6 +90,7 @@ Takto může vypadat třída a stylování podle sémantického CSS.
     font-size: 20px;
 }
 ```
+
 <div className="mdx-space--md"></div>
 Sémantické CSS mnoho týmů využívá, ale má i nevýhody. Jednou s nich je neustálá potřeba vymýšlet odpovídající jména tříd. Když máte komplexnější design a musíte vymýšlet název pro už třetí “container” a pátý “wrapper”, přestává to být sranda 🙂
 
