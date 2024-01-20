@@ -1,0 +1,88 @@
+---
+title: Frontendové trendy 2024 
+date: 1705756530
+description: 6 frontendových trendů, které budou růst v roce 2024 
+readingtime: 3 minuty
+thumbnailUrl: 'https://images.unsplash.com/photo-1604933762023-7213af7ff7a7?q=80&w=1471'
+tags: ['frontend', 'learning', 'web accesibility']
+---
+
+{/* <MdxLink url=""></MdxLink> */}
+<div className="mdx-space--md"></div>
+
+Technologie se vyvíjí každý den a je těžké se vyznat v tom, které novinky se začít učit a které zatím ještě nabírají na popularitě. Těchto 6 trendů ale rozhodně bude růst a bude po nich stále větší poptávka. 
+
+
+## AI-assisted development
+
+První trend asi nikoho nepřekvapí. Raketový růst AI nástrojů v roce 2023 se letos nebude zpomalovat. Naopak, budou se používat stále přesnější a specifičtější nástroje na jednotlivé fáze vývoje. Je díky nim možné bleskově navrhovat prototypy, automatizovat monotónní psaní kódu nebo nechat si napsat dokumentaci (hurá!). 
+
+Některé z populárních nástrojů jsou 
+<MdxLink url="https://github.com/features/copilot">GitHub Copilot</MdxLink>,
+<MdxLink url="https://www.codium.ai/">Codium</MdxLink>,
+<MdxLink url="https://www.tabnine.com/">Tabnine</MdxLink> nebo 
+<MdxLink url="https://Mutable.ai">Mutable.ai</MdxLink> 
+
+## Typescript
+
+Už pár let si jako frontend developer bez Typescriptu neškrtnete. V posledních 6 letech se
+<MdxLink url="https://blog.jetbrains.com/blog/2023/01/17/the-state-of-developer-ecosystem-2022/">popularita Typescriptu ztrojnásobila</MdxLink>! 
+
+
+
+Typescript nabízí vše co Javascript a k tomu možnosti typových anotací a deklarací, což zlepšuje dokumentaci a čitelnost kódu. Díky tomu se vývojář v codebase mnohem rychleji zorientuje. Největší výhodou je ale odhalování a hlavně přecházení chybám - napovídá při psaní kódu, kontroluje typy už při kompilaci a nedovolí, aby se nám do kódu propašoval neočekávaný vstup. 
+
+Proto i letos bude Typescript standardem a budete ho vídat v požadavcích práce více, než Javascript. 
+
+## Mikrofrontendy
+
+Velké a složité monolitní aplikace postupně nahrazují mikrofrontendy. Nový koncept webové architektury umožňuje rozdělit UI aplikace do menších nezávislých částí. Za každý mikrofrontend odpovídá jeden samostatný tým a díky tomu je vývoj rychlejší a komunikace efektivnější. Každý mikrofrontend může využívat jiné technologie i frameworky, které odpovídají potřebám. 
+<div className="mdx-space--md"></div>
+<img src="https://res.cloudinary.com/doqtwlcxw/image/upload/v1705754160/microf_e2hj87.png" alt="Microfrontends"/>
+<div className="mdx-space--md"></div>
+## HTMX
+
+React nebo Vue jsou určitě šikovné frameworky. Ale občas je to takový kanón na vrabce. Je potřeba zakládat projekt, vyznat se v bundlerech, chápat lifecycle komponenty. V HTMX https://htmx.org/ můžeme přidávat dynamiku přímo do HTML. Pomocí atributu `hx-` můžete fetchovat data, dělat upload, update i další interakci, kterou by normálně obsluhoval Javascriptový soubor. 
+
+Pomocí takového kódu můžete třeba načíst další stránku v tabulce dat:
+
+```html
+<tr id="replaceMe">
+  <td colspan="3">
+    <button class='btn' 
+            hx-get="/contacts/?page=2"
+            hx-target="#replaceMe"
+            hx-swap="outerHTML">
+         Load More... 
+		 <img class="htmx-indicator" src="/img/bars.svg">
+    </button>
+  </td>
+</tr>
+```
+
+## SSR a SSG
+
+Pokud jste hledali práci jako Frontenďák v posledních dvou-třech letech, tak jste určitě slyšeli o server-side renderingu. SSR generuje na serveru obsah webových stránek, a to i na základě dynamicky na základě uživatelských informací. Při přohlížení stránek generovaných pomocí SSG (Static Site Generation) je stránka načtena už v průběhu build time a uložena jako statický soubor. Ten se potom uživateli načte rovnou z CDN a nemusí čekat na jeho vykreslení. 
+Nejvíc se tyto koncepty zpopularizovaly v NextJS, ale v minulém roce se objevily React Server Components, které umožňují načítání a případné cachování komponent na serveru. 
+
+SSR a SSG jsou populární, protože nejen je načítání stránek mnohonásobně rychlejší přes různá zařízení a zlepšuje tak uživatelký zážitek, ale napomáhají také SEO (Search Engine Optimization), protože vyhledávače mají snazší přístup k obsahu stránek. 
+
+
+## Webová přístupnost
+
+<div className="mdx-space--md"></div>
+<img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=900" alt="Responsive accessible web app design"/>
+<div className="mdx-space--md"></div>
+
+
+Dávno pryč jsou časy, kdy byly weby kódovány přesně na šířku desktopu 1080px a nikdo nekontroloval, jestli jste zadali e-mail ve správném formátu. Webová přístupnost se netýká pouze lidí s postižením, ale jedná se často o situační potřebu - co když máte ruku v sádře, nebo jste v tmavém a hlučném prostředí? I pro takové případy je potřeba psát přístupné weby. 
+
+Vývojářům už neprojde psaní HTML pouze s divy a spany, formuláře bez labelů nebo tlačítka jako ikonky bez doplňujícího popisu. Pro kontrolu kontrastu barev se objevil nový standard, <MdxLink url="https://www.color-contrast.dev/?txtColor=FEF3C7&bgColor=059669">APCA</MdxLink> (Accessible Perceptual Contrast Algorithm). Ten je od WCAG lepší v tom, že bere v potaz i velikost písma a to, která barva je pozadí a která písmo. 
+
+## Shrnutí
+
+Jak víte, programování se nejde “naučit”, jde se ho jen stále “učit”. To nebude rozdíl ani letos. Sledujte proto novinky z newslettrů nebo od svých oblíbených tvůrců. Můžu doporučit třeba
+<MdxLink url="https://www.joshwcomeau.com/">Josh W. Comeau</MdxLink>,
+<MdxLink url="https://www.a11yproject.com/">Project a11y</MdxLink> nebo
+<MdxLink url="https://www.stefanjudis.com/ ">blog Stefana Judis</MdxLink>.
+
