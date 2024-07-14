@@ -1,0 +1,226 @@
+---
+title: Co jsou to komponenty?
+date: 1720961000
+description: Komponenty jsou základní stavební kameny pro frontend. Díky tomuto článku pochopíte proč a jak se tvoří.
+readingtime: 3 minuty
+thumbnailUrl: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000"
+tags: ["css", "learning"]
+---
+
+<div className="mdx-space--md"></div>
+Web components, React components, Wrapper component, Styled components. U
+frontendového vývoje je nekončící seznam technologií, které vytvářejí, využívají
+nebo pomáhají udržovat komponenty. Ale co to ta komponenta (nebo komponent?)
+vlastně je?
+
+## HTML a CSS
+
+Pokud jste dělali stránky jenom v HTML a CSS a měli jste například 5 obrázků s popiskem, které jste chtěli zobrazit, museli jste pětkrát napsat element img, přidat mu správné třídy, pokaždé unikátní src a popisek.
+
+<CodeBlock language="html">
+  {`  <ul class="image-gallery">
+    <li>
+      <a href="drawing.html">
+        <img src="Img\drawing.png" width="130" height="130" alt="Learn to draw">
+      </a>
+      <p class="image-description">This image links to a page about learning to draw.</p>
+    </li>
+    <li>
+      <a href="art.html">
+        <img src="Img\art.png" width="130" height="130" alt="Art Design and creation">
+      </a>
+      <p class="image-description">This image links to a page about art design and creation.</p>
+    </li>
+    <li>
+      <a href="design.html">
+        <img src="Img\designart.png" width="130" height="130" alt="Design">
+      </a>
+      <p class="image-description">This image links to a page about design.</p>
+    </li>
+    <li>
+      <a href="code.html">
+        <img src="Img\code.png" width="130" height="130" alt="Coding programmer">
+      </a>
+      <p class="image-description">This image links to a page about code.</p>
+    </li>
+    <li>
+      <a href="test.html">
+        <img src="Img\test.png" width="130" height="130" alt="Test">
+      </a>
+      <p class="image-description">This image links to a page about testing.</p>
+    </li> 
+  </ul>`}
+</CodeBlock>
+
+Už takto se to zdá poměrně zdlouhavé napsat. Hodně věcí se v kódu opakuje, jen s jiným obsahem. A představte si, že budete chtít něco změnit. Přidat nebo upravit třídu, nebo pozměnit strukturu galerie. Musíte ručně u každého obrázku udělat změnu a doufat, že jste nikde neudělali překlep.
+
+<div className="mdx-space--md"></div>
+
+Kéž by tak bylo možné si udělat nějakou šablonu image a description a potom tam jen vložit samotný obrázek a text!
+
+<div className="mdx-space--md"></div>
+
+_Voilá, přivítejte komponenty!_
+
+<div className="mdx-space--md"></div>
+Komponenty jsou samostatné bloky kódu, které je možné využít na více místech v
+naší aplikaci. Mají v sobě zahrnutý styl a logiku, který s danou částí souvisí.
+Mohou být úplně malé, jako třeba tlačítko, až do komplexních, jako je sidebar
+nebo dashboard. Mohou být obalové a mít v sobě vykreslené další komponenty a
+mohou mít víc variant.
+
+## Co jsou základní principy komponent?
+
+1. **Reusability - znovupoužitelnost**
+
+   Komponentu je možné použít na více místech aplikace s jiným obsahem
+
+   Díky tomu dodržujeme DRY princip (Don't repear yourself)
+
+2. **Encapsulation - zapouzdření (oddělení)**
+
+   Každá komponenta je zodpovědná jen za jednu část logiky - například jedna komponenta řeší pouze zobrazení článku a další řeší přidávání komentáře k článku.
+
+3. **Flexibilita**
+
+   Komponenty je možné snadno přizpůsobit a upravit, aniž by to mělo vliv na ostatní části aplikace.
+
+4. **Testovatelnost**
+
+   Komponenty je možné testovat samostatně
+
+## Jak začít psát komponenty?
+
+Ještě neotvírejte textový editor. Začněte tím, že si otevřete jakoukoli webovou stránku a zkusíte se pouze vizuálně podívat na to, jak by se dala rozdělit na komponenty.
+
+<div className="mdx-space--sm"></div>
+<img
+  src="https://res.cloudinary.com/doqtwlcxw/image/upload/v1720961228/component-example_n5jbpe.png"
+  alt="Dashboard made of components"
+/>
+
+<div className="mdx-space--md"></div>
+
+Tady je možné vidět jasné opakující se komponenty. Mají společný design s možnými variacemi - např. barva pozadí kartičky. Kromě toho se ale liší pouze obsahem.
+
+## Komponenty v Reactu
+
+<div className="mdx-space--md"></div>
+Kdybychom měli princip komponent aplikovat na naše obrázky a použili React,
+vypadal by kód takto:
+<div className="mdx-space--md"></div>
+
+### 1. Definice komponenty
+
+Nejdřív se definuje komponenta, která bere props (dynamický obsah, který se mění). Props jsou `href`, `src`, `alt` a `description`. Tyto se pak použití při vykreslení komponenty.
+
+<div className="mdx-space--sm"></div>
+<CodeBlock language="javascript">
+  {`
+  const GalleryItem = ({ href, src, alt, description }) => (
+  <li>
+    <a href={href}>
+      <img src={src} width="130" height="130" alt={alt} />
+    </a>
+    <p className="image-description">{description}</p>
+  </li>
+);
+  `}
+</CodeBlock>
+<div className="mdx-space--md"></div>
+
+### 2. Definice dat
+
+Následně definujeme data, která chceme vykreslit. K tomu se nejlépe hodí pole objektů.
+Vidíte, že každý objekt má vlastnosti, které se použijí jako props pro komponentu.
+
+<div className="mdx-space--sm"></div>
+<CodeBlock language="javascript">
+  {`
+  const galleryData = [
+  {
+    href: "drawing.html",
+    src: "Img/drawing.png",
+    alt: "Learn to draw",
+    description: "This image links to a page about learning to draw."
+  },
+  {
+    href: "art.html",
+    src: "Img/art.png",
+    alt: "Art Design and creation",
+    description: "This image links to a page about art design and creation."
+  },
+  {
+    href: "design.html",
+    src: "Img/designart.png",
+    alt: "Design",
+    description: "This image links to a page about design."
+  },
+  {
+    href: "code.html",
+    src: "Img/code.png",
+    alt: "Coding programmer",
+    description: "This image links to a page about code."
+  },
+  {
+    href: "test.html",
+    src: "Img/test.png",
+    alt: "Test",
+    description: "This image links to a page about testing."
+  }
+];
+  `}
+</CodeBlock>
+<div className="mdx-space--md"></div>{" "}
+
+### 3. Vykreslení sezanmu komponent
+
+A následně vykreslíme seznam obrázků. Pomocí `.map` procházíme polem a pro každou položku pole - tady pojmenovaná `item` - renderujeme komponentu `GalleryItem` s příslušnými props.
+
+Při mapování se používá `index` (pořadí položky v poli) jako `key`. V tomto případě to stačí, ale je pokud máte např. unikátní `id`, je lepší ho použít. Proč? Protože při přeskládání pole se může stát, že se indexy změní a React bude mít problém s vykreslením.
+
+<div className="mdx-space--sm"></div>
+<CodeBlock language="javascript">
+  {`
+  const ImageGallery = () => (
+  <ul className="image-gallery">
+    {galleryData.map((item, index) => (
+      <GalleryItem
+        key={index}
+        href={item.href}
+        src={item.src}
+        alt={item.alt}
+        description={item.description}
+      />
+    ))}
+  </ul>
+);
+`}
+</CodeBlock>
+<div className="mdx-space--md"></div>
+
+## Praktické využití
+
+Na první pohled se může zdát, že tento kód je zbytečně složitý. Často nám ale dynamicky
+nepřijde pět obrázků, ale třeba tisíc uživatelů. A v tuto chvíli začne příprava a
+použití komponent dávat smysl.
+
+<div className="mdx-space--md"></div>
+Kromě efektivnosti psaní kódu je dobré, že komponenty se pojmenovávají
+sémanticky. Podle názvu tedy už tušíte, co komponenta dělá: pokud v kódu uvidíte
+`GalleryItem`, je jasné, že se jedná o obrázek v galerii.{" "}
+
+Je snazší se
+orientovat v kódu, kde vidíte elementy jako `ProductCard`, `UserList` `Sidebar`,
+nebo `LoginForm`, než když vidíte pouze hluboce zanořené `div`, `span`, `p`.
+
+<div className="mdx-space--md"></div>
+## Shrnutí{" "}
+
+Komponenty jsou tak častým přístupem v psaní frontendu webových
+stránek, že existují celé knihovny a frameworky, které nabízí už hotové
+nastylované komponenty, které stačí do projektu jen naimportovat.
+
+Jsou to například <MdxLink url="https://getbootstrap.com/">Bootstrap</MdxLink>, <MdxLink url="https://semantic-ui.com/">SemanticUI</MdxLink> nebo pro React <MdxLink url="https://v2.chakra-ui.com/">ChakraUI</MdxLink>.
+
+Díky tomto shrnutí se už nikdy nebudete na webové stránky dívat stejně. Komponenty uvidíte všude! A nebojte se nakouknout do devtools a zkusit si nějaké atributy nebo stylování změnit.
