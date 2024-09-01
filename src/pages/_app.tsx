@@ -6,6 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../theme";
 import "../styles/prism.css";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </ChakraProvider>
   );
