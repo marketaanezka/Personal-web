@@ -13,6 +13,7 @@ const MdxLink: FC<MdxLinkProps> = ({ url, ariaLabel, children }) => (
     className="linkUnderline"
     target="_blank"
     aria-label={ariaLabel}
+    rel="noopener noreferrer"
   >
     {children}
   </Link>

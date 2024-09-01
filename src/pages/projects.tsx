@@ -39,7 +39,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
   return (
     <Box>
       <Heading size="lg">Projekty</Heading>
-      <Text mt={3} mb={6} opacity={0.7}>
+      <Text mt={3} mb={6} opacity={0.75}>
         Seznam projektů, na kterých jsem pracovala, jaké technologie jsem
         používala, i co jsem se na nich naučila.
       </Text>
@@ -59,7 +59,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
         <Heading size="lg" mt={{ base: 8, lg: 10 }} mb={2}>
           Znalosti
         </Heading>
-        <Text mb={6} opacity={0.7}>
+        <Text mb={6} opacity={0.75}>
           Přehled technologií, se kterými pracuji a témata kterým se věnuji.
         </Text>
         <Grid

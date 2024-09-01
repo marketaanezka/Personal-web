@@ -6,6 +6,7 @@ import {
   useColorModeValue,
   VStack,
   Text,
+  Link,
 } from "@chakra-ui/react";
 
 import { CONFETTI_LIGHT, CONFETTI_DARK } from "../assets/Icons/confetti";
@@ -35,11 +36,23 @@ export default function ContactFormWithSocialButtons() {
                   base: "2xl",
                   md: "3xl",
                 }}
+                textAlign="center"
               >
                 Kontaktní formulář
               </Heading>
-              <Text align="center" mt={{ base: 2, md: 4 }}>
-                Zůstaňme ve spojení 📧
+              <Text textAlign="center" mt={{ base: 2, md: 4 }}>
+                Chcete spolupracovat? 📨
+                <br />
+                Pošlete mi zprávu na{" "}
+                <Link
+                  href="https://www.linkedin.com/in/marketa-willis/"
+                  className="linkUnderline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </Link>{" "}
+                nebo přes formulář
               </Text>
             </Box>
             <Stack

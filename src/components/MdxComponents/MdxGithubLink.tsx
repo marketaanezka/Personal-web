@@ -20,6 +20,7 @@ const MdxGithubLink: FC<MdxGithubLinkProps> = ({
       className="linkUnderline"
       target="_blank"
       aria-label={ariaLabel}
+      rel="noopener noreferrer"
     >
       {children}
     </Link>

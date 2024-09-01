@@ -1,34 +1,36 @@
 import Link from "next/link";
 import styles from "./FeaturedPitch.module.scss";
-import { Box, Text, Heading, Avatar, Flex } from "@chakra-ui/react";
+import { Box, Text, Heading, Avatar, Flex, Button } from "@chakra-ui/react";
 import { ExternalLink } from "../../../assets/Icons/icons";
-import PitchHeading from "../../PitchHeading/PitchHeading";
-import { CldImage } from "next-cloudinary";
 
 const FeaturedPitch = () => {
   return (
     <section className={styles.wrapper}>
-      <PitchHeading
-        heading="Média"
-        linkUrl="/media"
-        linkText="Na čtení i poslech"
-      />
-      <iframe
-        title="junior guru podcast on apple podcasts"
-        allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-        frameBorder="0"
-        height="175"
-        style={{
-          width: "100%",
-          maxWidth: "950px",
-          overflow: "hidden",
-          borderRadius: "10px",
-        }}
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-        src="https://embed.podcasts.apple.com/cz/podcast/6-mark%C3%A9ta-willis-applifting-o-jej%C3%AD-cest%C4%9B-k-it-a/id1603653549?i=1000566466352"
-      ></iframe>
+      <Link href="/media">
+        {" "}
+        <h2 className={styles.heading}>Média</h2>
+      </Link>
+
+      <Box opacity={0.75}>Kde mě můžete slyšet nebo si přečíst rozhovor</Box>
+
+      <Box mt={4}>
+        <iframe
+          title="junior guru podcast on apple podcasts"
+          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+          frameBorder="0"
+          height="175"
+          style={{
+            width: "100%",
+            maxWidth: "950px",
+            overflow: "hidden",
+            borderRadius: "10px",
+          }}
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+          src="https://embed.podcasts.apple.com/cz/podcast/6-mark%C3%A9ta-willis-applifting-o-jej%C3%AD-cest%C4%9B-k-it-a/id1603653549?i=1000566466352"
+        ></iframe>
+      </Box>
       <Flex
-        gap={{ base: 0, lg: 6 }}
+        gap={{ base: 0, lg: 12 }}
         mt={4}
         direction={{ base: "column", lg: "row" }}
       >
@@ -36,6 +38,7 @@ const FeaturedPitch = () => {
           <Link
             href="https://www.wdf.cz/blog/se-zapojenim-do-komunit-bych-nevahala-radi-juniorum-vyvojarka-willis"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Flex align="center" mt="0.5">
               <Avatar src="/img/wdf.png" marginRight="0.5rem" size="xs" />
@@ -57,6 +60,7 @@ const FeaturedPitch = () => {
           <Link
             href="https://applifting.io/blog/a-pedagogue-turned-developer"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Flex align="center" mt="0.5">
               <Avatar
@@ -79,6 +83,10 @@ const FeaturedPitch = () => {
           </Text>
         </Box>
       </Flex>
+
+      <Button colorScheme={"purple"} as="a" href="/media" mb={6} mt={4}>
+        Všechna media
+      </Button>
     </section>
   );
 };

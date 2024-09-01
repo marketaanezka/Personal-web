@@ -16,26 +16,11 @@ export default function Footer() {
     <Box
       bg={useColorModeValue("white", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
-      height={{ base: "12.5rem", md: "7.5rem" }}
+      height={{ base: "7rem", md: "4rem" }}
       display="flex"
       flexDirection={"column"}
       justifyContent={"end"}
     >
-      <Flex
-        px={4}
-        pt={{ base: 4, md: 6 }}
-        pb={{ base: 4, md: 2 }}
-        direction={{ base: "column", md: "row" }}
-        alignItems="center"
-        justifyContent="center"
-      >
-        Chcete spolupracovat?{" "}
-        <Link href="/contact">
-          <Text as="b" mx={2} className="linkUnderline">
-            Pošlete mi zprávu 💌
-          </Text>
-        </Link>
-      </Flex>
       {/* <Flex
         p={4}
         direction={{ base: "column", md: "row" }}
@@ -61,7 +46,7 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Text fontSize="sm">
-          ©2023 with 🫶
+          ©2024 with 🫶
           {/* &{" "}
           <Link href="/contact" className="linkUnderline">
             various tech

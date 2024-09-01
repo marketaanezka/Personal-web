@@ -15,7 +15,7 @@ const Blog: FC<BlogPostProps> = ({ posts }) => {
   return (
     <Box>
       <Heading size="lg">Blog</Heading>
-      <Text mt={3} mb={6} opacity={0.7}>
+      <Text mt={3} mb={6} opacity={0.75}>
         Tady najdete zajímavosti ze světa webového vývoje, hlavně frontendu.
         Mimo to sdílím své zkušenosti a tipy z oblasti začátků v programování,
         hledání uplatnění v IT i to, jak zvládnout první týdny v nové práci.

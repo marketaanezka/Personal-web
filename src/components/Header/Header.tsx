@@ -17,7 +17,7 @@ const Header = () => {
     <Box as="header" className={styles.wrapper} bg={color} height="4.5rem">
       <div className={styles.header}>
         <Box as="span">
-          <Link href="/">
+          <Link href="/" rel="noopener noreferrer">
             <span className={styles.name}>Markéta</span>
             <span className={styles.popColor}>Willis</span>
           </Link>

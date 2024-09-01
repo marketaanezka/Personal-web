@@ -8,21 +8,23 @@ import path from "path";
 import matter from "gray-matter";
 import BlogPitch from "../components/HomePage/BlogPitch/BlogPitch";
 import { Post, Project } from "../common/types";
+import AboutMePitch from "../components/HomePage/AboutMePitch/AboutMePitch";
 
 interface HomeProps {
-  latestPost: Post;
+  latestPosts: Post[];
   projects: Project[];
 }
 
-const Home: NextPage<{ latestPost: Post; projects: Project[] }> = ({
-  latestPost,
+const Home: NextPage<{ latestPosts: Post[]; projects: Project[] }> = ({
+  latestPosts,
   projects,
 }: HomeProps) => {
   return (
     <div className={styles.container}>
       <Intro />
-      <BlogPitch post={latestPost} />
-      <ProjectsPitch projects={projects} />
+      <AboutMePitch />
+      <BlogPitch posts={latestPosts} />
+      {/* <ProjectsPitch projects={projects} /> */}
       <FeaturedPitch />
     </div>
   );
@@ -49,7 +51,7 @@ export const getStaticProps = async () => {
     return b.frontMatter.date - a.frontMatter.date;
   });
 
-  const latestPost = posts[0];
+  const latestPosts = posts.slice(0, 3);
 
   const projectFiles = fs.readdirSync(path.join("src", "projects"));
 
@@ -69,7 +71,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      latestPost,
+      latestPosts,
       projects,
     },
   };

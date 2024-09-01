@@ -1,7 +1,6 @@
-import { Box, Stack, Text } from "@chakra-ui/react";
+import { Box, Stack, Text, Button } from "@chakra-ui/react";
 import SocialMediaButtons from "../../SocialMediaButtons/SocialMediaButtons";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./Intro.module.scss";
 
 const Intro = () => {
@@ -9,27 +8,32 @@ const Intro = () => {
     <section className={styles.wrapper}>
       <div className={styles.content}>
         <h1 className={styles.heading}>
-          Markéta Willis, frontend vývojářka, mentor a lektor
+          Markéta Willis, mentor programování a kariérní poradce pro IT
         </h1>
         <Stack direction="row" spacing={1} my={3}>
           <SocialMediaButtons />
         </Stack>
-        <Text className={styles.text} opacity={0.7} mb={3}>
-          Baví mě technologie webového vývoje, ráda se učím a stejně rada učím
-          druhé. Nevěřím, že programovat může jen ten, kdo na to má “mozek” od
-          narození.
+
+        <Text className={styles.text} opacity={0.75}>
+          Nabízím praktický mentoring frontendových technologií, přípravu na
+          pohovor a rozvoj profesní značky.
         </Text>
-        <Text className={styles.text} opacity={0.7}>
-          Kromě webového vývoje se zabývám tématem přípravy na změnu kariéry do
-          IT, a to nejen prakticky, ale i mentálně. Na vlastní cestě mě
-          překvapilo, jak byl přechod kromě samotného studia programování
-          náročný i emocionálně. Věnuji se problematice imposter syndromu, práci
-          se zpětnou vazbou, vyhoření, pozici ženy v převážně mužských týmech i
-          dalším.
+        <Text className={styles.text} opacity={0.75} mb={3}>
+          Konzultace připravuji na míru pro vaše potřeby a schopnosti. Vaše
+          cesta je unikátní, pojďme ji společně objevit.
         </Text>
-        <Link href="/about" className={styles.link}>
-          Více o mně &#x2192;
-        </Link>
+        <Text className={styles.text} opacity={0.75}>
+          Zajímá vás, jestli je programování to pravé pro vás, nebo už v IT jste
+          a chcete se kariérně posunout?
+        </Text>
+        <Button
+          colorScheme={"purple"}
+          marginTop={[4, 4, 6]}
+          as="a"
+          href="/mentoring"
+        >
+          Více o mentoringu
+        </Button>
       </div>
       {/* <div className={styles.imageWrapper}> */}
       <Box

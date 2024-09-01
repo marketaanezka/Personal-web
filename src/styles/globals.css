@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Hind';
+  font-family: "Hind";
   src: url("../assets/Hind/Hind-Bold.ttf");
   src: url("../assets/Hind/Hind-Light.ttf");
   src: url("../assets/Hind/Hind-Medium.ttf");
@@ -8,14 +8,14 @@
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   src: url("../assets/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
   src: url("../assets/Montserrat/Montserrat-VariableFont_wght.ttf");
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'GTBold';
+  font-family: "GTBold";
   src: url("../assets/GT-font/GT-Walsheim-Bold.ttf");
   font-style: normal;
 }
@@ -32,7 +32,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Hind, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Hind, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
   /* background-color: #f4f0eb; */
 }
 
@@ -51,44 +52,45 @@ html,
   font-family: Hind;
 }
 
-
 .profile-image {
   /* background-image: url('../../public/img/Blob_Image.png'); */
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   background-position: center;
-  background-size:contain;
+  background-size: contain;
 }
 
 .aboutme-image {
-  background-image: url('../../public/img/about-me.webp');
+  background-image: url("../../public/img/about-me.webp");
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   background-position: center;
-  background-size:contain;
+  background-size: contain;
 }
 
 .linkUnderline {
   background-image: linear-gradient(
-    0deg, 
-    transparent 15%, 
-  rgb(192 184 255 / 50%) 0 20%, 
-  rgb(192 184 255 / 40%) 30%, 
-  rgb(192 184 255 / 30%) 45%, 
-  transparent 0 100%);
+    0deg,
+    transparent 15%,
+    rgb(192 184 255 / 50%) 0 20%,
+    rgb(192 184 255 / 40%) 30%,
+    rgb(192 184 255 / 30%) 45%,
+    transparent 0 100%
+  );
   border-bottom: none;
 }
 
 .linkUnderline:hover {
   background-image: linear-gradient(
-    0deg, 
-    transparent 15%, 
-  rgb(192 184 255 / 80%) 0 20%, 
-  rgb(192 184 255 / 70%) 30%, 
-  rgb(192 184 255 / 60%) 45%, 
-  transparent 0 100%);
+    0deg,
+    transparent 15%,
+    rgb(192 184 255 / 80%) 0 20%,
+    rgb(192 184 255 / 70%) 30%,
+    rgb(192 184 255 / 60%) 45%,
+    transparent 0 100%
+  );
 }
 
 .u-no-decoration,
@@ -101,24 +103,24 @@ html,
 
 /*  full height minus header (3.5rem), footer, and layout top and bottom padding (2*1.5) */
 .u-full-height {
-  min-height: calc(100vh - 14.5rem); 
+  min-height: calc(100vh - 14.5rem);
 
   @media (min-width: 768px) {
-    min-height: calc(100vh - 11rem); 
+    min-height: calc(100vh - 11rem);
   }
 }
 
 .u-card-shadow {
-   transition: box-shadow .2s;
-   cursor: pointer;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
 }
 
 .u-card-shadow:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
-html[data-theme='dark'] .u-card-shadow:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);  
+html[data-theme="dark"] .u-card-shadow:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .u-arrowlink {
@@ -127,15 +129,15 @@ html[data-theme='dark'] .u-card-shadow:hover {
   color: var(--chakra-colors-lila-300);
 }
 .u-arrowlink:hover {
-  color: var(--chakra-colors-lila-500)
+  color: var(--chakra-colors-lila-500);
 }
 
-html[data-theme='dark'] .u-arrowlink {
+html[data-theme="dark"] .u-arrowlink {
   color: var(--chakra-colors-lila-200);
 }
 
-html[data-theme='dark'] .u-arrowlink:hover {
-  color: var(--chakra-colors-lila-400)
+html[data-theme="dark"] .u-arrowlink:hover {
+  color: var(--chakra-colors-lila-400);
 }
 
 /* code styling */
@@ -169,3 +171,10 @@ p > code {
   width: 100%;
 }
 
+.font-rowdies {
+  font-family: Rowdies !important;
+}
+
+.font-gtBold {
+  font-family: GTBold !important;
+}

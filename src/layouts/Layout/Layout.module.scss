@@ -1,24 +1,23 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: var(--chakra-space-lg) 7%;
-    min-height: calc(100vh - 4.5rem - 12.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--chakra-space-lg) 7%;
+  min-height: calc(100vh - 4.5rem - 7rem);
 
-    @media (min-width: 768px) {
-        min-height: calc(100vh - 4.5rem - 7.5rem);
-        padding: var(--chakra-space-lg) 12%;
-    }
+  @media (min-width: 768px) {
+    min-height: calc(100vh - 4.5rem - 4rem);
+    padding: var(--chakra-space-lg) 12%;
+  }
 }
 
 .wrapper section {
-    padding: 2rem 0;
-    @media (min-width: 1045px) {
-        padding: 2.5rem 0;
-    }
+  padding: 2rem 0;
+  @media (min-width: 1045px) {
+    padding: 5rem 0;
+  }
 }
 
 .wrapper > * {
-    max-width: 1000px;
-    
+  max-width: 1000px;
 }
