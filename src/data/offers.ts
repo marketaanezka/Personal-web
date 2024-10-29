@@ -30,7 +30,7 @@ export const offers = [
     title: "Osobní značka",
     icon: "⭐️",
     details: [
-      "Při změně kariéry do IT může být náročné se prezentovat v nové roli. Díky konzultaci:",
+      "Pochopíte, jak vám osobní značka může pomoci v kariérním růstu",
       "Najdete svůj unikátní příběh a pozici v IT",
       "Přestanete se bát networkingu",
       "Získáte sebevědomí se prezentovat",

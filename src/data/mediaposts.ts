@@ -9,6 +9,34 @@ export const MediaPosts: MediaPost[] = [
     description:
       "Na instagramu nabízím náhled do svého života frontend programátorky a lektorky IT. Kromě toho sdílím tipy na hledání práce v IT nebo jak se poprat s imposter syndromem a mentální náloží při změně kariéry.",
   },
+
+  {
+    externalLink:
+      "https://archiv.hn.cz/c1-67418180-pouhy-zivotopis-bez-kontextu-uz-firmy-neoslovi",
+    avatar: "/img/hn-button.svg",
+    alt: "applifting",
+    heading: "Pouhý životopis bez kontextu už firmy neosloví",
+    description:
+      "Rozhovor pro Hospodářské noviny - magazín Nejlepší zaměstnavatelé. Tématy jsou hledání práce jako career switcher, pozice ženy v IT a jak se vyrovnávat s imposter syndromem.",
+  },
+  {
+    externalLink: "https://open.spotify.com/episode/3o3UOtI81b86VA6kJ6DS30",
+    avatar: "/img/prhr.jpeg",
+    alt: "programhrovani",
+    heading: "Programhrování podcast: Jak si najít práci v IT",
+    description:
+      "Epizoda podcastu PorgramHRování, kde se bavíme o tom, jaké faktory jsou důležité při hledání práce, nebo jak se detailně připravit na vyjednávání o platu. ",
+  },
+  {
+    externalLink:
+      "https://www.e15.cz/byznys/technologie-a-media/my-holky-z-it-proc-maji-zeny-v-cesku-stale-pocit-ze-technologie-jsou-uzavreny-pansky-klub-1418365r",
+    avatar: "/img/e15.jpeg",
+    alt: "e15",
+    heading:
+      "My, holky z IT. Proč mají ženy v Česku stále pocit, že technologie jsou uzavřený pánský klub",
+    description:
+      "Byla jsem oslovena jako jedna ze tří vlivných žen v IT, abych sdílela své zkušenosti z cesty do IT pro magazín e15. Mluvíme o tom, jak se ženám daří v IT, jaké jsou překážky a co by měly firmy udělat pro to, aby byly pro ženy atraktivnější.",
+  },
   {
     externalLink: "https://applifting.io/blog/a-pedagogue-turned-developer",
     avatar: "/img/applifting.png",

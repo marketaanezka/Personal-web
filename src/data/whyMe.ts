@@ -2,7 +2,7 @@ import { RiGraduationCapFill } from "react-icons/ri";
 import { IoMdChatboxes } from "react-icons/io";
 import { FaHandsHelping } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
-import { GoStarFill } from "react-icons/go";
+import { BsStars } from "react-icons/bs";
 import { IoMdCompass } from "react-icons/io";
 
 export const whyMe = [
@@ -16,7 +16,7 @@ export const whyMe = [
     id: 2,
     icon: IoMdChatboxes,
     contents:
-      "Jelikož jsem sama byla v pozici, kdy jsem nevěděla, co je to div, nikdy nesoudím, ale s nadšením vítám otázky. Nejsem tu od toho, abych se vytahovala svými znalostmi, ale abych vám pomohla prohloubit ty vaše.",
+      "Jelikož jsem sama byla v pozici úplného začátečníka, nikdy nesoudím, ale s nadšením vítám otázky. Nejsem tu od toho, abych se vytahovala svými znalostmi, ale abych vám pomohla prohloubit ty vaše.",
   },
   {
     id: 3,
@@ -26,9 +26,9 @@ export const whyMe = [
   },
   {
     id: 4,
-    icon: GoStarFill,
+    icon: BsStars,
     contents:
-      "Na konzultace vnášíte svou osobnost a jedinečné zájmy a styl učení. Není jeden správný způsob, jak se dostat do IT. Vaše cesta je unikátní, pojďme ji společně objevit.",
+      "Na konzultace vnášíte svou osobnost, jedinečné zájmy a styl učení. Není jeden správný způsob, jak se dostat do IT. Vaše cesta je unikátní, pojďme ji společně objevit.",
   },
   {
     id: 5,
