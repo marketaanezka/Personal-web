@@ -40,3 +40,36 @@ export const offers = [
     ],
   },
 ];
+
+export const mentoringDetails = [
+  {
+    id: "1",
+    title: "Před první konzultací",
+    icon: "👋",
+    details: [
+      "Zašlu vám dotazník pro zjištění vašich potřeb a očekávání",
+      "Na základě dotazníku připravím zdroje, roadmapu a materiály",
+      "Dohodneme se na termínu konzultace",
+    ],
+  },
+  {
+    id: "2",
+    title: "Cena",
+    icon: "💰",
+    details: [
+      "3000,-/60 minut",
+      "Při nákupu 5 konzultací cena 2500,-/60 minut",
+      "Platba předem pomocí QR kódu nebo převodem",
+    ],
+  },
+  {
+    id: "3",
+    title: "Co je v ceně",
+    icon: "📑",
+    details: [
+      "60 minut online konzultace",
+      "Příprava zadání, zdrojů a materiálů před a po každém setkání",
+      "Code reviews a odpovídání na dotazy mezi konzultacemi",
+    ],
+  },
+];

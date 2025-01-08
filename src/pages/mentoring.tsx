@@ -1,9 +1,11 @@
 import Image from "next/image";
 import {
   Box,
+  Button,
   Card,
   CardBody,
   CardHeader,
+  Flex,
   Grid,
   Heading,
   List,
@@ -12,9 +14,10 @@ import {
   Stack,
   StackDivider,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
-import { offers } from "../data/offers";
+import { mentoringDetails, offers } from "../data/offers";
 import EmailForm from "../components/ContactForm/EmailForm";
 import { whyMe } from "../data/whyMe";
 import { situations } from "../data/situations";
@@ -88,7 +91,8 @@ const Mentoring = () => (
         </Card>
       ))}
     </Grid>
-    <Box mt={[10, 20]}>
+
+    {/* <Box mt={[10, 20]}>
       <EmailForm
         description={
           <>
@@ -100,7 +104,7 @@ const Mentoring = () => (
           </>
         }
       />
-    </Box>
+    </Box> */}
     <Box my={[10, 20]}>
       <Image
         src="https://res.cloudinary.com/doqtwlcxw/image/upload/v1725034100/windowApplifting1_rf1o5l.jpg"
@@ -135,18 +139,79 @@ const Mentoring = () => (
           ))}
         </Grid>
       </List>
+      <Button
+        colorScheme={"purple"}
+        marginTop={[4, 4, 8]}
+        as="a"
+        href="/about"
+        size={"sm"}
+      >
+        Více o mně
+      </Button>
+    </Box>
+    <Box mb={[10, 20]}>
+      <Heading as={"h3"} size="md" className="font-gtBold" mb={[4, 6, 8]}>
+        Jak to probíhá a kolik to stojí?
+      </Heading>
+      <Grid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          lg: "repeat(3, 1fr)",
+        }}
+        gap={12}
+        mt={[6, 12]}
+      >
+        {mentoringDetails.map((offer) => (
+          <Card key={offer.id}>
+            <CardHeader pb={1}>
+              <Heading
+                size="xs"
+                textTransform="uppercase"
+                textAlign="center"
+                className="font-rowdies"
+                fontWeight={400}
+              >
+                {offer.title}
+                <Text ml={"1.5"} as="span">
+                  {offer.icon}
+                </Text>
+              </Heading>
+            </CardHeader>
+
+            <CardBody>
+              <Stack divider={<StackDivider />} spacing="2">
+                {offer.details.map((detail) => (
+                  <Box key={detail}>
+                    <Text pt="2" fontSize="sm">
+                      {detail}
+                    </Text>
+                  </Box>
+                ))}
+              </Stack>
+            </CardBody>
+          </Card>
+        ))}
+      </Grid>
     </Box>
     <Box my={[10, 20]}>
-      <EmailForm
-        description={
-          <>
+      <Box p={8}>
+        <Flex
+          // bg={useColorModeValue("white", "gray.700")}
+          borderRadius="lg"
+          color={useColorModeValue("gray.700", "whiteAlpha.900")}
+          alignItems="center"
+          justifyContent="center"
+          flexDirection="column"
+        >
+          <Box w={["auto", "90"]} mb={[2, 2, 4]}>
             <Text>
-              Pokud máte zájem o konzultaci, jakmile bude připravený formát,
-              pošlu vám detaily na e-mail:{" "}
+              Pokud máte zájem o mentoring, pošlete objednávkový formulář s
+              tématem konzultace.
             </Text>
-          </>
-        }
-      />
+          </Box>
+          <EmailForm />
+        </Flex>
+      </Box>
     </Box>
   </Box>
 );

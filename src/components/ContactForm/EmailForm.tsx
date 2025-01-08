@@ -9,7 +9,8 @@ import {
   useColorModeValue,
   useToast,
   Flex,
-  Text,
+  Textarea,
+  VStack,
 } from "@chakra-ui/react";
 import { MdOutlineEmail } from "react-icons/md";
 import axios from "axios";
@@ -28,11 +29,7 @@ const sendEmail = async (email: string) => {
   });
 };
 
-interface EmailFormProps {
-  description: React.ReactNode;
-}
-
-const EmailForm = ({ description }: EmailFormProps) => {
+const EmailForm = () => {
   const [responseMessage, setResponseMessage] = useState({
     isSuccessful: false,
     message: "",
@@ -91,21 +88,11 @@ const EmailForm = ({ description }: EmailFormProps) => {
   //   };
 
   return (
-    <Box p={8}>
-      <Flex
-        // bg={useColorModeValue("white", "gray.700")}
-        borderRadius="lg"
-        color={useColorModeValue("gray.700", "whiteAlpha.900")}
-        alignItems="center"
-        justifyContent="center"
-        flexDirection="column"
-      >
-        <Box textAlign={"center"} w={["100%", "100%", "50%"]}>
-          {description}
-        </Box>
-        <form onSubmit={handleSubmit}>
+    <Box w={["auto", "80"]}>
+      <form onSubmit={handleSubmit}>
+        <VStack spacing={3}>
           <FormControl isRequired>
-            <FormLabel visibility={"hidden"}>Email</FormLabel>
+            <FormLabel>Email</FormLabel>
 
             <InputGroup border={"ButtonFace"}>
               <InputLeftElement>
@@ -121,6 +108,19 @@ const EmailForm = ({ description }: EmailFormProps) => {
               />
             </InputGroup>
           </FormControl>
+          <FormControl isRequired>
+            <FormLabel>Téma konzultace</FormLabel>
+
+            <Textarea
+              name="message"
+              placeholder=""
+              rows={6}
+              resize="none"
+              id="message"
+              value={values.message}
+              onChange={handleChange}
+            />
+          </FormControl>
 
           <Button
             bg={useColorModeValue("lila.400", "lila.800")}
@@ -133,10 +133,10 @@ const EmailForm = ({ description }: EmailFormProps) => {
             isLoading={loading}
             mt={4}
           >
-            Chci info
+            Objednat konzultaci
           </Button>
-        </form>
-      </Flex>
+        </VStack>
+      </form>
     </Box>
   );
 };

@@ -1,0 +1,17 @@
+.card {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+
+  .description {
+    min-height: 3em;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 2;
+    // line-clamp: 2;
+    line-height: 1.5;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+    // text-wrap: balance
+  }
+}
