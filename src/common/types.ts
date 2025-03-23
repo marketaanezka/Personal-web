@@ -38,7 +38,7 @@ export interface MediaPost {
 export interface CourseCard {
   link: string;
   image: string;
-  date: string;
+  date?: string;
   time: string;
   price: string;
   alt: string;

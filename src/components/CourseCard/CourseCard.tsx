@@ -35,15 +35,15 @@ const CourseCard: FC<Props> = ({ course }) => {
             gap={{ base: 2, sm: 4 }}
             direction={{ base: "column", sm: "row" }}
           >
-            <Text>
+            {/* <Text>
               <Text as="span" mr={1}>
                 🗓️
               </Text>
               {course.date}
-            </Text>
+            </Text> */}
             <Text>
               <Text as="span" mr={1}>
-                ⏱️
+                🗓️
               </Text>
               {course.time}
             </Text>
