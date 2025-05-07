@@ -17,7 +17,11 @@ import axios from "axios";
 import React, { useState } from "react";
 import useContactForm from "../../hooks/useContactForm";
 
-const sendEmail = async (name: string, email: string, message: string) => {
+const sendContactEmail = async (
+  name: string,
+  email: string,
+  message: string
+) => {
   return axios({
     method: "post",
     url: "/api/sendmail",
@@ -59,7 +63,11 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const req = await sendEmail(values.name, values.email, values.message);
+      const req = await sendContactEmail(
+        values.name,
+        values.email,
+        values.message
+      );
       if (req.status === 250) {
         setResponseMessage({
           isSuccessful: true,

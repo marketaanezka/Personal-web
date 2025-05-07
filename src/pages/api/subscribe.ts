@@ -16,8 +16,8 @@ export default function handler(
     from: process.env.MAIL_SENDER,
     to: process.env.MAIL_ADDRESS,
     subject: `E-mail ${req.body.email}`,
-    text: `${req.body.email} subscribed for mentoring info`,
-    html: `<p>${req.body.email} subscribed for mentoring info</p>`,
+    text: req.body.message,
+    html: req.body.message,
   };
 
   const transporter = nodemailer.createTransport({

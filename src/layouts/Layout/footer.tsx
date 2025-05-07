@@ -46,7 +46,7 @@ export default function Footer() {
         align={{ base: "center", md: "center" }}
       >
         <Text fontSize="sm">
-          ©2024 with 🫶
+          ©2025 with 🫶
           {/* &{" "}
           <Link href="/contact" className="linkUnderline">
             various tech

@@ -14,31 +14,20 @@ const Intro = () => {
           <SocialMediaButtons />
         </Stack>
 
-        <Text className={styles.text} opacity={0.75}>
+        <Text as="span" className={styles.text} opacity={0.75} mr={1.5}>
           Věnuji se tématům frontendových technologií, přípravě na pohovor a
           rozvoj profesní značky. Zajímá vás, jestli je programování to pravé
-          pro vás, nebo už v IT jste a chcete se kariérně posunout? Nabízím{" "}
-          <Link
-            href="https://www.startupjobs.cz/test/javascript"
-            className="linkUnderline"
-          >
-            individální mentoring
-          </Link>
-          .
+          pro vás, nebo už v IT jste a chcete se kariérně posunout? Nabízím
         </Text>
+        <Link href="/mentoring" className="linkUnderline">
+          individální mentoring.
+        </Link>
         <Text className={styles.text} opacity={0.75} marginTop={[4, 4, 6]}>
-          Nově jsem spustila kurz Jak najít práci v IT v roce 2025. Dozvíte se,
-          jak efektivně hledat práci, strukturovat životopis a portfolio, využít
-          sílu networkingu a vyjednávat o mzdě.
+          Také pracuji na novém kurzu o efektivním hledání práce v IT.
         </Text>
-        <Button
-          colorScheme={"purple"}
-          marginTop={[2, 2, 4]}
-          as="a"
-          href="https://willis.webinarninja.com/live-webinars/10639265/register?in_tok=e838b3d5-8fd7-4b75-940e-de3c8d9558f4"
-        >
-          👩🏻‍🏫 Kurz: Jak najít práci v IT v roce 2025
-        </Button>
+        <Link href="/courses" className="linkUnderline">
+          Detaily kurzu Jak hledat práci v IT sebevědomě a autenticky.
+        </Link>
       </div>
       {/* <div className={styles.imageWrapper}> */}
       <Box
